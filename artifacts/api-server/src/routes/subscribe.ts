@@ -1,6 +1,8 @@
 import { Router } from "express";
 import { ReplitConnectors } from "@replit/connectors-sdk";
 import { z } from "zod";
+import { existsSync, readFileSync } from "fs";
+import { join } from "path";
 
 const router = Router();
 
@@ -11,6 +13,25 @@ const SubscribeBody = z.object({
 
 const OWNER_EMAIL = "fuadmammadov335@gmail.com";
 const FROM = "IKE & IKZE Guide <onboarding@resend.dev>";
+
+// Works in both dev (cwd = artifacts/api-server) and production (cwd = workspace root)
+function getGuidePath(lang: string): string {
+  const filename = `guide-${lang}.pdf`;
+  const devPath = join(process.cwd(), "guides", filename);
+  if (existsSync(devPath)) return devPath;
+  return join(process.cwd(), "artifacts/api-server/guides", filename);
+}
+
+function guideBase64(lang: string): string {
+  const filePath = getGuidePath(lang);
+  return readFileSync(filePath).toString("base64");
+}
+
+const guideFilenames: Record<string, string> = {
+  en: "IKE-IKZE-Guide.pdf",
+  ru: "IKE-IKZE-Guide-RU.pdf",
+  ua: "IKE-IKZE-Guide-UA.pdf",
+};
 
 function ownerHtml(email: string, language: string) {
   return `
@@ -23,57 +44,62 @@ function ownerHtml(email: string, language: string) {
   `;
 }
 
-const confirmContent: Record<string, { subject: string; heading: string; body: string; cta: string; disclaimer: string }> = {
+const confirmContent: Record<string, {
+  subject: string; heading: string; body: string; cta: string; disclaimer: string; attachment: string;
+}> = {
   en: {
-    subject: "Your free IKE & IKZE guide",
+    subject: "Your free IKE & IKZE guide (PDF attached)",
     heading: "Here's your guide: How IKE and IKZE actually work",
     body: `
-      <p>Thanks for signing up!</p>
-      <p>Here is a quick overview of everything covered in the full guide:</p>
+      <p>Thanks for signing up! Your free guide is attached to this email as a PDF.</p>
+      <p>Inside you'll find:</p>
       <ul>
-        <li><strong>IKE (Individual Retirement Account)</strong> — 2026 contribution limit: 26,019 PLN. Tax-free on withdrawal at retirement. No early withdrawal tax if conditions are met.</li>
-        <li><strong>IKZE (Individual Retirement Security Account)</strong> — 2026 limits: 11,304 PLN (employment/civil contract) or 16,956 PLN (B2B/self-employed). Contributions are fully deductible from taxable income in the year you make them. Early closure is taxed at a flat 10% + income tax on the accumulated sum — plan carefully.</li>
-        <li><strong>Key difference:</strong> IKE saves tax at the back end (no tax on gains at exit). IKZE saves tax up front (deduction now, flat 10% exit tax at retirement).</li>
-        <li><strong>Expats:</strong> Both accounts are available to non-citizens who are Polish tax residents. Leaving Poland before retirement age does not automatically close them.</li>
+        <li>How IKE and IKZE actually work — contribution limits, tax mechanics, withdrawal rules</li>
+        <li>The 2026 figures for both UoP and B2B contract holders</li>
+        <li>What happens to your accounts if you leave Poland</li>
+        <li>A side-by-side comparison of IKE vs IKZE tax treatment</li>
       </ul>
-      <p>If you'd like to walk through how this applies to your specific contract type, income bracket, or exit plan, I offer 60-minute educational sessions.</p>
+      <p>If you'd like to walk through how any of this applies to your specific situation, I offer 60-minute educational sessions — 450 PLN.</p>
     `,
     cta: "Book a session →",
     disclaimer: "Educational content only. Not financial advice.",
+    attachment: "IKE-IKZE-Guide.pdf",
   },
   ru: {
-    subject: "Ваш бесплатный гид по IKE и IKZE",
+    subject: "Ваш бесплатный гид по IKE и IKZE (PDF во вложении)",
     heading: "Вот ваш гид: как на самом деле работают IKE и IKZE",
     body: `
-      <p>Спасибо за подписку!</p>
-      <p>Краткое содержание полного гида:</p>
+      <p>Спасибо за подписку! Ваш бесплатный гид прикреплён к этому письму в формате PDF.</p>
+      <p>Внутри вы найдёте:</p>
       <ul>
-        <li><strong>IKE (Индивидуальный пенсионный счёт)</strong> — лимит взносов 2026: 26 019 PLN. Вывод средств при выходе на пенсию не облагается налогом.</li>
-        <li><strong>IKZE (Индивидуальный счёт пенсионного обеспечения)</strong> — лимиты 2026: 11 304 PLN (UoP/гражданский договор) или 16 956 PLN (B2B/ИП). Взносы полностью вычитаются из налогооблагаемого дохода. При досрочном закрытии — плоский налог 10% + налог на доходы с накопленной суммы.</li>
-        <li><strong>Ключевое отличие:</strong> IKE экономит налог на выходе (без налога на прирост при выводе). IKZE экономит налог сейчас (вычет сегодня, плоский 10% при выходе на пенсию).</li>
-        <li><strong>Иностранцы:</strong> Оба счёта доступны нерезидентам, являющимся польскими налоговыми резидентами. Отъезд из Польши до пенсионного возраста не закрывает счета автоматически.</li>
+        <li>Как на самом деле работают IKE и IKZE — лимиты взносов, налоговая механика, правила вывода</li>
+        <li>Актуальные цифры 2026 года для UoP и B2B</li>
+        <li>Что происходит со счетами при отъезде из Польши</li>
+        <li>Сравнение налогового режима IKE и IKZE</li>
       </ul>
-      <p>Если вы хотите разобрать, как это применимо к вашему типу договора, налоговой ставке или плану выезда — я провожу 60-минутные образовательные сессии.</p>
+      <p>Если вы хотите разобрать, как это применимо к вашей ситуации, я провожу 60-минутные образовательные сессии — 450 PLN.</p>
     `,
     cta: "Записаться на сессию →",
     disclaimer: "Только образовательный контент. Не финансовая консультация.",
+    attachment: "IKE-IKZE-Guide-RU.pdf",
   },
   ua: {
-    subject: "Ваш безкоштовний гід по IKE і IKZE",
+    subject: "Ваш безкоштовний гід по IKE і IKZE (PDF у вкладенні)",
     heading: "Ось ваш гід: як насправді працюють IKE і IKZE",
     body: `
-      <p>Дякуємо за підписку!</p>
-      <p>Короткий зміст повного гіда:</p>
+      <p>Дякуємо за підписку! Ваш безкоштовний гід прикріплений до цього листа у форматі PDF.</p>
+      <p>Всередині ви знайдете:</p>
       <ul>
-        <li><strong>IKE (Індивідуальний пенсійний рахунок)</strong> — ліміт внесків 2026: 26 019 PLN. Виведення коштів при виході на пенсію не оподатковується.</li>
-        <li><strong>IKZE (Індивідуальний рахунок пенсійного забезпечення)</strong> — ліміти 2026: 11 304 PLN (UoP/цивільний договір) або 16 956 PLN (B2B/ФОП). Внески повністю вираховуються з оподатковуваного доходу. При достроковому закритті — плоский податок 10% + ПДФО з накопиченої суми.</li>
-        <li><strong>Ключова різниця:</strong> IKE економить податок на виході (без податку на приріст при виведенні). IKZE економить податок зараз (вирахування сьогодні, плоский 10% при виході на пенсію).</li>
-        <li><strong>Іноземці:</strong> Обидва рахунки доступні негромадянам, які є польськими податковими резидентами. Від'їзд з Польщі до пенсійного віку не закриває рахунки автоматично.</li>
+        <li>Як насправді працюють IKE і IKZE — ліміти внесків, податкова механіка, правила виведення</li>
+        <li>Актуальні цифри 2026 року для UoP та B2B</li>
+        <li>Що відбувається з рахунками при від'їзді з Польщі</li>
+        <li>Порівняння податкового режиму IKE та IKZE</li>
       </ul>
-      <p>Якщо ви хочете розібратися, як це застосовується до вашого типу договору, податкової ставки або плану виїзду — я проводжу 60-хвилинні освітні сесії (англійською або російською мовою).</p>
+      <p>Якщо ви хочете розібратися, як це застосовується до вашої ситуації, я проводжу 60-хвилинні освітні сесії — 450 PLN (сесії проводяться англійською або російською мовою).</p>
     `,
     cta: "Записатися на сесію →",
     disclaimer: "Лише освітній контент. Не фінансова консультація.",
+    attachment: "IKE-IKZE-Guide-UA.pdf",
   },
 };
 
@@ -89,14 +115,17 @@ function confirmHtml(email: string, lang: string) {
         <h1 style="font-size:22px;font-weight:700;margin:0 0 20px;">${c.heading}</h1>
         ${c.body}
         <div style="text-align:center;margin:32px 0;">
-          <a href="https://expatfinance.pl/book" style="background:#f59e0b;color:#1e293b;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;display:inline-block;">
+          <a href="https://expatfinance.pl/book"
+             style="background:#f59e0b;color:#1e293b;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;display:inline-block;">
             ${c.cta}
           </a>
         </div>
       </div>
       <div style="padding:16px 32px;background:#f1f5f9;border-radius:0 0 8px 8px;">
         <p style="margin:0;font-size:11px;color:#94a3b8;">${c.disclaimer}</p>
-        <p style="margin:4px 0 0;font-size:11px;color:#94a3b8;">You received this because you signed up at expatfinance.pl. Email: ${email}</p>
+        <p style="margin:4px 0 0;font-size:11px;color:#94a3b8;">
+          You received this because you signed up at expatfinance.pl with address: ${email}
+        </p>
       </div>
     </div>
   `;
@@ -112,7 +141,12 @@ router.post("/subscribe", async (req, res) => {
   try {
     const connectors = new ReplitConnectors();
 
-    // Notify owner
+    // Read & encode the correct PDF
+    const pdfBase64 = guideBase64(language);
+    const pdfFilename = guideFilenames[language] ?? guideFilenames.en;
+    const c = confirmContent[language] ?? confirmContent.en;
+
+    // 1. Notify owner (no attachment needed)
     await connectors.proxy("resend", "/emails", {
       method: "POST",
       body: JSON.stringify({
@@ -124,8 +158,7 @@ router.post("/subscribe", async (req, res) => {
       headers: { "Content-Type": "application/json" },
     });
 
-    // Confirm to subscriber
-    const c = confirmContent[language] ?? confirmContent.en;
+    // 2. Send PDF to subscriber
     await connectors.proxy("resend", "/emails", {
       method: "POST",
       body: JSON.stringify({
@@ -133,6 +166,12 @@ router.post("/subscribe", async (req, res) => {
         to: [email],
         subject: c.subject,
         html: confirmHtml(email, language),
+        attachments: [
+          {
+            filename: pdfFilename,
+            content: pdfBase64,
+          },
+        ],
       }),
       headers: { "Content-Type": "application/json" },
     });
