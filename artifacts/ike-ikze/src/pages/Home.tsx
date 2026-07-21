@@ -28,7 +28,9 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeInUp} className="max-w-3xl mx-auto text-center">
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-foreground tracking-tight mb-6">
-              {t('home.hero.title')}
+              {t('home.hero.title.pre')}{' '}
+              <span className="text-amber-500">{t('home.hero.title.accent')}</span>{' '}
+              {t('home.hero.title.post')}
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground mb-8 leading-relaxed">
               {t('home.hero.subtitle')}

@@ -72,6 +72,9 @@ export const translations: Translations = {
 
     // Home page
     'home.hero.title': 'Your Complete Guide to Wealth Creation in Poland',
+    'home.hero.title.pre': 'Your Complete Guide to',
+    'home.hero.title.accent': 'Wealth Creation',
+    'home.hero.title.post': 'in Poland',
     'home.hero.subtitle': 'Walk through the exact mechanics of IKE and IKZE — contribution limits, tax treatment, and withdrawal rules — and build the financial literacy to evaluate them for your own situation.',
     'home.hero.cta': 'Book a consultation',
     'home.hero.secondary': 'Compare Accounts',
@@ -529,7 +532,10 @@ export const translations: Translations = {
     'cta.note': 'Только образовательные сессии. Не финансовая и не налоговая консультация.',
     
     // Home page
-    'home.hero.title': 'Полный гид по созданию капитала в Польше',
+    'home.hero.title': 'Полный гид по созданию Капитала в Польше',
+    'home.hero.title.pre': 'Полный гид по созданию',
+    'home.hero.title.accent': 'Капитала',
+    'home.hero.title.post': 'в Польше',
     'home.hero.subtitle': 'Разберите точную механику IKE и IKZE — лимиты взносов, налоговый режим и правила вывода — и получите финансовую грамотность для оценки этих инструментов.',
     'home.hero.cta': 'Записаться на консультацию',
     'home.hero.secondary': 'Сравнить счета',
@@ -743,7 +749,10 @@ export const translations: Translations = {
     'cta.note': 'Тільки освітні сесії. Не фінансова і не податкова консультація.',
     
     // Home page
-    'home.hero.title': 'Повний гід зі створення капіталу в Польщі',
+    'home.hero.title': 'Повний гід зі створення Капіталу в Польщі',
+    'home.hero.title.pre': 'Повний гід зі створення',
+    'home.hero.title.accent': 'Капіталу',
+    'home.hero.title.post': 'в Польщі',
     'home.hero.subtitle': 'Розберіть точну механіку IKE і IKZE — ліміти внесків, податковий режим та правила виведення — і здобудьте фінансову грамотність для оцінки цих інструментів.',
     'home.hero.cta': 'Записатися на консультацію',
     'home.hero.secondary': 'Порівняти рахунки',
