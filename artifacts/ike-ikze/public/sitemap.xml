@@ -79,4 +79,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/faq"/>
   </url>
 
+  <url>
+    <loc>https://expatfinance.pl/book</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://expatfinance.pl/book"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://expatfinance.pl/book"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://expatfinance.pl/book"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/book"/>
+  </url>
+
 </urlset>

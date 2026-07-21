@@ -12,6 +12,7 @@ import Compare from '@/pages/Compare';
 import Calculator from '@/pages/Calculator';
 import Expats from '@/pages/Expats';
 import FAQ from '@/pages/FAQ';
+import Book from '@/pages/Book';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ function Router() {
         <Route path="/calculator" component={Calculator} />
         <Route path="/expats" component={Expats} />
         <Route path="/faq" component={FAQ} />
+        <Route path="/book" component={Book} />
         <Route component={NotFound} />
       </Switch>
     </Layout>

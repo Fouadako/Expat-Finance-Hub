@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Globe, CheckCircle, FileText, Building2, Info, ArrowRight, AlertTriangle, DollarSign, TrendingUp, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { BookingCTA } from '@/components/BookingCTA';
 
 export default function Expats() {
   const { t } = useLanguage();
@@ -284,6 +285,8 @@ export default function Expats() {
         </div>
       </section>
 
+      <BookingCTA location="expats" />
+
       {/* CTA */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
@@ -293,12 +296,12 @@ export default function Expats() {
           <p className="text-lg opacity-90 mb-8">
             {t('expats.cta.desc')}
           </p>
-          <Link href="/faq">
-            <Button size="lg" variant="secondary" className="font-semibold" data-testid="button-faq">
+          <Button asChild size="lg" variant="secondary" className="font-semibold" data-testid="button-faq">
+            <Link href="/faq">
               {t('expats.cta.button')}
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </section>
     </>

@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Shield, CheckCircle, XCircle, ArrowRight, AlertTriangle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { BookingCTA } from '@/components/BookingCTA';
 
 export default function IKZE() {
   const { t } = useLanguage();
@@ -261,6 +262,8 @@ export default function IKZE() {
         </div>
       </section>
 
+      <BookingCTA location="ikze" />
+
       {/* CTA */}
       <section className="py-16 bg-muted">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
@@ -270,12 +273,12 @@ export default function IKZE() {
           <p className="text-lg text-muted-foreground mb-8">
             {t('ikze.cta.desc')}
           </p>
-          <Link href="/compare">
-            <Button size="lg" data-testid="button-compare-accounts">
+          <Button asChild size="lg" data-testid="button-compare-accounts">
+            <Link href="/compare">
               {t('ikze.cta.button')}
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </section>
     </>

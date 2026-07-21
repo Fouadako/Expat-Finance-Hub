@@ -16,8 +16,6 @@ export function Header() {
     { name: t('nav.expats'), href: '/expats' },
     { name: t('nav.faq'), href: '/faq' },
   ];
-  
-  const bookingUrl = 'https://calendar.app.google/Qd5aMvkXQJTQHw4q8';
 
   const languages: { code: Language; label: string; flag: string }[] = [
     { code: 'en', label: 'EN', flag: '🇬🇧' },
@@ -54,16 +52,18 @@ export function Header() {
 
           <div className="flex items-center gap-3">
             {/* Booking CTA */}
-            <a
-              href={bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden md:inline-block"
-            >
-              <Button variant="outline" size="sm" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground font-medium">
+            <Button asChild variant="default" size="sm" className="hidden md:inline-flex bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold shadow-sm">
+              <Link 
+                href="/book" 
+                onClick={() => {
+                  if (window.gtag) {
+                    window.gtag('event', 'book_consultation_click', { event_category: 'engagement', event_label: 'header' });
+                  }
+                }}
+              >
                 {t('nav.booking')}
-              </Button>
-            </a>
+              </Link>
+            </Button>
             
             {/* Language switcher */}
             <div className="flex items-center gap-1 border border-border rounded-lg p-1">
@@ -111,6 +111,18 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
+            <Link
+              href="/book"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                if (window.gtag) {
+                  window.gtag('event', 'book_consultation_click', { event_category: 'engagement', event_label: 'header_mobile' });
+                }
+              }}
+              className="block px-3 py-2 text-sm font-bold text-amber-500 hover:bg-muted rounded-md transition-colors mt-2"
+            >
+              {t('nav.booking')}
+            </Link>
           </div>
         )}
       </nav>

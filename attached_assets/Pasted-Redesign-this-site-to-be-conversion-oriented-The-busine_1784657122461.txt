@@ -1,0 +1,44 @@
+Redesign this site to be conversion-oriented. The business goal is to book paid EDUCATIONAL consultations about how IKE/IKZE retirement accounts work, aimed at English/Russian-speaking foreigners in Poland.
+
+CRITICAL COMPLIANCE RULE (applies to ALL copy you write):
+- This is financial EDUCATION, not financial or tax advice. Copy must explain how instruments, limits, taxes, and math WORK — never what a specific person should do, which product to buy, or how to structure their taxes.
+- Do NOT use suitability/matching language: no "we'll find what fits your situation", "which account is right for you", "I'll match you with a broker", "personalised advice/recommendations".
+- Do NOT use active-management verbs about the client's money or taxes: no "optimize", "protect", "structure", "manage".
+- Do NOT claim any investment is "zero risk" or "guaranteed" (only the statutory tax refund is a certainty, if mentioned at all).
+- Use facilitation framing instead: "walk you through the exact mechanics", "so you can evaluate it for your own strategy", "build the financial literacy to navigate IKE/IKZE".
+- Position me as a financial educator, NOT a licensed financial advisor or tax advisor.
+
+PRIMARY CTA
+- One primary call-to-action sitewide: "Book a consultation".
+- Sticky header (visible on scroll) + repeated at the bottom of every page. Make it visually dominant.
+
+WHAT THE CONSULTATION IS (use this framing in the copy)
+- Describe it as a session where I walk the client through the mechanics of IKE and IKZE — contribution limits, withdrawal rules, tax treatment, and account types (bank deposit vs brokerage) — so they can make their own informed decisions.
+- Do NOT describe it as choosing products for them or assessing their personal situation.
+
+BOOKING
+- Dedicated "Book a consultation" page with an embedded scheduler: [YOUR SCHEDULER LINK — e.g. Calendly / Cal.com, or add a placeholder embed I can paste my link into].
+- Offer: [FREE 15-MIN INTRO CALL leading to a paid educational session — OR — PAID SESSION ONLY].
+- Pricing: [SHOW PRICES: "PLN ___ / session" — OR — "book intro call first"].
+
+CONVERT THE TOOLS (compliant framing)
+- On the Calculator and Compare pages, after a result, insert a CTA block: "Want to understand how these mechanics apply in practice? Book a consultation and I'll walk you through them so you can evaluate your own strategy." Link to the booking page.
+
+TRUST / CREDIBILITY
+- "About / Why work with me" section: my professional background and years of experience, what I help clients understand (financial literacy around IKE/IKZE), and space for testimonials I'll add later. Frame as educator, not advisor.
+
+LEAD CAPTURE
+- Email opt-in offering a free EDUCATIONAL guide (e.g. "IKE vs IKZE: how each account actually works") — NOT a "which is right for you" guide. Show it on the Calculator result and in the footer.
+
+FINANCIAL FIGURES
+- Do NOT invent or guess any contribution limits, tax rates, or numbers. Leave clear placeholders like [2026 IKZE LIMIT] for me to fill with my own verified figures.
+
+MANDATORY DISCLAIMER
+- Add this to the site footer on every page AND at the bottom of the booking page, in both languages:
+  EN: "Disclaimer: This content and my consultations are strictly for educational purposes. I am not a licensed financial advisor or tax advisor (doradca podatkowy). I do not provide personalized investment recommendations or cross-border tax advice."
+  PL: "Zastrzeżenie: Ta treść oraz moje konsultacje mają charakter wyłącznie edukacyjny. Nie jestem licencjonowanym doradcą finansowym ani doradcą podatkowym. Nie udzielam spersonalizowanych rekomendacji inwestycyjnych ani porad z zakresu opodatkowania transgranicznego."
+
+MEASUREMENT
+- Fire a GA4 event (event name: "book_consultation_click") whenever any "Book a consultation" CTA is clicked.
+
+Keep the existing educational content and tools. Then tell me what changed so I can redeploy.

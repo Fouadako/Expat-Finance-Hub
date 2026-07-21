@@ -31,20 +31,27 @@ export default function Home() {
               {t('home.hero.title')}
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground mb-8 leading-relaxed">
-              {t('home.hero.subtitle')}
+              Walk through the exact mechanics of IKE and IKZE — contribution limits, tax treatment, and withdrawal rules — and build the financial literacy to evaluate them for your own situation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/expats">
-                <Button size="lg" className="w-full sm:w-auto font-semibold" data-testid="button-get-started">
-                  {t('home.hero.cta')}
+              <Button asChild size="lg" className="w-full sm:w-auto font-semibold bg-amber-500 hover:bg-amber-600 text-slate-900 shadow-sm" data-testid="button-get-started">
+                <Link 
+                  href="/book"
+                  onClick={() => {
+                    if (window.gtag) {
+                      window.gtag('event', 'book_consultation_click', { event_category: 'engagement', event_label: 'home_hero' });
+                    }
+                  }}
+                >
+                  Book a consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/compare">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto font-semibold" data-testid="button-compare">
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="w-full sm:w-auto font-semibold" data-testid="button-compare">
+                <Link href="/compare">
                   {t('home.hero.secondary')}
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -100,11 +107,11 @@ export default function Home() {
                       <span className="text-sm">{t('home.ike.withdraw')}</span>
                     </li>
                   </ul>
-                  <Link href="/ike">
-                    <Button variant="outline" className="w-full mt-6" data-testid="button-learn-ike">
+                  <Button asChild variant="outline" className="w-full mt-6" data-testid="button-learn-ike">
+                    <Link href="/ike">
                       {t('common.learnmore')}
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </CardContent>
               </Card>
             </motion.div>
@@ -146,11 +153,11 @@ export default function Home() {
                       <span className="text-sm">{t('home.ikze.tax')}</span>
                     </li>
                   </ul>
-                  <Link href="/ikze">
-                    <Button variant="outline" className="w-full mt-6" data-testid="button-learn-ikze">
+                  <Button asChild variant="outline" className="w-full mt-6" data-testid="button-learn-ikze">
+                    <Link href="/ikze">
                       {t('common.learnmore')}
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </CardContent>
               </Card>
             </motion.div>
@@ -260,6 +267,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About / Why work with me */}
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-8 text-center">
+              {t('home.about.title') !== 'home.about.title' ? t('home.about.title') : 'Why work with me?'}
+            </h2>
+            
+            <Card className="border-l-4 border-l-amber-500 shadow-sm border-y-border border-r-border">
+              <CardContent className="p-8 sm:p-10 space-y-6">
+                <p className="text-lg font-medium text-foreground leading-relaxed">
+                  {t('home.about.educator') !== 'home.about.educator' ? t('home.about.educator') : "I'm a financial educator who helps English and Russian-speaking foreigners understand how Poland's retirement accounts actually work."}
+                </p>
+                
+                <ul className="space-y-4 text-muted-foreground">
+                  <li className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2.5 shrink-0" />
+                    <span>[Your background — e.g. years working with expats in Poland]</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2.5 shrink-0" />
+                    <span>[What you help clients understand — e.g. breaking down complex Polish tax mechanics into clear English/Russian]</span>
+                  </li>
+                </ul>
+
+                <div className="pt-6 border-t border-border mt-8">
+                  <blockquote className="italic text-muted-foreground border-l-2 border-border pl-4 py-1">
+                    "[Testimonial placeholder — add yours here. E.g. 'Helped me finally understand the difference between IKE and IKZE without all the financial jargon.']"
+                  </blockquote>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Booking Section */}
       <section className="py-16 sm:py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent pointer-events-none" />
@@ -275,27 +323,30 @@ export default function Home() {
               <Calendar className="h-8 w-8" />
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4 tracking-tight">
-              {t('home.booking.title')}
+              Book a consultation — I'll walk you through the mechanics
             </h2>
             <p className="text-lg text-amber-100 font-medium mb-3">
-              {t('home.booking.subtitle')}
+              Understanding IKE and IKZE limits and taxes for your own situation.
             </p>
             <p className="text-base text-slate-300 max-w-2xl mx-auto mb-6">
-              {t('home.booking.desc')}
+              These are educational sessions to help you understand how IKE and IKZE work — their mechanics, limits, and tax rules — so you can evaluate them for your own strategy. I do not provide personalized financial advice.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-              <a
-                href="https://calendar.app.google/Qd5aMvkXQJTQHw4q8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block"
-              >
-                <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold shadow-lg hover:shadow-xl transition-all">
-                  {t('home.booking.cta')}
-                  <ExternalLink className="ml-2 h-5 w-5" />
-                </Button>
-              </a>
+              <Button asChild size="lg" className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold shadow-lg hover:shadow-xl transition-all">
+                <Link
+                  href="/book"
+                  onClick={() => {
+                    if (window.gtag) {
+                      window.gtag('event', 'book_consultation_click', { event_category: 'engagement', event_label: 'home_booking_section' });
+                    }
+                  }}
+                  className="inline-flex items-center"
+                >
+                  Book a consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
             </div>
             
             <div className="flex items-center justify-center gap-2 text-xs text-slate-400">
@@ -315,12 +366,12 @@ export default function Home() {
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
             {t('home.cta.desc')}
           </p>
-          <Link href="/ike">
-            <Button size="lg" variant="secondary" className="font-semibold" data-testid="button-explore-guides">
+          <Button asChild size="lg" variant="secondary" className="font-semibold" data-testid="button-explore-guides">
+            <Link href="/ike">
               {t('home.cta.button')}
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </section>
 

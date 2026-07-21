@@ -62,12 +62,18 @@ export const translations: Translations = {
     'nav.calculator': 'Calculator',
     'nav.expats': 'For Expats',
     'nav.faq': 'FAQ',
-    'nav.booking': 'Book a Session',
+    'nav.booking': 'Book a consultation',
     
+    // Booking CTA
+    'cta.heading': 'Want to understand how these mechanics apply in practice?',
+    'cta.body': 'Book a consultation and I\'ll walk you through the exact mechanics of IKE and IKZE so you can evaluate your own strategy.',
+    'cta.button': 'Book a consultation',
+    'cta.note': 'Educational sessions only. Not financial or tax advice.',
+
     // Home page
     'home.hero.title': 'Your Complete Guide to Retirement Savings in Poland',
-    'home.hero.subtitle': 'Everything expats and foreign residents need to know about IKE and IKZE accounts in 2026',
-    'home.hero.cta': 'Get Started',
+    'home.hero.subtitle': 'Walk through the exact mechanics of IKE and IKZE — contribution limits, tax treatment, and withdrawal rules — and build the financial literacy to evaluate them for your own situation.',
+    'home.hero.cta': 'Book a consultation',
     'home.hero.secondary': 'Compare Accounts',
     
     'home.what.title': 'What are IKE and IKZE?',
@@ -106,7 +112,10 @@ export const translations: Translations = {
     'home.booking.title': 'Have Questions? Book an Educational Session',
     'home.booking.subtitle': 'Walk through the mechanics of IKE and IKZE together. Educational sessions only — not financial advice.',
     'home.booking.desc': 'These are educational sessions to help you understand how IKE and IKZE work — their mechanics, limits, and tax rules — so you can evaluate them for your own situation. I do not provide personalized financial advice.',
-    'home.booking.cta': 'Book the Session',
+    'home.booking.cta': 'Book a consultation',
+
+    'home.about.title': 'Why work with me?',
+    'home.about.educator': 'I\'m a financial educator who helps English and Russian-speaking foreigners understand how Poland\'s retirement accounts actually work.',
     
     'home.cta.title': 'Ready to Start Saving?',
     'home.cta.desc': 'Explore detailed guides, compare accounts, and use our calculator to plan your retirement.',
@@ -495,11 +504,17 @@ export const translations: Translations = {
     'nav.expats': 'Для иностранцев',
     'nav.faq': 'Вопросы',
     'nav.booking': 'Записаться на консультацию',
+
+    // Booking CTA
+    'cta.heading': 'Хотите понять, как эта механика работает на практике?',
+    'cta.body': 'Запишитесь на консультацию, и я разберу с вами точную механику IKE и IKZE, чтобы вы могли оценить свою стратегию.',
+    'cta.button': 'Записаться на консультацию',
+    'cta.note': 'Только образовательные сессии. Не финансовая и не налоговая консультация.',
     
     // Home page
     'home.hero.title': 'Полный гид по пенсионным накоплениям в Польше',
-    'home.hero.subtitle': 'Всё, что иностранным резидентам нужно знать о счетах IKE и IKZE в 2026 году',
-    'home.hero.cta': 'Начать',
+    'home.hero.subtitle': 'Разберите точную механику IKE и IKZE — лимиты взносов, налоговый режим и правила вывода — и получите финансовую грамотность для оценки этих инструментов.',
+    'home.hero.cta': 'Записаться на консультацию',
     'home.hero.secondary': 'Сравнить счета',
     
     'home.what.title': 'Что такое IKE и IKZE?',
@@ -538,8 +553,11 @@ export const translations: Translations = {
     'home.booking.title': 'Есть вопросы? Запишитесь на образовательную сессию',
     'home.booking.subtitle': 'Разберите механику IKE и IKZE вместе. Только образовательные сессии — не финансовое консультирование.',
     'home.booking.desc': 'Это образовательные сессии, помогающие понять, как работают IKE и IKZE — их механику, лимиты и налоговые правила — чтобы вы могли оценить их для своей ситуации. Я не предоставляю персональных финансовых рекомендаций.',
-    'home.booking.cta': 'Записаться на сессию',
+    'home.booking.cta': 'Записаться на консультацию',
     
+    'home.about.title': 'Почему работать со мной?',
+    'home.about.educator': 'Я финансовый преподаватель, который помогает англо- и русскоязычным иностранцам понять, как на самом деле работают польские пенсионные счета.',
+
     'home.cta.title': 'Готовы начать копить?',
     'home.cta.desc': 'Изучите подробные гиды, сравните счета и используйте калькулятор для планирования пенсии.',
     'home.cta.button': 'Изучить гиды',
@@ -683,11 +701,17 @@ export const translations: Translations = {
     'nav.expats': 'Для іноземців',
     'nav.faq': 'Питання',
     'nav.booking': 'Записатися на консультацію',
+
+    // Booking CTA
+    'cta.heading': 'Хочете зрозуміти, як ця механіка працює на практиці?',
+    'cta.body': 'Запишіться на консультацію, і я розберу з вами точну механіку IKE і IKZE, щоб ви могли оцінити свою стратегію.',
+    'cta.button': 'Записатися на консультацию',
+    'cta.note': 'Тільки освітні сесії. Не фінансова і не податкова консультація.',
     
     // Home page
     'home.hero.title': 'Повний гід по пенсійних накопиченнях у Польщі',
-    'home.hero.subtitle': 'Все, що іноземним резидентам потрібно знати про рахунки IKE і IKZE в 2026 році',
-    'home.hero.cta': 'Почати',
+    'home.hero.subtitle': 'Розберіть точну механіку IKE і IKZE — ліміти внесків, податковий режим та правила виведення — і здобудьте фінансову грамотність для оцінки цих інструментів.',
+    'home.hero.cta': 'Записатися на консультацію',
     'home.hero.secondary': 'Порівняти рахунки',
     
     'home.what.title': 'Що таке IKE і IKZE?',
@@ -726,8 +750,11 @@ export const translations: Translations = {
     'home.booking.title': 'Є питання? Запишіться на освітню сесію',
     'home.booking.subtitle': 'Розберіть механіку IKE і IKZE разом. Тільки освітні сесії — не фінансове консультування.',
     'home.booking.desc': 'Це освітні сесії, що допомагають зрозуміти, як працюють IKE і IKZE — їх механіку, ліміти та податкові правила — щоб ви могли оцінити їх для своєї ситуації. Я не надаю персональних фінансових рекомендацій. Зверніть увагу: сесії проводяться англійською або російською мовою.',
-    'home.booking.cta': 'Записатися на сесію',
+    'home.booking.cta': 'Записатися на консультацію (сесії проводяться англійською або російською мовою)',
     
+    'home.about.title': 'Чому варто зі мною?',
+    'home.about.educator': 'Я фінансовий викладач, який допомагає англо- та російськомовним іноземцям зрозуміти, як насправді працюють польські пенсійні рахунки.',
+
     'home.cta.title': 'Готові почати накопичувати?',
     'home.cta.desc': 'Вивчіть детальні гіди, порівняйте рахунки та використовуйте калькулятор для планування пенсії.',
     'home.cta.button': 'Вивчити гіди',

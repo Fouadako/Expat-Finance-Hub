@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { TrendingUp, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { BookingCTA } from '@/components/BookingCTA';
 
 export default function IKE() {
   const { t } = useLanguage();
@@ -240,6 +241,8 @@ export default function IKE() {
         </div>
       </section>
 
+      <BookingCTA location="ike" />
+
       {/* CTA */}
       <section className="py-16 bg-muted">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
@@ -249,12 +252,12 @@ export default function IKE() {
           <p className="text-lg text-muted-foreground mb-8">
             {t('ike.cta.desc')}
           </p>
-          <Link href="/compare">
-            <Button size="lg" data-testid="button-compare-accounts">
+          <Button asChild size="lg" data-testid="button-compare-accounts">
+            <Link href="/compare">
               {t('ike.cta.button')}
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </section>
     </>

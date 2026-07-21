@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Calculator as CalcIcon, TrendingUp, Shield, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { BookingCTA } from '@/components/BookingCTA';
 
 export default function Calculator() {
   const { t } = useLanguage();
@@ -362,6 +363,8 @@ export default function Calculator() {
                 </Card>
               </motion.div>
 
+              <BookingCTA location="calculator" />
+
               {/* Disclaimer */}
               <Card className="bg-amber-50/50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800">
                 <CardContent className="p-6">
@@ -390,16 +393,16 @@ export default function Calculator() {
             {t('calc.cta.title')}
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/ike">
-              <Button variant="outline" size="lg" data-testid="button-learn-ike">
+            <Button asChild variant="outline" size="lg" data-testid="button-learn-ike">
+              <Link href="/ike">
                 {t('calc.cta.ike')}
-              </Button>
-            </Link>
-            <Link href="/ikze">
-              <Button variant="outline" size="lg" data-testid="button-learn-ikze">
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" data-testid="button-learn-ikze">
+              <Link href="/ikze">
                 {t('calc.cta.ikze')}
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

@@ -1,8 +1,12 @@
 import { Link } from 'wouter';
 import { useLanguage } from '@/lib/i18n';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useState } from 'react';
 
 export function Footer() {
   const { t } = useLanguage();
+  const [emailSent, setEmailSent] = useState(false);
 
   const navigation = {
     guides: [
@@ -15,12 +19,21 @@ export function Footer() {
       { name: t('nav.expats'), href: '/expats' },
       { name: t('nav.faq'), href: '/faq' },
     ],
+    sessions: [
+      { name: t('nav.booking'), href: '/book' },
+    ]
+  };
+
+  const handleEmailSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setEmailSent(true);
+    setTimeout(() => setEmailSent(false), 5000);
   };
 
   return (
     <footer className="bg-muted border-t border-border mt-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2 font-display text-xl font-bold text-foreground mb-4">
@@ -30,7 +43,7 @@ export function Footer() {
               IKE & IKZE Poland
             </Link>
             <p className="text-sm text-muted-foreground max-w-md">
-              Independent financial guide for foreigners navigating Poland's retirement savings system. Not affiliated with any bank or financial institution.
+              Independent educational guide for foreigners navigating Poland's retirement savings system. Not affiliated with any bank or financial institution.
             </p>
           </div>
 
@@ -67,19 +80,62 @@ export function Footer() {
               ))}
             </ul>
           </div>
+
+          {/* Sessions */}
+          <div>
+            <h3 className="font-display font-semibold text-sm text-foreground mb-3">Sessions</h3>
+            <ul className="space-y-2">
+              {navigation.sessions.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-sm font-medium text-accent hover:text-accent/80 transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Email Opt-in */}
+        <div className="mt-12 pt-8 border-t border-border">
+          <div className="bg-card border border-border rounded-lg p-6 max-w-2xl mx-auto text-center mb-12 shadow-sm">
+            <h3 className="font-display font-bold text-lg text-foreground mb-2">
+              Get the free guide: How IKE and IKZE actually work
+            </h3>
+            <p className="text-sm text-muted-foreground mb-6">
+              A plain-language breakdown of contribution mechanics, tax treatment, and withdrawal rules. Not investment advice.
+            </p>
+            {emailSent ? (
+              <div className="text-sm font-medium text-accent bg-accent/10 py-3 px-4 rounded-md">
+                Thanks! Check your inbox.
+              </div>
+            ) : (
+              <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+                <Input 
+                  type="email" 
+                  placeholder="Enter your email" 
+                  required 
+                  className="bg-background"
+                />
+                <Button type="submit" className="shrink-0 bg-primary text-primary-foreground">
+                  Send me the guide
+                </Button>
+              </form>
+            )}
+          </div>
         </div>
 
         {/* Legal Disclaimer */}
-        <div className="mt-12 pt-8 border-t border-border">
-          <div className="bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 rounded-lg p-6 mb-6">
-            <h3 className="font-display font-semibold text-sm text-foreground mb-3">
-              {t('footer.disclaimer.title')}
-            </h3>
-            <p className="text-xs text-muted-foreground leading-relaxed mb-3">
-              {t('footer.disclaimer.text')}
+        <div className="pt-8 border-t border-border">
+          <div className="bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 rounded-lg p-6 mb-6 space-y-4">
+            <p className="text-xs text-muted-foreground leading-relaxed font-medium">
+              Disclaimer: This content and my consultations are strictly for educational purposes. I am not a licensed financial advisor or tax advisor (doradca podatkowy). I do not provide personalized investment recommendations or cross-border tax advice.
             </p>
-            <p className="text-xs text-muted-foreground">
-              {t('footer.lastupdated')}
+            <p className="text-xs text-muted-foreground leading-relaxed font-medium">
+              Zastrzeżenie: Ta treść oraz moje konsultacje mają charakter wyłącznie edukacyjny. Nie jestem licencjonowanym doradcą finansowym ani doradcą podatkowym. Nie udzielam spersonalizowanych rekomendacji inwestycyjnych ani porad z zakresu opodatkowania transgranicznego.
             </p>
           </div>
           <p className="text-xs text-muted-foreground text-center">

@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { HelpCircle, ArrowRight, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { BookingCTA } from '@/components/BookingCTA';
 
 export default function FAQ() {
   const { t } = useLanguage();
@@ -117,6 +118,8 @@ export default function FAQ() {
         </div>
       </section>
 
+      <BookingCTA location="faq" />
+
       {/* CTA */}
       <section className="py-16 bg-muted">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
@@ -127,17 +130,17 @@ export default function FAQ() {
             {t('faq.cta.desc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/ike">
-              <Button size="lg" variant="outline" data-testid="button-guides">
+            <Button asChild size="lg" variant="outline" data-testid="button-guides">
+              <Link href="/ike">
                 {t('faq.cta.guides')}
-              </Button>
-            </Link>
-            <Link href="/calculator">
-              <Button size="lg" data-testid="button-calculator">
+              </Link>
+            </Button>
+            <Button asChild size="lg" data-testid="button-calculator">
+              <Link href="/calculator">
                 {t('faq.cta.calc')}
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

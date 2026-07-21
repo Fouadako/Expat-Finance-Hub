@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { GitCompare, TrendingUp, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { BookingCTA } from '@/components/BookingCTA';
 
 export default function Compare() {
   const { t } = useLanguage();
@@ -111,6 +112,8 @@ export default function Compare() {
           </div>
         </div>
       </section>
+
+      <BookingCTA location="compare" />
 
       {/* Can you have both */}
       <section className="py-16 bg-muted">
@@ -223,12 +226,12 @@ export default function Compare() {
           <p className="text-lg opacity-90 mb-8">
             {t('compare.cta.desc')}
           </p>
-          <Link href="/calculator">
-            <Button size="lg" variant="secondary" className="font-semibold" data-testid="button-use-calculator">
+          <Button asChild size="lg" variant="secondary" className="font-semibold" data-testid="button-use-calculator">
+            <Link href="/calculator">
               {t('compare.cta.button')}
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </section>
     </>
