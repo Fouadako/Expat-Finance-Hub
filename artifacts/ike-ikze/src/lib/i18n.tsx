@@ -106,7 +106,7 @@ export const translations: Translations = {
     'home.booking.title': 'Have Questions? Book an Educational Session',
     'home.booking.subtitle': 'Walk through the mechanics of IKE and IKZE together. Educational sessions only — not financial advice.',
     'home.booking.desc': 'These are educational sessions to help you understand how IKE and IKZE work — their mechanics, limits, and tax rules — so you can evaluate them for your own situation. I do not provide personalized financial advice.',
-    'home.booking.cta': 'Book a Free Session',
+    'home.booking.cta': 'Book the Session',
     
     'home.cta.title': 'Ready to Start Saving?',
     'home.cta.desc': 'Explore detailed guides, compare accounts, and use our calculator to plan your retirement.',
@@ -538,7 +538,7 @@ export const translations: Translations = {
     'home.booking.title': 'Есть вопросы? Запишитесь на образовательную сессию',
     'home.booking.subtitle': 'Разберите механику IKE и IKZE вместе. Только образовательные сессии — не финансовое консультирование.',
     'home.booking.desc': 'Это образовательные сессии, помогающие понять, как работают IKE и IKZE — их механику, лимиты и налоговые правила — чтобы вы могли оценить их для своей ситуации. Я не предоставляю персональных финансовых рекомендаций.',
-    'home.booking.cta': 'Записаться на бесплатную сессию',
+    'home.booking.cta': 'Записаться на сессию',
     
     'home.cta.title': 'Готовы начать копить?',
     'home.cta.desc': 'Изучите подробные гиды, сравните счета и используйте калькулятор для планирования пенсии.',
@@ -726,7 +726,7 @@ export const translations: Translations = {
     'home.booking.title': 'Є питання? Запишіться на освітню сесію',
     'home.booking.subtitle': 'Розберіть механіку IKE і IKZE разом. Тільки освітні сесії — не фінансове консультування.',
     'home.booking.desc': 'Це освітні сесії, що допомагають зрозуміти, як працюють IKE і IKZE — їх механіку, ліміти та податкові правила — щоб ви могли оцінити їх для своєї ситуації. Я не надаю персональних фінансових рекомендацій.',
-    'home.booking.cta': 'Записатися на безкоштовну сесію',
+    'home.booking.cta': 'Записатися на сесію',
     
     'home.cta.title': 'Готові почати накопичувати?',
     'home.cta.desc': 'Вивчіть детальні гіди, порівняйте рахунки та використовуйте калькулятор для планування пенсії.',
