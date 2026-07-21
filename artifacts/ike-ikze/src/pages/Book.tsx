@@ -74,7 +74,7 @@ export default function Book() {
                 <CardContent className="p-6">
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-foreground">Session price</span>
-                    <span className="text-lg font-mono font-bold text-accent">[Contact for pricing]</span>
+                    <span className="text-lg font-mono font-bold text-accent">450 PLN / 60-minute session</span>
                   </div>
                 </CardContent>
               </Card>

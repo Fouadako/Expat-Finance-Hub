@@ -289,11 +289,15 @@ export default function Home() {
                 <ul className="space-y-4 text-muted-foreground">
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2.5 shrink-0" />
-                    <span>[Your background — e.g. years working with expats in Poland]</span>
+                    <span>I walk you through how IKE and IKZE actually work — the 2026 limits, the tax mechanics without bureaucratic words.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2.5 shrink-0" />
-                    <span>[What you help clients understand — e.g. breaking down complex Polish tax mechanics into clear English/Russian]</span>
+                    <span>As a Senior Margin Assurance Analyst, financial modeling is my day job. I bring that same rigor to the IKZE deduction math and how the picture shifts between UoP and B2B, and as your income crosses into the higher tax bracket.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2.5 shrink-0" />
+                    <span>I explain exactly how the accounts behave when you stop being a Polish tax resident: what you can keep, how an early IKZE closure works, and where the real trade-offs sit — so the fear of leaving stops being a reason not to start.</span>
                   </li>
                 </ul>
 
