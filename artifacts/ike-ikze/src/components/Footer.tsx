@@ -5,8 +5,11 @@ import { Input } from '@/components/ui/input';
 import { useState } from 'react';
 
 export function Footer() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const [emailValue, setEmailValue] = useState('');
   const [emailSent, setEmailSent] = useState(false);
+  const [emailError, setEmailError] = useState('');
+  const [submitting, setSubmitting] = useState(false);
 
   const navigation = {
     guides: [
@@ -24,10 +27,27 @@ export function Footer() {
     ]
   };
 
-  const handleEmailSubmit = (e: React.FormEvent) => {
+  const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setEmailSent(true);
-    setTimeout(() => setEmailSent(false), 5000);
+    setEmailError('');
+    setSubmitting(true);
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: emailValue, language }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setEmailError(data.error ?? 'Something went wrong. Please try again.');
+      } else {
+        setEmailSent(true);
+      }
+    } catch {
+      setEmailError('Network error. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -109,20 +129,28 @@ export function Footer() {
               {t('footer.guide.desc')}
             </p>
             {emailSent ? (
-              <div className="text-sm font-medium text-accent bg-accent/10 py-3 px-4 rounded-md">
+              <div className="text-sm font-medium text-green-700 bg-green-50 border border-green-200 py-3 px-4 rounded-md">
                 {t('footer.guide.thanks')}
               </div>
             ) : (
-              <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
-                <Input 
-                  type="email" 
-                  placeholder={t('footer.guide.email')}
-                  required 
-                  className="bg-background"
-                />
-                <Button type="submit" className="shrink-0 bg-primary text-primary-foreground">
-                  {t('footer.guide.button')}
-                </Button>
+              <form onSubmit={handleEmailSubmit} className="flex flex-col gap-2 max-w-md mx-auto">
+                <div className="flex flex-col sm:flex-row gap-2">
+                  <Input
+                    type="email"
+                    placeholder={t('footer.guide.email')}
+                    required
+                    value={emailValue}
+                    onChange={(e) => { setEmailValue(e.target.value); setEmailError(''); }}
+                    className="bg-background"
+                    disabled={submitting}
+                  />
+                  <Button type="submit" className="shrink-0 bg-primary text-primary-foreground" disabled={submitting}>
+                    {submitting ? '…' : t('footer.guide.button')}
+                  </Button>
+                </div>
+                {emailError && (
+                  <p className="text-xs text-red-600">{emailError}</p>
+                )}
               </form>
             )}
           </div>
