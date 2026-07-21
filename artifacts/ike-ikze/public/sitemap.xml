@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://expatfinance.pl/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://expatfinance.pl/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://expatfinance.pl/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://expatfinance.pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/"/>
+  </url>
+
+  <url>
+    <loc>https://expatfinance.pl/ike</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://expatfinance.pl/ike"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://expatfinance.pl/ike"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://expatfinance.pl/ike"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/ike"/>
+  </url>
+
+  <url>
+    <loc>https://expatfinance.pl/ikze</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://expatfinance.pl/ikze"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://expatfinance.pl/ikze"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://expatfinance.pl/ikze"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/ikze"/>
+  </url>
+
+  <url>
+    <loc>https://expatfinance.pl/compare</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://expatfinance.pl/compare"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://expatfinance.pl/compare"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://expatfinance.pl/compare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/compare"/>
+  </url>
+
+  <url>
+    <loc>https://expatfinance.pl/calculator</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://expatfinance.pl/calculator"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://expatfinance.pl/calculator"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://expatfinance.pl/calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/calculator"/>
+  </url>
+
+  <url>
+    <loc>https://expatfinance.pl/expats</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://expatfinance.pl/expats"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://expatfinance.pl/expats"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://expatfinance.pl/expats"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/expats"/>
+  </url>
+
+  <url>
+    <loc>https://expatfinance.pl/faq</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://expatfinance.pl/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://expatfinance.pl/faq"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://expatfinance.pl/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/faq"/>
+  </url>
+
+</urlset>
