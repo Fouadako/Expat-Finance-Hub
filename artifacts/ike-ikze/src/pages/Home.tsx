@@ -289,23 +289,17 @@ export default function Home() {
                 <ul className="space-y-4 text-muted-foreground">
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2.5 shrink-0" />
-                    <span>I walk you through how IKE and IKZE actually work — the 2026 limits, the tax mechanics without bureaucratic words.</span>
+                    <span>{t('home.about.bullet1')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2.5 shrink-0" />
-                    <span>As a Senior Margin Assurance Analyst, financial modeling is my day job. I bring that same rigor to the IKZE deduction math and how the picture shifts between UoP and B2B, and as your income crosses into the higher tax bracket.</span>
+                    <span>{t('home.about.bullet2')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2.5 shrink-0" />
-                    <span>I explain exactly how the accounts behave when you stop being a Polish tax resident: what you can keep, how an early IKZE closure works, and where the real trade-offs sit — so the fear of leaving stops being a reason not to start.</span>
+                    <span>{t('home.about.bullet3')}</span>
                   </li>
                 </ul>
-
-                <div className="pt-6 border-t border-border mt-8">
-                  <blockquote className="italic text-muted-foreground border-l-2 border-border pl-4 py-1">
-                    "[Testimonial placeholder — add yours here. E.g. 'Helped me finally understand the difference between IKE and IKZE without all the financial jargon.']"
-                  </blockquote>
-                </div>
               </CardContent>
             </Card>
           </motion.div>
@@ -327,13 +321,13 @@ export default function Home() {
               <Calendar className="h-8 w-8" />
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4 tracking-tight">
-              Book a consultation — I'll walk you through the mechanics
+              {t('home.booking.heading2')}
             </h2>
             <p className="text-lg text-amber-100 font-medium mb-3">
-              Understanding IKE and IKZE limits and taxes for your own situation.
+              {t('home.booking.subtitle2')}
             </p>
             <p className="text-base text-slate-300 max-w-2xl mx-auto mb-6">
-              These are educational sessions to help you understand how IKE and IKZE work — their mechanics, limits, and tax rules — so you can evaluate them for your own strategy. I do not provide personalized financial advice.
+              {t('home.booking.desc2')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
@@ -347,7 +341,7 @@ export default function Home() {
                   }}
                   className="inline-flex items-center"
                 >
-                  Book a consultation
+                  {t('home.booking.cta')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -355,7 +349,7 @@ export default function Home() {
             
             <div className="flex items-center justify-center gap-2 text-xs text-slate-400">
               <AlertCircle className="h-4 w-4" />
-              <span>Educational sessions only. Not financial advice.</span>
+              <span>{t('home.booking.note')}</span>
             </div>
           </motion.div>
         </div>

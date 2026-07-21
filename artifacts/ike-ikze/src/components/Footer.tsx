@@ -43,13 +43,13 @@ export function Footer() {
               IKE & IKZE Poland
             </Link>
             <p className="text-sm text-muted-foreground max-w-md">
-              Independent educational guide for foreigners navigating Poland's retirement savings system. Not affiliated with any bank or financial institution.
+              {t('footer.brand')}
             </p>
           </div>
 
           {/* Guides */}
           <div>
-            <h3 className="font-display font-semibold text-sm text-foreground mb-3">Guides</h3>
+            <h3 className="font-display font-semibold text-sm text-foreground mb-3">{t('footer.guides')}</h3>
             <ul className="space-y-2">
               {navigation.guides.map((item) => (
                 <li key={item.href}>
@@ -66,7 +66,7 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="font-display font-semibold text-sm text-foreground mb-3">Resources</h3>
+            <h3 className="font-display font-semibold text-sm text-foreground mb-3">{t('footer.resources')}</h3>
             <ul className="space-y-2">
               {navigation.resources.map((item) => (
                 <li key={item.href}>
@@ -83,7 +83,7 @@ export function Footer() {
 
           {/* Sessions */}
           <div>
-            <h3 className="font-display font-semibold text-sm text-foreground mb-3">Sessions</h3>
+            <h3 className="font-display font-semibold text-sm text-foreground mb-3">{t('footer.sessions')}</h3>
             <ul className="space-y-2">
               {navigation.sessions.map((item) => (
                 <li key={item.href}>
@@ -103,25 +103,25 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="bg-card border border-border rounded-lg p-6 max-w-2xl mx-auto text-center mb-12 shadow-sm">
             <h3 className="font-display font-bold text-lg text-foreground mb-2">
-              Get the free guide: How IKE and IKZE actually work
+              {t('footer.guide.title')}
             </h3>
             <p className="text-sm text-muted-foreground mb-6">
-              A plain-language breakdown of contribution mechanics, tax treatment, and withdrawal rules. Not investment advice.
+              {t('footer.guide.desc')}
             </p>
             {emailSent ? (
               <div className="text-sm font-medium text-accent bg-accent/10 py-3 px-4 rounded-md">
-                Thanks! Check your inbox.
+                {t('footer.guide.thanks')}
               </div>
             ) : (
               <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
                 <Input 
                   type="email" 
-                  placeholder="Enter your email" 
+                  placeholder={t('footer.guide.email')}
                   required 
                   className="bg-background"
                 />
                 <Button type="submit" className="shrink-0 bg-primary text-primary-foreground">
-                  Send me the guide
+                  {t('footer.guide.button')}
                 </Button>
               </form>
             )}
