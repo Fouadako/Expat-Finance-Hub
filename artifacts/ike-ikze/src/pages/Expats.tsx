@@ -3,7 +3,7 @@ import { useLanguage } from '@/lib/i18n';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Globe, CheckCircle, FileText, Building2, Info, ArrowRight } from 'lucide-react';
+import { Globe, CheckCircle, FileText, Building2, Info, ArrowRight, AlertTriangle, DollarSign, TrendingUp, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Expats() {
@@ -99,23 +99,56 @@ export default function Expats() {
             </Card>
           </div>
 
-          {/* English-Language Providers */}
+          {/* Which Providers Offer IKE/IKZE */}
           <div className="mb-16">
             <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-              {t('expats.providers.title')}
+              {t('expats.brokers.title')}
             </h2>
+            
+            {/* Important Warning - IBKR/DEGIRO don't offer */}
+            <Card className="border-2 border-amber-500/50 bg-amber-50/50 dark:bg-amber-950/20 mb-6">
+              <CardContent className="p-6">
+                <div className="flex gap-3">
+                  <AlertTriangle className="h-6 w-6 text-amber-600 dark:text-amber-500 shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-foreground mb-2">Important</p>
+                    <p className="text-sm text-muted-foreground">
+                      {t('expats.brokers.note')}
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
             <Card>
-              <CardContent className="p-8">
-                <p className="text-muted-foreground mb-4">{t('expats.providers.p1')}</p>
-                <div className="bg-muted/50 border border-border rounded-lg p-6">
+              <CardContent className="p-8 space-y-4">
+                <div className="flex gap-3">
+                  <Building2 className="h-5 w-5 text-accent shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-foreground mb-1">XTB</p>
+                    <p className="text-sm text-muted-foreground">
+                      {t('expats.brokers.xtb')}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-3">
+                  <Building2 className="h-5 w-5 text-accent shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-foreground mb-1">Other Options</p>
+                    <p className="text-sm text-muted-foreground">
+                      {t('expats.brokers.others')}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-4 mt-4">
                   <div className="flex gap-3">
-                    <Building2 className="h-5 w-5 text-accent shrink-0 mt-0.5" />
+                    <AlertTriangle className="h-5 w-5 text-destructive shrink-0 mt-0.5" />
                     <div>
-                      <p className="text-sm text-foreground mb-2">
-                        International banks, online brokers, and major Polish banks often provide English-language account opening and support for IKE and IKZE accounts.
-                      </p>
-                      <p className="text-xs text-muted-foreground italic">
-                        {t('expats.providers.note')}
+                      <p className="font-semibold text-destructive mb-1">75% Penalty Warning</p>
+                      <p className="text-sm text-muted-foreground">
+                        {t('expats.brokers.warning75')}
                       </p>
                     </div>
                   </div>
@@ -129,27 +162,66 @@ export default function Expats() {
             <h2 className="font-display text-3xl font-bold text-foreground mb-6">
               {t('expats.leave.title')}
             </h2>
-            <Card className="border-2">
-              <CardContent className="p-8">
-                <p className="text-foreground mb-6">
-                  {t('expats.leave.p1')}
-                </p>
-                <p className="font-semibold text-foreground mb-4">{t('expats.leave.p2')}</p>
-                <ul className="space-y-3">
-                  {[
-                    t('expats.leave.maintain'),
-                    t('expats.leave.contribute'),
-                    t('expats.leave.tax'),
-                    t('expats.leave.consult'),
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <Info className="h-5 w-5 text-accent shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+            <div className="space-y-6">
+              <Card className="border-2 border-primary/50">
+                <CardContent className="p-8">
+                  <div className="flex gap-3 mb-4">
+                    <TrendingUp className="h-6 w-6 text-primary shrink-0" />
+                    <div>
+                      <h3 className="font-display font-semibold text-lg text-foreground mb-2">IKE if you leave</h3>
+                      <p className="text-sm text-muted-foreground">
+                        {t('expats.leave.ike')}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="border-2 border-accent/50">
+                <CardContent className="p-8">
+                  <div className="flex gap-3 mb-4">
+                    <Shield className="h-6 w-6 text-accent shrink-0" />
+                    <div>
+                      <h3 className="font-display font-semibold text-lg text-foreground mb-2">IKZE if you leave</h3>
+                      <p className="text-sm text-muted-foreground">
+                        {t('expats.leave.ikze')}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-muted/50">
+                <CardContent className="p-8">
+                  <div className="flex gap-3 mb-4">
+                    <DollarSign className="h-6 w-6 text-muted-foreground shrink-0" />
+                    <div>
+                      <h3 className="font-display font-semibold text-lg text-foreground mb-2">Currency Risk</h3>
+                      <p className="text-sm text-muted-foreground">
+                        {t('expats.leave.currency')}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="border-2 border-amber-500/50 bg-amber-50/50 dark:bg-amber-950/20">
+                <CardContent className="p-6">
+                  <div className="flex gap-3">
+                    <AlertTriangle className="h-6 w-6 text-amber-600 dark:text-amber-500 shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground mb-2">Cross-Border Tax Advice</p>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        {t('expats.leave.disclaimer')}
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        {t('expats.leave.uscitizen')}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
           {/* Tax Considerations */}

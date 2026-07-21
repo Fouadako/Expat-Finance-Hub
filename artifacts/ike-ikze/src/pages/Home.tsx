@@ -3,7 +3,7 @@ import { useLanguage } from '@/lib/i18n';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, TrendingUp, Shield, Users, Banknote, Globe, CheckCircle } from 'lucide-react';
+import { ArrowRight, TrendingUp, Shield, Users, Banknote, Globe, CheckCircle, Calendar, ExternalLink, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <SEO
-        title={language === 'en' ? 'IKE & IKZE Poland 2025: Complete Guide for Expats' : language === 'ru' ? 'IKE и IKZE Польша 2025: Полный гид для иностранцев' : 'IKE і IKZE Польща 2025: Повний гід для іноземців'}
+        title={language === 'en' ? 'IKE & IKZE Poland 2026: Complete Guide for Expats' : language === 'ru' ? 'IKE и IKZE Польша 2026: Полный гид для иностранцев' : 'IKE і IKZE Польща 2026: Повний гід для іноземців'}
         description={language === 'en' ? 'Everything expats need to know about IKE and IKZE retirement accounts in Poland: contribution limits, tax benefits, and how to open as a foreign resident.' : language === 'ru' ? 'Все, что иностранцам нужно знать о пенсионных счетах IKE и IKZE в Польше: лимиты взносов, налоговые льготы и как открыть.' : 'Все, що іноземцям потрібно знати про пенсійні рахунки IKE і IKZE у Польщі: ліміти внесків, податкові пільги та як відкрити.'}
         path="/"
       />
@@ -257,6 +257,52 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Booking Section */}
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent pointer-events-none" />
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <div className="w-16 h-16 rounded-2xl bg-amber-500/20 border-2 border-amber-500/40 text-amber-400 flex items-center justify-center mx-auto mb-6">
+              <Calendar className="h-8 w-8" />
+            </div>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4 tracking-tight">
+              {t('home.booking.title')}
+            </h2>
+            <p className="text-lg text-amber-100 font-medium mb-3">
+              {t('home.booking.subtitle')}
+            </p>
+            <p className="text-base text-slate-300 max-w-2xl mx-auto mb-6">
+              {t('home.booking.desc')}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+              <a
+                href="https://calendar.app.google/Qd5aMvkXQJTQHw4q8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold shadow-lg hover:shadow-xl transition-all">
+                  {t('home.booking.cta')}
+                  <ExternalLink className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
+            </div>
+            
+            <div className="flex items-center justify-center gap-2 text-xs text-slate-400">
+              <AlertCircle className="h-4 w-4" />
+              <span>Educational sessions only. Not financial advice.</span>
+            </div>
+          </motion.div>
         </div>
       </section>
 

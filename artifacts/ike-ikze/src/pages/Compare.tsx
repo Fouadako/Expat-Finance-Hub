@@ -14,7 +14,7 @@ export default function Compare() {
     { feature: t('compare.selfemployed'), ike: t('compare.selfemployed.ike'), ikze: t('compare.selfemployed.ikze') },
     { feature: t('compare.deduction'), ike: t('compare.deduction.ike'), ikze: t('compare.deduction.ikze') },
     { feature: t('compare.withdraw.tax'), ike: t('compare.withdraw.tax.ike'), ikze: t('compare.withdraw.tax.ikze') },
-    { feature: t('compare.age'), ike: t('compare.age.both'), ikze: t('compare.age.both') },
+    { feature: t('compare.age'), ike: t('compare.age.ike'), ikze: t('compare.age.ikze') },
     { feature: t('compare.invest'), ike: t('compare.invest.ike'), ikze: t('compare.invest.ikze') },
     { feature: t('compare.eligible'), ike: t('compare.eligible.both'), ikze: t('compare.eligible.both') },
     { feature: t('compare.early'), ike: t('compare.early.ike'), ikze: t('compare.early.ikze') },
@@ -55,6 +55,13 @@ export default function Compare() {
       {/* Comparison Table */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          {/* Updated badge */}
+          <div className="flex justify-center mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20">
+              <div className="w-2 h-2 rounded-full bg-accent" />
+              <span className="text-xs font-medium text-accent">Updated for 2026 limits</span>
+            </div>
+          </div>
           {/* Header Row */}
           <div className="grid grid-cols-3 gap-4 mb-6">
             <div className="font-display text-sm font-semibold text-muted-foreground uppercase tracking-wide">

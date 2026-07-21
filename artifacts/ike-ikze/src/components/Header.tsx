@@ -16,6 +16,8 @@ export function Header() {
     { name: t('nav.expats'), href: '/expats' },
     { name: t('nav.faq'), href: '/faq' },
   ];
+  
+  const bookingUrl = 'https://calendar.app.google/Qd5aMvkXQJTQHw4q8';
 
   const languages: { code: Language; label: string; flag: string }[] = [
     { code: 'en', label: 'EN', flag: '🇬🇧' },
@@ -50,7 +52,19 @@ export function Header() {
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
+            {/* Booking CTA */}
+            <a
+              href={bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-block"
+            >
+              <Button variant="outline" size="sm" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground font-medium">
+                {t('nav.booking')}
+              </Button>
+            </a>
+            
             {/* Language switcher */}
             <div className="flex items-center gap-1 border border-border rounded-lg p-1">
               {languages.map((lang) => (

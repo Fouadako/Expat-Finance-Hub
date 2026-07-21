@@ -3,7 +3,7 @@ import { useLanguage } from '@/lib/i18n';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Shield, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
+import { Shield, CheckCircle, XCircle, ArrowRight, AlertTriangle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function IKZE() {
@@ -44,6 +44,13 @@ export default function IKZE() {
       {/* Main Content */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          {/* Updated badge */}
+          <div className="flex justify-center mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20">
+              <div className="w-2 h-2 rounded-full bg-accent" />
+              <span className="text-xs font-medium text-accent">Updated for 2026: PLN 11,304 (UoP) / PLN 16,956 (JDG)</span>
+            </div>
+          </div>
           <article className="prose prose-lg max-w-none">
             <h2 className="font-display text-3xl font-bold text-foreground mb-6">
               {t('ikze.what.title')}
@@ -182,6 +189,25 @@ export default function IKZE() {
                   ))}
                 </ul>
                 <p className="text-sm text-muted-foreground italic">{t('ikze.invest.note')}</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Ryczałt Warning */}
+          <div className="my-12">
+            <Card className="border-2 border-amber-500/50 bg-amber-50/50 dark:bg-amber-950/20">
+              <CardContent className="p-8">
+                <div className="flex gap-4">
+                  <AlertTriangle className="h-8 w-8 text-amber-600 dark:text-amber-500 shrink-0 mt-1" />
+                  <div>
+                    <h2 className="font-display text-2xl font-bold text-foreground mb-4">
+                      {t('ikze.ryczalt.title')}
+                    </h2>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {t('ikze.ryczalt.desc')}
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>

@@ -69,9 +69,21 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border">
+        {/* Legal Disclaimer */}
+        <div className="mt-12 pt-8 border-t border-border">
+          <div className="bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 rounded-lg p-6 mb-6">
+            <h3 className="font-display font-semibold text-sm text-foreground mb-3">
+              {t('footer.disclaimer.title')}
+            </h3>
+            <p className="text-xs text-muted-foreground leading-relaxed mb-3">
+              {t('footer.disclaimer.text')}
+            </p>
+            <p className="text-xs text-muted-foreground">
+              {t('footer.lastupdated')}
+            </p>
+          </div>
           <p className="text-xs text-muted-foreground text-center">
-            2025 IKE & IKZE Poland Guide. Information provided for educational purposes only. Consult a licensed financial advisor before making investment decisions.
+            © 2026 IKE & IKZE Poland Guide. Information provided for educational purposes only.
           </p>
         </div>
       </div>

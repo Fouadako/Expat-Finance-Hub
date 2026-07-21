@@ -13,10 +13,11 @@ import { motion } from 'framer-motion';
 export default function Calculator() {
   const { t } = useLanguage();
 
+  const [contractType, setContractType] = useState<'uop' | 'jdg'>('uop');
   const [monthly, setMonthly] = useState(1000);
   const [annualReturn, setAnnualReturn] = useState(7);
   const [years, setYears] = useState(25);
-  const [taxBracket, setTaxBracket] = useState(17);
+  const [taxBracket, setTaxBracket] = useState(12);
 
   // Calculate future value with monthly contributions
   const calculateFV = (monthlyContribution: number, annualRate: number, years: number) => {
@@ -35,7 +36,8 @@ export default function Calculator() {
   const ikeAfterTax = ikeFV; // No tax on withdrawal
 
   // IKZE: Upfront deduction, 10% tax on withdrawal
-  const ikzeAnnualContribution = Math.min(monthly * 12, 9388.80);
+  const ikzeLimit = contractType === 'jdg' ? 16956 : 11304;
+  const ikzeAnnualContribution = Math.min(monthly * 12, ikzeLimit);
   const ikzeMonthlyEffective = ikzeAnnualContribution / 12;
   const ikzeUpfrontSavings = ikzeAnnualContribution * (taxBracket / 100) * years; // Tax deduction benefit
   const ikzeFV = calculateFV(ikzeMonthlyEffective, annualReturn, years);
@@ -93,6 +95,13 @@ export default function Calculator() {
       {/* Calculator */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          {/* Updated badge */}
+          <div className="flex justify-center mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20">
+              <div className="w-2 h-2 rounded-full bg-accent" />
+              <span className="text-xs font-medium text-accent">2026 limits: IKE PLN 28,260 | IKZE PLN 11,304 (UoP) / 16,956 (JDG)</span>
+            </div>
+          </div>
           <div className="grid lg:grid-cols-5 gap-8">
             {/* Inputs */}
             <div className="lg:col-span-2">
@@ -103,6 +112,22 @@ export default function Calculator() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
+                  {/* Contract Type */}
+                  <div>
+                    <Label htmlFor="contractType" className="text-sm font-medium mb-2 block">
+                      {t('calc.contracttype')}
+                    </Label>
+                    <Select value={contractType} onValueChange={(val) => setContractType(val as 'uop' | 'jdg')}>
+                      <SelectTrigger id="contractType" data-testid="select-contract-type">
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="uop">{t('calc.contracttype.uop')}</SelectItem>
+                        <SelectItem value="jdg">{t('calc.contracttype.jdg')}</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
                   {/* Monthly contribution */}
                   <div>
                     <Label htmlFor="monthly" className="text-sm font-medium mb-2 block">
@@ -175,8 +200,9 @@ export default function Calculator() {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="12">{t('calc.bracket.12')}</SelectItem>
-                        <SelectItem value="17">{t('calc.bracket.17')}</SelectItem>
                         <SelectItem value="32">{t('calc.bracket.32')}</SelectItem>
+                        <SelectItem value="19">{t('calc.bracket.19lin')}</SelectItem>
+                        <SelectItem value="10">{t('calc.bracket.ryczalt')}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -254,10 +280,12 @@ export default function Calculator() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    {monthly * 12 > 9388.80 && (
+                    {monthly * 12 > ikzeLimit && (
                       <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-3 mb-4">
                         <p className="text-xs text-amber-700 dark:text-amber-400">
-                          Monthly contribution capped at PLN 782.40 (annual limit PLN 9,388.80)
+                          {contractType === 'jdg' 
+                            ? 'Monthly contribution capped at PLN 1,413 (annual limit PLN 16,956 for JDG/B2B)' 
+                            : 'Monthly contribution capped at PLN 942 (annual limit PLN 11,304 for employees)'}
                         </p>
                       </div>
                     )}
@@ -335,13 +363,18 @@ export default function Calculator() {
               </motion.div>
 
               {/* Disclaimer */}
-              <Card className="bg-muted/50 border-muted">
+              <Card className="bg-amber-50/50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800">
                 <CardContent className="p-6">
                   <div className="flex gap-3">
-                    <AlertCircle className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
-                    <p className="text-sm text-muted-foreground">
-                      {t('calc.note')}
-                    </p>
+                    <AlertCircle className="h-5 w-5 text-amber-600 dark:text-amber-500 shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        {t('calc.note')}
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        Disclaimer: This content is strictly for educational purposes. I am not a licensed financial advisor or tax advisor (doradca podatkowy). Always verify information with a licensed professional.
+                      </p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

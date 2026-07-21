@@ -2,8 +2,9 @@ import { Link } from 'wouter';
 import { useLanguage } from '@/lib/i18n';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { HelpCircle, ArrowRight } from 'lucide-react';
+import { HelpCircle, ArrowRight, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function FAQ() {
@@ -59,6 +60,20 @@ export default function FAQ() {
       {/* FAQ Accordion */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          {/* Disclaimer */}
+          <Card className="bg-amber-50/50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800 mb-8">
+            <CardContent className="p-6">
+              <div className="flex gap-3">
+                <AlertCircle className="h-5 w-5 text-amber-600 dark:text-amber-500 shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Educational content only.</strong> I am not a licensed financial advisor or tax advisor (doradca podatkowy). I do not provide personalized investment recommendations or cross-border tax advice. Always verify information with a licensed professional.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, i) => (
               <motion.div
