@@ -130,12 +130,9 @@ export function Footer() {
 
         {/* Legal Disclaimer */}
         <div className="pt-8 border-t border-border">
-          <div className="bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 rounded-lg p-6 mb-6 space-y-4">
+          <div className="bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 rounded-lg p-6 mb-6">
             <p className="text-xs text-muted-foreground leading-relaxed font-medium">
-              Disclaimer: This content and my consultations are strictly for educational purposes. I am not a licensed financial advisor or tax advisor (doradca podatkowy). I do not provide personalized investment recommendations or cross-border tax advice.
-            </p>
-            <p className="text-xs text-muted-foreground leading-relaxed font-medium">
-              Zastrzeżenie: Ta treść oraz moje konsultacje mają charakter wyłącznie edukacyjny. Nie jestem licencjonowanym doradcą finansowym ani doradcą podatkowym. Nie udzielam spersonalizowanych rekomendacji inwestycyjnych ani porad z zakresu opodatkowania transgranicznego.
+              {t('disclaimer.text')}
             </p>
           </div>
           <p className="text-xs text-muted-foreground text-center">

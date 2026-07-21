@@ -112,20 +112,12 @@ export default function Book() {
           </div>
           
           <div className="mt-20 pt-8 border-t border-border">
-            <div className="bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 rounded-lg p-6 space-y-6">
+            <div className="bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 rounded-lg p-6">
               <div className="flex gap-4">
                 <AlertCircle className="h-6 w-6 text-amber-600 dark:text-amber-500 shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm text-muted-foreground leading-relaxed font-medium">
-                    Disclaimer: This content and my consultations are strictly for educational purposes. I am not a licensed financial advisor or tax advisor (doradca podatkowy). I do not provide personalized investment recommendations or cross-border tax advice.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="h-6 w-6 shrink-0" />
-                <div>
-                  <p className="text-sm text-muted-foreground leading-relaxed font-medium">
-                    Zastrzeżenie: Ta treść oraz moje konsultacje mają charakter wyłącznie edukacyjny. Nie jestem licencjonowanym doradcą finansowym ani doradcą podatkowym. Nie udzielam spersonalizowanych rekomendacji inwestycyjnych ani porad z zakresu opodatkowania transgranicznego.
+                    {t('disclaimer.text')}
                   </p>
                 </div>
               </div>

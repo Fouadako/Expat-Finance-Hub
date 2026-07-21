@@ -31,7 +31,7 @@ export default function Home() {
               {t('home.hero.title')}
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground mb-8 leading-relaxed">
-              Walk through the exact mechanics of IKE and IKZE — contribution limits, tax treatment, and withdrawal rules — and build the financial literacy to evaluate them for your own situation.
+              {t('home.hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="w-full sm:w-auto font-semibold bg-amber-500 hover:bg-amber-600 text-slate-900 shadow-sm" data-testid="button-get-started">
@@ -43,7 +43,7 @@ export default function Home() {
                     }
                   }}
                 >
-                  Book a consultation
+                  {t('home.hero.cta')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

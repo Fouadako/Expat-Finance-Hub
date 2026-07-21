@@ -502,6 +502,7 @@ export const translations: Translations = {
     // Footer
     'footer.disclaimer.title': 'Legal Disclaimer',
     'footer.disclaimer.text': 'Disclaimer: This content is strictly for educational purposes. I am not a licensed financial advisor or tax advisor (doradca podatkowy). I do not provide personalized investment recommendations or cross-border tax advice. Always verify information with a licensed professional.',
+    'disclaimer.text': 'Disclaimer: This content and my consultations are strictly for educational purposes. I am not a licensed financial advisor or tax advisor (doradca podatkowy). I do not provide personalized investment recommendations or cross-border tax advice.',
     'footer.lastupdated': 'Last updated for 2026 limits. Limits verified against Monitor Polski announcement, November 2025.',
     
     // Common
@@ -716,6 +717,7 @@ export const translations: Translations = {
     
     'footer.disclaimer.title': 'Правовая оговорка',
     'footer.disclaimer.text': 'Оговорка: Этот контент носит исключительно образовательный характер. Я не являюсь лицензированным финансовым консультантом или налоговым консультантом (doradca podatkowy). Я не предоставляю персональных инвестиционных рекомендаций или советов по трансграничному налогообложению. Всегда проверяйте информацию у лицензированного специалиста.',
+    'disclaimer.text': 'Оговорка: Этот контент и мои консультации носят исключительно образовательный характер. Я не являюсь лицензированным финансовым консультантом или налоговым консультантом (doradca podatkowy). Я не предоставляю персональных инвестиционных рекомендаций или советов по трансграничному налогообложению.',
     'footer.lastupdated': 'Последнее обновление для лимитов 2026 года. Лимиты проверены по объявлению Monitor Polski, ноябрь 2025 г.',
     
     'common.readmore': 'Читать дальше',
@@ -862,6 +864,7 @@ export const translations: Translations = {
     
     'footer.disclaimer.title': 'Правова застереження',
     'footer.disclaimer.text': 'Застереження: Цей контент має виключно освітній характер. Я не є ліцензованим фінансовим консультантом або податковим консультантом (doradca podatkowy). Я не надаю персональних інвестиційних рекомендацій або порад щодо транскордонного оподаткування. Завжди перевіряйте інформацію у ліцензованого фахівця.',
+    'disclaimer.text': 'Застереження: Цей контент і мої консультації мають виключно освітній характер. Я не є ліцензованим фінансовим консультантом або податковим консультантом (doradca podatkowy). Я не надаю персональних інвестиційних рекомендацій або порад щодо транскордонного оподаткування.',
     'footer.lastupdated': 'Останнє оновлення для лімітів 2026 року. Ліміти перевірені за оголошенням Monitor Polski, листопад 2025 р.',
     
     'common.readmore': 'Читати далі',
