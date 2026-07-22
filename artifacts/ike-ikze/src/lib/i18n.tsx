@@ -91,7 +91,7 @@ export const translations: Translations = {
     
     'home.ikze.title': 'IKZE',
     'home.ikze.subtitle': 'Tax Deduction Now',
-    'home.ikze.desc': 'Contribute up to PLN 11,304 (employees) or PLN 16,956 (self-employed) and deduct from your taxable income. Pay only 10% tax on withdrawal at age 65.',
+    'home.ikze.desc': 'Contribute up to PLN 11,304 (employees) or PLN 16,956 (self-employed) and deduct from your taxable income. Pay only 10% tax on qualified withdrawal at age 65 (requires contributions in ≥5 calendar years).',
     'home.ikze.limit': 'PLN 11,304 annual limit (employees)',
     'home.ikze.deduction': 'Full PIT deduction',
     'home.ikze.tax': '10% flat tax on withdrawal',
@@ -220,7 +220,7 @@ export const translations: Translations = {
     
     'ikze.what.title': 'What is IKZE?',
     'ikze.what.p1': 'IKZE (Indywidualne Konto Zabezpieczenia Emerytalnego) is an individual retirement security account that offers an immediate tax benefit: contributions are fully deductible from your PIT (Personal Income Tax) taxable income.',
-    'ikze.what.p2': 'For employees, the 2026 annual contribution limit is PLN 11,304 (1.2× average monthly salary). Self-employed individuals (JDG/B2B) can contribute up to PLN 16,956 (1.8× average monthly salary). When you withdraw funds after age 65, you pay a flat 10% tax — significantly lower than standard income tax rates.',
+    'ikze.what.p2': 'For employees, the 2026 annual contribution limit is PLN 11,304 (1.2× average monthly salary). Self-employed individuals (JDG/B2B) can contribute up to PLN 16,956 (1.8× average monthly salary). Qualified withdrawal requires age 65 AND contributions in at least 5 calendar years; it is taxed at a flat 10% rate. Installment payouts must run for at least 10 years (or your actual saving period if shorter, minimum 5 years).',
     
     'ikze.limits.title': '2026 Contribution Limits',
     'ikze.limits.employee': 'Employees (UoP)',
@@ -235,7 +235,7 @@ export const translations: Translations = {
     'ikze.tax.savings': 'Immediate tax savings',
     'ikze.tax.savings.desc': 'Save 12-32% of contribution depending on tax bracket',
     'ikze.tax.withdraw': '10% flat tax on withdrawal',
-    'ikze.tax.withdraw.desc': 'Much lower than standard income tax rates',
+    'ikze.tax.withdraw.desc': 'Requires age 65 AND contributions in at least 5 different calendar years. Installment payouts must span ≥10 years (or actual saving period if shorter, min. 5 years).',
     
     'ikze.eligible.title': 'Who Can Open IKZE?',
     'ikze.eligible.p1': 'Any individual with a PESEL number who pays PIT tax in Poland:',
@@ -259,7 +259,7 @@ export const translations: Translations = {
     'ikze.invest.funds': 'Mutual funds (TFI)',
     'ikze.invest.stocks': 'Stocks and ETFs (via brokerage IKZE)',
     'ikze.invest.insurance': 'Insurance products',
-    'ikze.invest.note': 'Note: Bank deposits are not available for IKZE (only IKE)',
+    'ikze.invest.note': 'Note: Bank deposit accounts are also available for IKZE through banks',
     
     'ikze.pros.title': 'Advantages',
     'ikze.pros.immediate': 'Immediate tax deduction',
@@ -275,7 +275,7 @@ export const translations: Translations = {
     'ikze.cons.tax': 'Withdrawal is taxed',
     'ikze.cons.tax.desc': 'Unlike IKE, you pay 10% tax when withdrawing at age 65',
     'ikze.cons.penalty': 'Early withdrawal penalties',
-    'ikze.cons.penalty.desc': 'Early full liquidation adds the entire amount to your taxable income',
+    'ikze.cons.penalty.desc': 'No partial withdrawal — only full liquidation (zwrot) is possible, unlike IKE. The entire amount is added to taxable income at progressive PIT scale rates.',
     
     'ikze.ryczalt.title': 'Important: If You Are on Ryczałt Tax',
     'ikze.ryczalt.desc': 'If you pay ryczałt (lump-sum tax on revenue — common among IT freelancers at 8.5% or 12%), the IKZE deduction reduces your revenue at your lump-sum rate, not your marginal income tax rate. The benefit is smaller than for skala or liniowy taxpayers. For ryczałt taxpayers, IKE is often worth considering first. This is a significant nuance the research shows is almost absent from English-language content.',
@@ -314,11 +314,11 @@ export const translations: Translations = {
     
     'compare.age': 'Withdrawal age',
     'compare.age.ike': 'Age 60 (or 55 with pension rights) + contributions in ≥5 calendar years',
-    'compare.age.ikze': 'Age 65',
+    'compare.age.ikze': 'Age 65 + contributions in ≥5 calendar years',
     
     'compare.invest': 'Investment options',
     'compare.invest.ike': 'Funds, stocks, ETFs, bank deposits, insurance',
-    'compare.invest.ikze': 'Funds, stocks, ETFs, insurance (no bank deposits)',
+    'compare.invest.ikze': 'Funds, stocks, ETFs, bank deposits, insurance',
     
     'compare.eligible': 'Eligibility',
     'compare.eligible.both': 'Any individual aged 16+ with a PESEL number',
@@ -471,10 +471,10 @@ export const translations: Translations = {
     'faq.a3': 'You can keep your IKE/IKZE accounts even after leaving Poland. The accounts remain yours, and you can withdraw funds according to standard rules. However, you generally cannot make new contributions without Polish income. Tax treatment may vary depending on your new country of residence.',
     
     'faq.q4': 'What happens to the money if I die?',
-    'faq.a4': 'IKE and IKZE accounts are inheritable. Designated beneficiaries or legal heirs receive the funds completely tax-free — exempt from both capital gains (Belka) tax and inheritance/gift tax. Beneficiaries can either withdraw the funds or transfer them directly to their own IKE or PPE account, with the same tax-free treatment in both cases.',
+    'faq.a4': 'Both accounts are inheritable, but with different tax treatment. For IKE: beneficiaries receive funds completely tax-free — exempt from both Belka and inheritance/gift tax — and can withdraw or transfer to their own IKE or PPE. For IKZE: beneficiaries pay a flat 10% tax on withdrawal. IKZE funds can be transferred to the beneficiary\'s own IKZE (with 10% tax on eventual withdrawal), but cannot be moved to IKE or PPE.',
     
     'faq.q5': 'Can I withdraw money before the qualifying age?',
-    'faq.a5': 'Yes. For IKE: early withdrawal is always possible. Full early withdrawal triggers 19% Belka tax on gains only — your contributed principal is never touched. Since 2009, partial withdrawal of your own contributions is also allowed (the proportional gain on the withdrawn amount is taxable). Important: once you make the first full IKE withdrawal or receive the first installment, you cannot open a new IKE — the tax exemption is a once-per-lifetime benefit. For IKZE: early full liquidation adds the entire amount (contributions + gains) to your taxable income at the progressive rate.',
+    'faq.a5': 'Yes. For IKE: early withdrawal is always possible. Full early withdrawal triggers 19% Belka tax on gains only — your contributed principal is never touched. Since 2009, partial withdrawal of your own contributions is also allowed. Important: once you make the first full IKE withdrawal or receive the first installment, you cannot open a new IKE. For IKZE: no partial withdrawal is allowed — only full liquidation (zwrot). The entire amount (contributions + gains) is added to your taxable income at progressive PIT scale rates.',
     
     'faq.q6': 'Do popular brokers like Interactive Brokers, DEGIRO, or Revolut offer IKE/IKZE?',
     'faq.a6': 'No. IKE and IKZE are Polish-specific tax wrappers and are only available through Polish-licensed financial institutions. IBKR, DEGIRO, Revolut, Trading 212, and eToro do not offer these accounts. Polish brokers such as XTB, DM BOŚ, and mBank eMakler are among those that do.',
@@ -489,7 +489,7 @@ export const translations: Translations = {
     'faq.a9': 'Report your IKZE contributions in your annual Polish tax return (PIT-37 for employees, PIT-36 for self-employed). The contribution amount reduces your taxable income, lowering your tax bill. Your provider will give you a statement of contributions.',
     
     'faq.q10': 'Can I transfer my IKE or IKZE to a different provider?',
-    'faq.a10': 'Yes. You can transfer your IKE or IKZE account to a different provider without losing tax benefits, as long as the transfer is done correctly (direct transfer between providers, not withdrawal and redeposit). Check with both providers for transfer procedures.',
+    'faq.a10': 'Yes, but with an important difference. IKE can be transferred to a different IKE provider or to a PPE. IKZE can only be transferred to another IKZE — not to IKE or PPE. Both types of transfer are tax-free. Always do a direct provider-to-provider transfer, not a withdrawal and redeposit.',
     
     'faq.q11': 'Are there any fees?',
     'faq.a11': 'Fees vary by provider. Common fees include account maintenance fees, fund management fees (TFI), or transaction fees (brokerage). Compare providers carefully and read fee schedules before opening an account.',
@@ -558,7 +558,7 @@ export const translations: Translations = {
     
     'home.ikze.title': 'IKZE',
     'home.ikze.subtitle': 'Налоговый вычет сейчас',
-    'home.ikze.desc': 'Внесите до 11 304 злотых (наемные работники) или 16 956 злотых (самозанятые) и вычтите из налогооблагаемого дохода. Платите только 10% налог при выводе в 65 лет.',
+    'home.ikze.desc': 'Внесите до 11 304 злотых (наемные работники) или 16 956 злотых (самозанятые) и вычтите из налогооблагаемого дохода. Платите только 10% налог при квалифицированном выводе в 65 лет (при взносах в ≥5 календарных годах).',
     'home.ikze.limit': 'Годовой лимит 11 304 зл (наемные работники)',
     'home.ikze.deduction': 'Полный вычет из PIT',
     'home.ikze.tax': '10% налог при выводе',
@@ -687,7 +687,7 @@ export const translations: Translations = {
 
     'ikze.what.title': 'Что такое IKZE?',
     'ikze.what.p1': 'IKZE (Indywidualne Konto Zabezpieczenia Emerytalnego) — это индивидуальный счет пенсионного обеспечения, предлагающий немедленную налоговую льготу: взносы полностью вычитаются из вашего налогооблагаемого дохода PIT.',
-    'ikze.what.p2': 'Для наемных работников годовой лимит взноса 2026 года составляет 11 304 злотых (1,2× средней месячной зарплаты). Самозанятые (JDG/B2B) могут вносить до 16 956 злотых (1,8× средней месячной зарплаты). При выводе средств после 65 лет вы платите фиксированный налог 10% — значительно ниже стандартных ставок подоходного налога.',
+    'ikze.what.p2': 'Для наемных работников годовой лимит взноса 2026 года составляет 11 304 злотых (1,2× средней месячной зарплаты). Самозанятые (JDG/B2B) могут вносить до 16 956 злотых (1,8× средней месячной зарплаты). Квалифицированный вывод требует возраст 65 лет И взносы как минимум в 5 календарных годах; он облагается фиксированным налогом 10%. Выплата в рассрочку должна длиться не менее 10 лет (или фактический период накопления, если он короче, минимум 5 лет).',
 
     'ikze.limits.title': 'Лимиты взносов 2026',
     'ikze.limits.employee': 'Наемные работники (UoP)',
@@ -702,7 +702,7 @@ export const translations: Translations = {
     'ikze.tax.savings': 'Немедленная экономия на налогах',
     'ikze.tax.savings.desc': 'Экономьте 12-32% взноса в зависимости от налоговой ставки',
     'ikze.tax.withdraw': '10% фиксированный налог при выводе',
-    'ikze.tax.withdraw.desc': 'Значительно ниже стандартных ставок подоходного налога',
+    'ikze.tax.withdraw.desc': 'Требует возраст 65 лет И взносы как минимум в 5 разных календарных годах. Выплата в рассрочку должна длиться ≥10 лет (или фактический период накопления, если он короче, минимум 5 лет).',
 
     'ikze.eligible.title': 'Кто может открыть IKZE?',
     'ikze.eligible.p1': 'Любое лицо с номером PESEL, уплачивающее PIT в Польше:',
@@ -726,7 +726,7 @@ export const translations: Translations = {
     'ikze.invest.funds': 'Взаимные фонды (TFI)',
     'ikze.invest.stocks': 'Акции и ETF (через брокерский IKZE)',
     'ikze.invest.insurance': 'Страховые продукты',
-    'ikze.invest.note': 'Примечание: Банковские депозиты недоступны для IKZE (только для IKE)',
+    'ikze.invest.note': 'Примечание: Банковские депозитные счета также доступны для IKZE через банки',
 
     'ikze.pros.title': 'Преимущества',
     'ikze.pros.immediate': 'Немедленный налоговый вычет',
@@ -742,7 +742,7 @@ export const translations: Translations = {
     'ikze.cons.tax': 'Вывод облагается налогом',
     'ikze.cons.tax.desc': 'В отличие от IKE, при выводе в 65 лет вы платите 10% налог',
     'ikze.cons.penalty': 'Штрафы за досрочный вывод',
-    'ikze.cons.penalty.desc': 'Досрочная полная ликвидация добавляет всю сумму к налогооблагаемому доходу',
+    'ikze.cons.penalty.desc': 'Частичный вывод невозможен — только полная ликвидация (zwrot), в отличие от IKE. Вся сумма добавляется к налогооблагаемому доходу по прогрессивной шкале PIT.',
 
     'ikze.cta.title': 'Сравните с IKE',
     'ikze.cta.desc': 'Посмотрите, чем IKZE отличается от IKE, чтобы сделать лучший выбор для вашей ситуации.',
@@ -773,10 +773,10 @@ export const translations: Translations = {
     'compare.withdraw.tax.ikze': '10% фиксированная ставка',
     'compare.age': 'Возраст вывода',
     'compare.age.ike': 'Возраст 60 (или 55 при наличии пенсионных прав) + взносы в ≥5 календарных годах',
-    'compare.age.ikze': 'Возраст 65',
+    'compare.age.ikze': 'Возраст 65 + взносы в ≥5 календарных годах',
     'compare.invest': 'Варианты инвестирования',
     'compare.invest.ike': 'Фонды, акции, ETF, банковские депозиты, страхование',
-    'compare.invest.ikze': 'Фонды, акции, ETF, страхование (без банковских депозитов)',
+    'compare.invest.ikze': 'Фонды, акции, ETF, банковские депозиты, страхование',
     'compare.eligible': 'Право на открытие',
     'compare.eligible.both': 'Любое лицо от 16 лет с номером PESEL',
     'compare.early': 'Штраф за досрочный вывод',
@@ -905,13 +905,13 @@ export const translations: Translations = {
     'faq.q3': 'Что происходит со счетом при отъезде из Польши?',
     'faq.a3': 'Вы можете сохранить счета IKE/IKZE даже после отъезда. Счета остаются вашими, и вы можете выводить средства по стандартным правилам. Однако, как правило, новые взносы невозможны без польского дохода. Налоговый режим может различаться в зависимости от новой страны проживания.',
     'faq.q4': 'Что происходит с деньгами в случае смерти?',
-    'faq.a4': 'Счета IKE и IKZE наследуемы. Назначенные бенефициары или законные наследники получают средства полностью без налогов — они освобождены как от налога Белки, так и от налога на наследство и дарение. Бенефициары могут вывести средства или перевести их на собственный счет IKE или PPE — в обоих случаях без налогов.',
+    'faq.a4': 'Оба счета наследуемы, но с разным налогообложением. Для IKE: бенефициары получают средства полностью без налогов — освобождены как от налога Белки, так и от налога на наследство и дарение — и могут вывести или перевести на собственный IKE или PPE. Для IKZE: бенефициары платят фиксированный налог 10% при выводе. Средства IKZE можно перевести на IKZE бенефициара (с 10% налогом при последующем выводе), но не на IKE или PPE.',
     'faq.q5': 'Можно ли вывести деньги до достижения пенсионного возраста?',
-    'faq.a5': 'Да. Для IKE: досрочный вывод всегда возможен. Полный досрочный вывод активирует 19% налог Белки только на прибыль — основной капитал не затрагивается никогда. С 2009 года разрешён частичный вывод собственных взносов (пропорциональная прибыль на выведенную часть облагается налогом). Важно: после первого полного вывода IKE или первой рассрочки открыть новый IKE невозможно — льгота действует один раз в жизни. Для IKZE: досрочная полная ликвидация добавляет всю сумму (взносы + доход) к налогооблагаемому доходу по прогрессивной ставке.',
+    'faq.a5': 'Да. Для IKE: досрочный вывод всегда возможен. Полный досрочный вывод активирует 19% налог Белки только на прибыль — основной капитал не затрагивается никогда. С 2009 года разрешён частичный вывод собственных взносов. Важно: после первого полного вывода IKE или первой рассрочки открыть новый IKE невозможно. Для IKZE: частичный вывод невозможен — только полная ликвидация (zwrot). Вся сумма (взносы + доход) добавляется к налогооблагаемому доходу по прогрессивной шкале PIT.',
     'faq.q9': 'Как получить налоговый вычет IKZE?',
     'faq.a9': 'Укажите взносы в IKZE в ежегодной польской налоговой декларации (PIT-37 для наемных, PIT-36 для самозанятых). Сумма взносов уменьшает налогооблагаемый доход, снижая налоговый счет. Провайдер выдаст вам справку о взносах.',
     'faq.q10': 'Можно ли перевести IKE или IKZE к другому провайдеру?',
-    'faq.a10': 'Да. Вы можете перевести счет IKE или IKZE к другому провайдеру без потери налоговых льгот при правильном оформлении (прямой перевод между провайдерами, не снятие и повторный депозит). Уточните процедуру перевода у обоих провайдеров.',
+    'faq.a10': 'Да, но с важным отличием. IKE можно перевести к другому провайдеру IKE или в PPE. IKZE можно перевести только в другой IKZE — не в IKE и не в PPE. Оба типа переводов освобождены от налогов. Всегда делайте прямой перевод между провайдерами, не снятие и повторный депозит.',
     'faq.q11': 'Есть ли комиссии?',
     'faq.a11': 'Комиссии зависят от провайдера. Распространенные: за обслуживание счета, за управление фондом (TFI) или транзакционные (брокерские). Тщательно сравнивайте провайдеров и изучайте тарифы перед открытием счета.',
     'faq.cta.title': 'Остались вопросы?',
@@ -985,7 +985,7 @@ export const translations: Translations = {
     
     'home.ikze.title': 'IKZE',
     'home.ikze.subtitle': 'Податкова знижка зараз',
-    'home.ikze.desc': 'Внесіть до 11 304 злотих (найм працівники) або 16 956 злотих (самозайняті) і відрахуйте з оподатковуваного доходу. Сплачуйте лише 10% податок при виведенні у 65 років.',
+    'home.ikze.desc': 'Внесіть до 11 304 злотих (наймані працівники) або 16 956 злотих (самозайняті) і відрахуйте з оподатковуваного доходу. Сплачуйте лише 10% податок при кваліфікованому виведенні у 65 років (при внесках в ≥5 календарних роках).',
     'home.ikze.limit': 'Річний ліміт 11 304 зл (найм працівники)',
     'home.ikze.deduction': 'Повна знижка з PIT',
     'home.ikze.tax': '10% податок при виведенні',
@@ -1114,7 +1114,7 @@ export const translations: Translations = {
 
     'ikze.what.title': 'Що таке IKZE?',
     'ikze.what.p1': 'IKZE (Indywidualne Konto Zabezpieczenia Emerytalnego) — це індивідуальний рахунок пенсійного забезпечення, що пропонує негайну податкову пільгу: внески повністю вираховуються з вашого оподатковуваного доходу PIT.',
-    'ikze.what.p2': 'Для найманих працівників річний ліміт внеску 2026 року становить 11 304 злотих (1,2× середньої місячної зарплати). Самозайняті (JDG/B2B) можуть вносити до 16 956 злотих (1,8× середньої місячної зарплати). При виведенні коштів після 65 років ви платите фіксований податок 10% — значно нижче стандартних ставок прибуткового податку.',
+    'ikze.what.p2': 'Для найманих працівників річний ліміт внеску 2026 року становить 11 304 злотих (1,2× середньої місячної зарплати). Самозайняті (JDG/B2B) можуть вносити до 16 956 злотих (1,8× середньої місячної зарплати). Кваліфіковане виведення потребує вік 65 років І внески щонайменше в 5 календарних роках; воно оподатковується фіксованою ставкою 10%. Виплата на виплати має тривати не менше 10 років (або фактичний період накопичення, якщо він коротший, мінімум 5 років).',
 
     'ikze.limits.title': 'Ліміти внесків 2026',
     'ikze.limits.employee': 'Наймані працівники (UoP)',
@@ -1129,7 +1129,7 @@ export const translations: Translations = {
     'ikze.tax.savings': 'Негайна економія на податках',
     'ikze.tax.savings.desc': 'Економте 12-32% внеску залежно від податкової ставки',
     'ikze.tax.withdraw': '10% фіксований податок при виведенні',
-    'ikze.tax.withdraw.desc': 'Значно нижче стандартних ставок прибуткового податку',
+    'ikze.tax.withdraw.desc': 'Потребує вік 65 років І внески щонайменше в 5 різних календарних роках. Виплата на виплати має тривати ≥10 років (або фактичний період накопичення, якщо він коротший, мінімум 5 років).',
 
     'ikze.eligible.title': 'Хто може відкрити IKZE?',
     'ikze.eligible.p1': 'Будь-яка особа з номером PESEL, що сплачує PIT в Польщі:',
@@ -1153,7 +1153,7 @@ export const translations: Translations = {
     'ikze.invest.funds': 'Взаємні фонди (TFI)',
     'ikze.invest.stocks': 'Акції та ETF (через брокерський IKZE)',
     'ikze.invest.insurance': 'Страхові продукти',
-    'ikze.invest.note': 'Примітка: Банківські депозити недоступні для IKZE (тільки для IKE)',
+    'ikze.invest.note': 'Примітка: Банківські депозитні рахунки також доступні для IKZE через банки',
 
     'ikze.pros.title': 'Переваги',
     'ikze.pros.immediate': 'Негайне податкове вирахування',
@@ -1169,7 +1169,7 @@ export const translations: Translations = {
     'ikze.cons.tax': 'Виведення оподатковується',
     'ikze.cons.tax.desc': 'На відміну від IKE, при виведенні в 65 років ви платите 10% податок',
     'ikze.cons.penalty': 'Штрафи за дострокове виведення',
-    'ikze.cons.penalty.desc': 'Дострокова повна ліквідація додає всю суму до оподатковуваного доходу',
+    'ikze.cons.penalty.desc': 'Часткове виведення неможливе — тільки повна ліквідація (zwrot), на відміну від IKE. Вся сума додається до оподатковуваного доходу за прогресивною шкалою PIT.',
 
     'ikze.cta.title': 'Порівняйте з IKE',
     'ikze.cta.desc': 'Подивіться, чим IKZE відрізняється від IKE, щоб зробити найкращий вибір для вашої ситуації.',
@@ -1200,10 +1200,10 @@ export const translations: Translations = {
     'compare.withdraw.tax.ikze': '10% фіксована ставка',
     'compare.age': 'Вік виведення',
     'compare.age.ike': 'Вік 60 (або 55 за наявності пенсійних прав) + внески в ≥5 календарних роках',
-    'compare.age.ikze': 'Вік 65',
+    'compare.age.ikze': 'Вік 65 + внески в ≥5 календарних роках',
     'compare.invest': 'Варіанти інвестування',
     'compare.invest.ike': 'Фонди, акції, ETF, банківські депозити, страхування',
-    'compare.invest.ikze': 'Фонди, акції, ETF, страхування (без банківських депозитів)',
+    'compare.invest.ikze': 'Фонди, акції, ETF, банківські депозити, страхування',
     'compare.eligible': 'Право на відкриття',
     'compare.eligible.both': 'Будь-яка особа від 16 років з номером PESEL',
     'compare.early': 'Штраф за дострокове виведення',
@@ -1332,13 +1332,13 @@ export const translations: Translations = {
     'faq.q3': 'Що відбувається з рахунком при від\'їзді з Польщі?',
     'faq.a3': 'Ви можете зберегти рахунки IKE/IKZE навіть після від\'їзду. Рахунки залишаються вашими, і ви можете виводити кошти за стандартними правилами. Однак, як правило, нові внески неможливі без польського доходу. Податковий режим може відрізнятися залежно від нової країни проживання.',
     'faq.q4': 'Що відбувається з грошима у разі смерті?',
-    'faq.a4': 'Рахунки IKE і IKZE успадковуються. Призначені бенефіціари або законні спадкоємці отримують кошти повністю без податків — звільнені як від податку Белки, так і від податку на спадщину та дарування. Бенефіціари можуть вивести кошти або перевести їх на власний рахунок IKE чи PPE — в обох випадках без жодних податків.',
+    'faq.a4': 'Обидва рахунки успадковуються, але з різним оподаткуванням. Для IKE: бенефіціари отримують кошти повністю без податків — звільнені як від податку Белки, так і від податку на спадщину та дарування — і можуть вивести або перевести на власний IKE чи PPE. Для IKZE: бенефіціари сплачують фіксований 10% податок при виведенні. Кошти IKZE можна перевести на IKZE бенефіціара (з 10% податком при наступному виведенні), але не на IKE або PPE.',
     'faq.q5': 'Чи можна вивести кошти до досягнення пенсійного віку?',
-    'faq.a5': 'Так. Для IKE: дострокове виведення завжди можливе. Повне дострокове виведення активує 19% податок Белки тільки на прибуток — основний капітал ніколи не зачіпається. З 2009 року також дозволено часткове виведення власних внесків (пропорційний прибуток на виведену частину оподатковується). Важливо: після першого повного виведення IKE або першого платежу при розстрочці відкрити новий IKE неможливо — пільга діє один раз у житті. Для IKZE: дострокова повна ліквідація додає всю суму (внески + дохід) до оподатковуваного доходу за прогресивною ставкою.',
+    'faq.a5': 'Так. Для IKE: дострокове виведення завжди можливе. Повне дострокове виведення активує 19% податок Белки тільки на прибуток — основний капітал ніколи не зачіпається. З 2009 року також дозволено часткове виведення власних внесків. Важливо: після першого повного виведення IKE або першого платежу при розстрочці відкрити новий IKE неможливо. Для IKZE: часткове виведення неможливе — тільки повна ліквідація (zwrot). Вся сума (внески + дохід) додається до оподатковуваного доходу за прогресивною шкалою PIT.',
     'faq.q9': 'Як отримати податкове вирахування IKZE?',
     'faq.a9': 'Зазначте внески в IKZE у щорічній польській податковій декларації (PIT-37 для найманих, PIT-36 для самозайнятих). Сума внесків зменшує оподатковуваний дохід, знижуючи ваш податковий рахунок. Провайдер надасть вам довідку про внески.',
     'faq.q10': 'Чи можна перевести IKE або IKZE до іншого провайдера?',
-    'faq.a10': 'Так. Ви можете перевести рахунок IKE або IKZE до іншого провайдера без втрати податкових пільг при правильному оформленні (прямий переказ між провайдерами, а не зняття і повторний депозит). Уточніть процедуру переводу у обох провайдерів.',
+    'faq.a10': 'Так, але з важливою відмінністю. IKE можна перевести до іншого провайдера IKE або до PPE. IKZE можна перевести лише до іншого IKZE — не до IKE і не до PPE. Обидва типи переказів звільнені від податків. Завжди робіть прямий переказ між провайдерами, а не зняття і повторний депозит.',
     'faq.q11': 'Чи є комісії?',
     'faq.a11': 'Комісії залежать від провайдера. Поширені: за обслуговування рахунку, за управління фондом (TFI) або транзакційні (брокерські). Ретельно порівнюйте провайдерів і вивчайте тарифи перед відкриттям рахунку.',
     'faq.cta.title': 'Ще є питання?',
