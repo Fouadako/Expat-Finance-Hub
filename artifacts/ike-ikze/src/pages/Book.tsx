@@ -66,10 +66,6 @@ export default function Book() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-accent shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">{t('book.expect.item3')}</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-accent shrink-0 mt-0.5" />
                   <span className="text-muted-foreground">{t('book.expect.item4')}</span>
                 </li>
               </ul>

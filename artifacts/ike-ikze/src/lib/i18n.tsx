@@ -511,7 +511,6 @@ export const translations: Translations = {
     'book.expect.title': 'What to expect',
     'book.expect.item1': 'Exactly how the 2026 contribution limits and withdrawal rules work — so you can see what you\'d actually be committing to, and weigh it against your own plans, before you put in a single złoty.',
     'book.expect.item2': 'Where each account\'s tax advantage really comes from: the 19% Belka exemption, the upfront PIT refund, and the 10% rate at the end. You\'ll be able to read the numbers yourself and see the real value, instead of taking anyone\'s word for it.',
-    'book.expect.item3': 'How to read and evaluate the numbers, so you can apply them to your own situation.',
     'book.expect.item4': 'And if you\'re not sure you\'ll stay in Poland long-term — what actually happens to each account if you leave, so that question stops being a reason to do nothing.',
     'footer.lastupdated': 'Last updated for 2026 limits. Limits verified against Monitor Polski announcement, November 2025.',
     
@@ -798,7 +797,6 @@ export const translations: Translations = {
     'book.expect.title': 'Что вас ждёт',
     'book.expect.item1': 'Как именно работают лимиты взносов 2026 года и правила вывода средств — чтобы вы понимали, к чему реально обязываетесь, и могли взвесить это с учётом своих планов, прежде чем вложить хоть один злотый.',
     'book.expect.item2': 'Откуда берётся налоговое преимущество каждого счёта: освобождение от 19% налога Белки, авансовый возврат PIT и ставка 10% при выводе. Вы сами прочитаете цифры и увидите реальную выгоду — не на чьих-то словах.',
-    'book.expect.item3': 'Как читать и оценивать цифры, чтобы применять их к своей ситуации.',
     'book.expect.item4': 'А если вы не уверены, останетесь ли в Польше надолго — что именно происходит с каждым счётом при отъезде, чтобы этот вопрос перестал быть причиной бездействия.',
     'footer.lastupdated': 'Последнее обновление для лимитов 2026 года. Лимиты проверены по объявлению Monitor Polski, ноябрь 2025 г.',
     
@@ -1084,7 +1082,6 @@ export const translations: Translations = {
     'book.expect.title': 'Що на вас чекає',
     'book.expect.item1': 'Як саме працюють ліміти внесків 2026 року та правила виведення коштів — щоб ви бачили, до чого реально зобов\'язуєтеся, і могли зважити це з урахуванням власних планів, перш ніж вкласти хоч один злотий.',
     'book.expect.item2': 'Звідки береться податкова перевага кожного рахунку: звільнення від 19% податку Белки, авансове повернення PIT та ставка 10% при виведенні. Ви самі прочитаєте цифри і побачите реальну вигоду — не на чиїхось словах.',
-    'book.expect.item3': 'Як читати та оцінювати цифри, щоб застосовувати їх до своєї ситуації.',
     'book.expect.item4': 'А якщо ви не впевнені, чи залишитеся в Польщі надовго — що насправді відбувається з кожним рахунком, якщо ви виїдете, щоб це питання перестало бути причиною нічого не робити.',
     'footer.lastupdated': 'Останнє оновлення для лімітів 2026 року. Ліміти перевірені за оголошенням Monitor Polski, листопад 2025 р.',
     
