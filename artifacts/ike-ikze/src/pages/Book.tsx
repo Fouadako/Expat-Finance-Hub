@@ -53,20 +53,24 @@ export default function Book() {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <h2 className="font-display text-2xl font-bold text-foreground mb-6">
-                What to expect
+                {t('book.expect.title')}
               </h2>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-accent shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">How IKE and IKZE contribution limits and withdrawal rules work in 2026</span>
+                  <span className="text-muted-foreground">{t('book.expect.item1')}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-accent shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">The tax treatment of each account — Belka tax, PIT deduction, 10% flat rate at withdrawal</span>
+                  <span className="text-muted-foreground">{t('book.expect.item2')}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-accent shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">How to read and evaluate the numbers, so you can apply them to your own situation</span>
+                  <span className="text-muted-foreground">{t('book.expect.item3')}</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-accent shrink-0 mt-0.5" />
+                  <span className="text-muted-foreground">{t('book.expect.item4')}</span>
                 </li>
               </ul>
               
