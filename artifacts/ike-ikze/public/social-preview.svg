@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a5f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- Decorative circles -->
+  <circle cx="1050" cy="120" r="200" fill="#3b82f6" opacity="0.07" />
+  <circle cx="1100" cy="500" r="150" fill="#06b6d4" opacity="0.06" />
+  <circle cx="100" cy="500" r="180" fill="#3b82f6" opacity="0.05" />
+
+  <!-- Accent bar -->
+  <rect x="80" y="220" width="6" height="180" fill="url(#accent)" rx="3" />
+
+  <!-- Polish flag accent strip -->
+  <rect x="80" y="80" width="120" height="8" rx="4" fill="#dc2626" />
+  <rect x="80" y="92" width="120" height="8" rx="4" fill="#f8fafc" />
+
+  <!-- PL label -->
+  <text x="215" y="96" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#94a3b8" letter-spacing="3">POLAND</text>
+
+  <!-- Main headline -->
+  <text x="100" y="310" font-family="'Helvetica Neue', Arial, sans-serif" font-size="80" font-weight="800" fill="#f8fafc" letter-spacing="-1">IKE &amp; IKZE</text>
+
+  <!-- Subheadline -->
+  <text x="102" y="380" font-family="'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="400" fill="#94a3b8">Retirement Accounts Guide for Expats</text>
+
+  <!-- Divider line -->
+  <rect x="100" y="415" width="1000" height="1" fill="#334155" />
+
+  <!-- Feature pills -->
+  <rect x="100" y="440" width="200" height="44" rx="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="200" y="468" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="500" fill="#93c5fd" text-anchor="middle">Tax Benefits</text>
+
+  <rect x="320" y="440" width="230" height="44" rx="22" fill="#1e3a5f" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="435" y="468" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="500" fill="#67e8f9" text-anchor="middle">2026 Limits</text>
+
+  <rect x="570" y="440" width="250" height="44" rx="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="695" y="468" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="500" fill="#93c5fd" text-anchor="middle">Expat Friendly</text>
+
+  <!-- Domain -->
+  <text x="1120" y="590" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="500" fill="#475569" text-anchor="end">ike-ikze-poland.com</text>
+</svg>
