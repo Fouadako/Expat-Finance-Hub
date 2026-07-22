@@ -757,13 +757,42 @@ export const translations: Translations = {
     'compare.age.ike': 'Возраст 60 (или 55 при наличии пенсионных прав)',
     'compare.age.ikze': 'Возраст 65',
     
+    'calc.meta.title': 'Калькулятор пенсионных накоплений IKE и IKZE Польша 2026',
+    'calc.meta.description': 'Рассчитайте прогнозируемые пенсионные накопления, налоговые льготы и доходность для счетов IKE и IKZE. Сравните результаты и оцените будущий баланс.',
+
+    'calc.hero.title': 'Калькулятор пенсионных накоплений',
+    'calc.hero.subtitle': 'Оцените доходность IKE и IKZE',
+    'calc.hero.desc': 'Спрогнозируйте пенсионный баланс и налоговую экономию',
+
+    'calc.inputs.title': 'Ваши данные',
     'calc.contracttype': 'Тип контракта',
     'calc.contracttype.uop': 'Трудовой договор (UoP)',
     'calc.contracttype.jdg': 'Самозанятый / B2B (JDG)',
+    'calc.monthly': 'Ежемесячный взнос',
+    'calc.return': 'Ожидаемая годовая доходность',
+    'calc.years': 'Лет до пенсии',
+    'calc.bracket': 'Ваша налоговая ставка',
     'calc.bracket.12': '12% (шкала, до 120k PLN)',
     'calc.bracket.32': '32% (шкала, свыше 120k PLN)',
     'calc.bracket.19lin': '19% плоский (liniowy)',
     'calc.bracket.ryczalt': 'Рычалт (уменьшенная льгота IKZE)',
+
+    'calc.results.title': 'Прогнозируемые результаты',
+    'calc.results.balance': 'Итоговый баланс',
+    'calc.results.contributed': 'Всего внесено',
+    'calc.results.returns': 'Инвестиционный доход',
+    'calc.results.tax': 'Налоговая экономия vs. обычный счет',
+    'calc.results.aftertax': 'Стоимость после налогов при выводе',
+
+    'calc.ike.title': 'Прогноз IKE',
+    'calc.ikze.title': 'Прогноз IKZE',
+    'calc.regular.title': 'Обычный брокерский счет (для сравнения)',
+
+    'calc.note': 'Примечание: Эти расчеты иллюстрируют математику механики работы счетов. Они не являются персональной финансовой консультацией. Результаты зависят от фактической доходности инвестиций, налоговой ситуации и других факторов. Проконсультируйтесь с лицензированным специалистом.',
+
+    'calc.cta.title': 'Узнать больше',
+    'calc.cta.ike': 'О счете IKE',
+    'calc.cta.ikze': 'О счете IKZE',
     
     'expats.brokers.title': 'Какие провайдеры предлагают IKE и IKZE?',
     'expats.brokers.note': 'Важно: Популярные международные брокеры, такие как IBKR (Interactive Brokers), DEGIRO, Revolut, Trading 212 и eToro, НЕ предлагают оболочки IKE или IKZE. Это специфичные для Польши налоговые оболочки, доступные только через лицензированные польские учреждения.',
@@ -1042,13 +1071,42 @@ export const translations: Translations = {
     'compare.age.ike': 'Вік 60 (або 55 за наявності пенсійних прав)',
     'compare.age.ikze': 'Вік 65',
     
+    'calc.meta.title': 'Калькулятор пенсійних накопичень IKE і IKZE Польща 2026',
+    'calc.meta.description': 'Розрахуйте прогнозовані пенсійні накопичення, податкові пільги та дохідність для рахунків IKE і IKZE. Порівняйте результати та оцініть майбутній баланс.',
+
+    'calc.hero.title': 'Калькулятор пенсійних накопичень',
+    'calc.hero.subtitle': 'Оцініть дохідність IKE і IKZE',
+    'calc.hero.desc': 'Спрогнозуйте пенсійний баланс та податкову економію',
+
+    'calc.inputs.title': 'Ваші дані',
     'calc.contracttype': 'Тип контракту',
     'calc.contracttype.uop': 'Трудовий договір (UoP)',
     'calc.contracttype.jdg': 'Самозайнятий / B2B (JDG)',
+    'calc.monthly': 'Щомісячний внесок',
+    'calc.return': 'Очікувана річна дохідність',
+    'calc.years': 'Років до пенсії',
+    'calc.bracket': 'Ваша податкова ставка',
     'calc.bracket.12': '12% (шкала, до 120k PLN)',
     'calc.bracket.32': '32% (шкала, понад 120k PLN)',
     'calc.bracket.19lin': '19% фіксований (liniowy)',
     'calc.bracket.ryczalt': 'Ричалт (зменшена пільга IKZE)',
+
+    'calc.results.title': 'Прогнозовані результати',
+    'calc.results.balance': 'Підсумковий баланс',
+    'calc.results.contributed': 'Всього внесено',
+    'calc.results.returns': 'Інвестиційний дохід',
+    'calc.results.tax': 'Податкова економія vs. звичайний рахунок',
+    'calc.results.aftertax': 'Вартість після податків при виведенні',
+
+    'calc.ike.title': 'Прогноз IKE',
+    'calc.ikze.title': 'Прогноз IKZE',
+    'calc.regular.title': 'Звичайний брокерський рахунок (для порівняння)',
+
+    'calc.note': 'Примітка: Ці розрахунки ілюструють математику механіки роботи рахунків. Вони не є персональною фінансовою консультацією. Результати залежать від фактичної дохідності інвестицій, податкової ситуації та інших факторів. Проконсультуйтеся з ліцензованим фахівцем.',
+
+    'calc.cta.title': 'Дізнатися більше',
+    'calc.cta.ike': 'Про рахунок IKE',
+    'calc.cta.ikze': 'Про рахунок IKZE',
     
     'expats.brokers.title': 'Які провайдери пропонують IKE і IKZE?',
     'expats.brokers.note': 'Важливо: Популярні міжнародні брокери, такі як IBKR (Interactive Brokers), DEGIRO, Revolut, Trading 212 та eToro, НЕ пропонують обгортки IKE або IKZE. Це специфічні для Польщі податкові обгортки, доступні лише через ліцензовані польські установи.',
