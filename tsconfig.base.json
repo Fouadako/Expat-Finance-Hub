@@ -12,6 +12,8 @@
     "noUnusedLocals": false,
     "strict": false,
     "noImplicitAny": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
     "strictFunctionTypes": false,
