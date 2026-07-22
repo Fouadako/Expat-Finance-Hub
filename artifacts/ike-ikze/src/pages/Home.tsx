@@ -374,15 +374,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Structured Data */}
+      {/* Structured Data — WebSite schema (server-rendered via prerender.js for crawlers) */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
+          "@id": "https://ike-ikze-poland.com/#website",
           "name": "IKE & IKZE Poland Guide",
           "url": "https://ike-ikze-poland.com",
           "description": "Complete guide to IKE and IKZE retirement accounts in Poland for expats and foreign residents",
           "inLanguage": ["en", "ru", "uk"]
+        })}
+      </script>
+      {/* Structured Data — Organization schema */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "https://ike-ikze-poland.com/#organization",
+          "name": "IKE & IKZE Poland Guide",
+          "url": "https://ike-ikze-poland.com",
+          "description": "Independent financial guide for foreigners on IKE and IKZE retirement accounts in Poland"
         })}
       </script>
     </>
