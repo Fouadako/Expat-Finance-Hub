@@ -2,92 +2,260 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Home -->
   <url>
-    <loc>https://expatfinance.pl/</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://ike-ikze-poland.com/</loc>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expatfinance.pl/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://expatfinance.pl/"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://expatfinance.pl/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/"/>
   </url>
-
   <url>
-    <loc>https://expatfinance.pl/ike</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://ike-ikze-poland.com/ru</loc>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expatfinance.pl/ike"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://expatfinance.pl/ike"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://expatfinance.pl/ike"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/ike"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/"/>
   </url>
-
   <url>
-    <loc>https://expatfinance.pl/ikze</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://ike-ikze-poland.com/ua</loc>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expatfinance.pl/ikze"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://expatfinance.pl/ikze"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://expatfinance.pl/ikze"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/ikze"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/"/>
   </url>
 
+  <!-- IKE -->
   <url>
-    <loc>https://expatfinance.pl/compare</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://ike-ikze-poland.com/ike</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/ike"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/ike"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/ike"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/ike"/>
+  </url>
+  <url>
+    <loc>https://ike-ikze-poland.com/ru/ike</loc>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expatfinance.pl/compare"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://expatfinance.pl/compare"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://expatfinance.pl/compare"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/compare"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/ike"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/ike"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/ike"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/ike"/>
   </url>
-
   <url>
-    <loc>https://expatfinance.pl/calculator</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://ike-ikze-poland.com/ua/ike</loc>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expatfinance.pl/calculator"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://expatfinance.pl/calculator"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://expatfinance.pl/calculator"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/calculator"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/ike"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/ike"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/ike"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/ike"/>
   </url>
 
+  <!-- IKZE -->
   <url>
-    <loc>https://expatfinance.pl/expats</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://ike-ikze-poland.com/ikze</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/ikze"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/ikze"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/ikze"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/ikze"/>
+  </url>
+  <url>
+    <loc>https://ike-ikze-poland.com/ru/ikze</loc>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expatfinance.pl/expats"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://expatfinance.pl/expats"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://expatfinance.pl/expats"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/expats"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/ikze"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/ikze"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/ikze"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/ikze"/>
+  </url>
+  <url>
+    <loc>https://ike-ikze-poland.com/ua/ikze</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/ikze"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/ikze"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/ikze"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/ikze"/>
   </url>
 
+  <!-- Compare -->
   <url>
-    <loc>https://expatfinance.pl/faq</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://ike-ikze-poland.com/compare</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/compare"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/compare"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/compare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/compare"/>
+  </url>
+  <url>
+    <loc>https://ike-ikze-poland.com/ru/compare</loc>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expatfinance.pl/faq"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://expatfinance.pl/faq"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://expatfinance.pl/faq"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/faq"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/compare"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/compare"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/compare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/compare"/>
+  </url>
+  <url>
+    <loc>https://ike-ikze-poland.com/ua/compare</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/compare"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/compare"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/compare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/compare"/>
   </url>
 
+  <!-- Calculator -->
   <url>
-    <loc>https://expatfinance.pl/book</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://ike-ikze-poland.com/calculator</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/calculator"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/calculator"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/calculator"/>
+  </url>
+  <url>
+    <loc>https://ike-ikze-poland.com/ru/calculator</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/calculator"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/calculator"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/calculator"/>
+  </url>
+  <url>
+    <loc>https://ike-ikze-poland.com/ua/calculator</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/calculator"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/calculator"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/calculator"/>
+  </url>
+
+  <!-- Expats -->
+  <url>
+    <loc>https://ike-ikze-poland.com/expats</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/expats"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/expats"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/expats"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/expats"/>
+  </url>
+  <url>
+    <loc>https://ike-ikze-poland.com/ru/expats</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/expats"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/expats"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/expats"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/expats"/>
+  </url>
+  <url>
+    <loc>https://ike-ikze-poland.com/ua/expats</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/expats"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/expats"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/expats"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/expats"/>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://ike-ikze-poland.com/faq</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/faq"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/faq"/>
+  </url>
+  <url>
+    <loc>https://ike-ikze-poland.com/ru/faq</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/faq"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/faq"/>
+  </url>
+  <url>
+    <loc>https://ike-ikze-poland.com/ua/faq</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/faq"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/faq"/>
+  </url>
+
+  <!-- Book -->
+  <url>
+    <loc>https://ike-ikze-poland.com/book</loc>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expatfinance.pl/book"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://expatfinance.pl/book"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://expatfinance.pl/book"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/book"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/book"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/book"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/book"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/book"/>
+  </url>
+  <url>
+    <loc>https://ike-ikze-poland.com/ru/book</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/book"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/book"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/book"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/book"/>
+  </url>
+  <url>
+    <loc>https://ike-ikze-poland.com/ua/book</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ike-ikze-poland.com/book"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ike-ikze-poland.com/ru/book"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ike-ikze-poland.com/ua/book"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ike-ikze-poland.com/book"/>
   </url>
 
 </urlset>
