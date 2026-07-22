@@ -58,7 +58,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2 font-display text-xl font-bold text-foreground mb-4">
               <div className="w-8 h-8 rounded-lg bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">
-                IR
+                FM
               </div>
               IKE & IKZE Poland
             </Link>
