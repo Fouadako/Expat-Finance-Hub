@@ -82,7 +82,7 @@ export default function IKE() {
               <div>
                 <p className="text-sm text-muted-foreground mb-2">{t('ike.limits.monthly')}</p>
                 <p className="font-mono text-2xl font-semibold text-accent">
-                  {t('ike.limits.monthly').split(' ')[1]}
+                  PLN
                 </p>
               </div>
             </CardContent>
