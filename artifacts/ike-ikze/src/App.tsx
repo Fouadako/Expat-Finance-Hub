@@ -17,18 +17,32 @@ import { Route, Switch, Router as WouterRouter } from 'wouter';
 
 const queryClient = new QueryClient();
 
+/** Page registry — each entry renders at its path AND at /ru<path> and /ua<path>. */
+const pages = [
+  { path: '/', component: Home },
+  { path: '/ike', component: IKE },
+  { path: '/ikze', component: IKZE },
+  { path: '/compare', component: Compare },
+  { path: '/calculator', component: Calculator },
+  { path: '/expats', component: Expats },
+  { path: '/faq', component: FAQ },
+  { path: '/book', component: Book },
+] as const;
+
 function Router() {
   return (
     <Layout>
       <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/ike" component={IKE} />
-        <Route path="/ikze" component={IKZE} />
-        <Route path="/compare" component={Compare} />
-        <Route path="/calculator" component={Calculator} />
-        <Route path="/expats" component={Expats} />
-        <Route path="/faq" component={FAQ} />
-        <Route path="/book" component={Book} />
+        {pages.flatMap(({ path, component: Component }) => {
+          // "/ru" and "/ua" are the language-prefix equivalents of "/"
+          const ruPath = path === '/' ? '/ru' : `/ru${path}`;
+          const uaPath = path === '/' ? '/ua' : `/ua${path}`;
+          return [
+            <Route key={path} path={path} component={Component} />,
+            <Route key={ruPath} path={ruPath} component={Component} />,
+            <Route key={uaPath} path={uaPath} component={Component} />,
+          ];
+        })}
         <Route component={NotFound} />
       </Switch>
     </Layout>
@@ -39,14 +53,15 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <HelmetProvider>
-        <LanguageProvider>
-          <TooltipProvider>
-            <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+          {/* LanguageProvider must be inside WouterRouter to use useLocation */}
+          <LanguageProvider>
+            <TooltipProvider>
               <Router />
-            </WouterRouter>
-            <Toaster />
-          </TooltipProvider>
-        </LanguageProvider>
+              <Toaster />
+            </TooltipProvider>
+          </LanguageProvider>
+        </WouterRouter>
       </HelmetProvider>
     </QueryClientProvider>
   );

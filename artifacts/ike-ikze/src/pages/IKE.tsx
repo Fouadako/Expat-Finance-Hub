@@ -1,5 +1,4 @@
-import { Link } from 'wouter';
-import { useLanguage } from '@/lib/i18n';
+import { useLanguage, LocaleLink } from '@/lib/i18n';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -253,10 +252,10 @@ export default function IKE() {
             {t('ike.cta.desc')}
           </p>
           <Button asChild size="lg" data-testid="button-compare-accounts">
-            <Link href="/compare">
+            <LocaleLink href="/compare">
               {t('ike.cta.button')}
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            </LocaleLink>
           </Button>
         </div>
       </section>

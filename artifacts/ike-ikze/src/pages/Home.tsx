@@ -1,5 +1,4 @@
-import { Link } from 'wouter';
-import { useLanguage } from '@/lib/i18n';
+import { useLanguage, LocaleLink } from '@/lib/i18n';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -37,7 +36,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="w-full sm:w-auto font-semibold bg-amber-500 hover:bg-amber-600 text-slate-900 shadow-sm" data-testid="button-get-started">
-                <Link 
+                <LocaleLink
                   href="/book"
                   onClick={() => {
                     if (window.gtag) {
@@ -47,12 +46,12 @@ export default function Home() {
                 >
                   {t('home.hero.cta')}
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                </LocaleLink>
               </Button>
               <Button asChild size="lg" variant="outline" className="w-full sm:w-auto font-semibold" data-testid="button-compare">
-                <Link href="/compare">
+                <LocaleLink href="/compare">
                   {t('home.hero.secondary')}
-                </Link>
+                </LocaleLink>
               </Button>
             </div>
           </motion.div>
@@ -110,9 +109,9 @@ export default function Home() {
                     </li>
                   </ul>
                   <Button asChild variant="outline" className="w-full mt-6" data-testid="button-learn-ike">
-                    <Link href="/ike">
+                    <LocaleLink href="/ike">
                       {t('common.learnmore')}
-                    </Link>
+                    </LocaleLink>
                   </Button>
                 </CardContent>
               </Card>
@@ -156,9 +155,9 @@ export default function Home() {
                     </li>
                   </ul>
                   <Button asChild variant="outline" className="w-full mt-6" data-testid="button-learn-ikze">
-                    <Link href="/ikze">
+                    <LocaleLink href="/ikze">
                       {t('common.learnmore')}
-                    </Link>
+                    </LocaleLink>
                   </Button>
                 </CardContent>
               </Card>
@@ -334,7 +333,7 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
               <Button asChild size="lg" className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold shadow-lg hover:shadow-xl transition-all">
-                <Link
+                <LocaleLink
                   href="/book"
                   onClick={() => {
                     if (window.gtag) {
@@ -345,7 +344,7 @@ export default function Home() {
                 >
                   {t('home.booking.cta')}
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                </LocaleLink>
               </Button>
             </div>
             
@@ -367,10 +366,10 @@ export default function Home() {
             {t('home.cta.desc')}
           </p>
           <Button asChild size="lg" variant="secondary" className="font-semibold" data-testid="button-explore-guides">
-            <Link href="/ike">
+            <LocaleLink href="/ike">
               {t('home.cta.button')}
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            </LocaleLink>
           </Button>
         </div>
       </section>

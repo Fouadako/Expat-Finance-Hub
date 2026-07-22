@@ -1,5 +1,4 @@
-import { Link } from 'wouter';
-import { useLanguage } from '@/lib/i18n';
+import { useLanguage, LocaleLink } from '@/lib/i18n';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
@@ -56,12 +55,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link href="/" className="flex items-center gap-2 font-display text-xl font-bold text-foreground mb-4">
+            <LocaleLink href="/" className="flex items-center gap-2 font-display text-xl font-bold text-foreground mb-4">
               <div className="w-8 h-8 rounded-lg bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">
                 FM
               </div>
               IKE & IKZE Poland
-            </Link>
+            </LocaleLink>
             <p className="text-sm text-muted-foreground max-w-md">
               {t('footer.brand')}
             </p>
@@ -73,12 +72,12 @@ export function Footer() {
             <ul className="space-y-2">
               {navigation.guides.map((item) => (
                 <li key={item.href}>
-                  <Link
+                  <LocaleLink
                     href={item.href}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {item.name}
-                  </Link>
+                  </LocaleLink>
                 </li>
               ))}
             </ul>
@@ -90,12 +89,12 @@ export function Footer() {
             <ul className="space-y-2">
               {navigation.resources.map((item) => (
                 <li key={item.href}>
-                  <Link
+                  <LocaleLink
                     href={item.href}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {item.name}
-                  </Link>
+                  </LocaleLink>
                 </li>
               ))}
             </ul>
@@ -107,12 +106,12 @@ export function Footer() {
             <ul className="space-y-2">
               {navigation.sessions.map((item) => (
                 <li key={item.href}>
-                  <Link
+                  <LocaleLink
                     href={item.href}
                     className="text-sm font-medium text-accent hover:text-accent/80 transition-colors"
                   >
                     {item.name}
-                  </Link>
+                  </LocaleLink>
                 </li>
               ))}
             </ul>

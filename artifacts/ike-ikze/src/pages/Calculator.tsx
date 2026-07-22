@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'wouter';
-import { useLanguage } from '@/lib/i18n';
+import { useLanguage, LocaleLink } from '@/lib/i18n';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -394,14 +393,14 @@ export default function Calculator() {
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild variant="outline" size="lg" data-testid="button-learn-ike">
-              <Link href="/ike">
+              <LocaleLink href="/ike">
                 {t('calc.cta.ike')}
-              </Link>
+              </LocaleLink>
             </Button>
             <Button asChild variant="outline" size="lg" data-testid="button-learn-ikze">
-              <Link href="/ikze">
+              <LocaleLink href="/ikze">
                 {t('calc.cta.ikze')}
-              </Link>
+              </LocaleLink>
             </Button>
           </div>
         </div>

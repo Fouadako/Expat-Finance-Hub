@@ -1,5 +1,4 @@
-import { Link } from 'wouter';
-import { useLanguage } from '@/lib/i18n';
+import { useLanguage, LocaleLink } from '@/lib/i18n';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -131,15 +130,15 @@ export default function FAQ() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" variant="outline" data-testid="button-guides">
-              <Link href="/ike">
+              <LocaleLink href="/ike">
                 {t('faq.cta.guides')}
-              </Link>
+              </LocaleLink>
             </Button>
             <Button asChild size="lg" data-testid="button-calculator">
-              <Link href="/calculator">
+              <LocaleLink href="/calculator">
                 {t('faq.cta.calc')}
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              </LocaleLink>
             </Button>
           </div>
         </div>

@@ -1,5 +1,4 @@
-import { Link } from 'wouter';
-import { useLanguage, Language } from '@/lib/i18n';
+import { useLanguage, Language, LocaleLink } from '@/lib/i18n';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
@@ -28,24 +27,24 @@ export function Header() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-8">
-            <Link href="/" className="flex items-center gap-2 font-display text-xl font-bold text-foreground hover:text-accent transition-colors" data-testid="link-home">
+            <LocaleLink href="/" className="flex items-center gap-2 font-display text-xl font-bold text-foreground hover:text-accent transition-colors" data-testid="link-home">
               <div className="w-8 h-8 rounded-lg bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">
                 FM
               </div>
               <span className="hidden sm:inline">IKE & IKZE</span>
-            </Link>
+            </LocaleLink>
 
             {/* Desktop navigation */}
             <div className="hidden md:flex items-center gap-1">
               {navigation.map((item) => (
-                <Link
+                <LocaleLink
                   key={item.href}
                   href={item.href}
                   className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
                   data-testid={`link-nav-${item.href.slice(1)}`}
                 >
                   {item.name}
-                </Link>
+                </LocaleLink>
               ))}
             </div>
           </div>
@@ -53,8 +52,8 @@ export function Header() {
           <div className="flex items-center gap-3">
             {/* Booking CTA */}
             <Button asChild variant="default" size="sm" className="hidden md:inline-flex bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold shadow-sm">
-              <Link 
-                href="/book" 
+              <LocaleLink
+                href="/book"
                 onClick={() => {
                   if (window.gtag) {
                     window.gtag('event', 'book_consultation_click', { event_category: 'engagement', event_label: 'header' });
@@ -62,7 +61,7 @@ export function Header() {
                 }}
               >
                 {t('nav.booking')}
-              </Link>
+              </LocaleLink>
             </Button>
             
             {/* Language switcher */}
@@ -101,7 +100,7 @@ export function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-border py-4 space-y-1">
             {navigation.map((item) => (
-              <Link
+              <LocaleLink
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
@@ -109,9 +108,9 @@ export function Header() {
                 data-testid={`link-mobile-${item.href.slice(1)}`}
               >
                 {item.name}
-              </Link>
+              </LocaleLink>
             ))}
-            <Link
+            <LocaleLink
               href="/book"
               onClick={() => {
                 setMobileMenuOpen(false);
@@ -122,7 +121,7 @@ export function Header() {
               className="block px-3 py-2 text-sm font-bold text-amber-500 hover:bg-muted rounded-md transition-colors mt-2"
             >
               {t('nav.booking')}
-            </Link>
+            </LocaleLink>
           </div>
         )}
       </nav>

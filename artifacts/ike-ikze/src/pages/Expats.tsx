@@ -1,5 +1,4 @@
-import { Link } from 'wouter';
-import { useLanguage } from '@/lib/i18n';
+import { useLanguage, LocaleLink } from '@/lib/i18n';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -297,10 +296,10 @@ export default function Expats() {
             {t('expats.cta.desc')}
           </p>
           <Button asChild size="lg" variant="secondary" className="font-semibold" data-testid="button-faq">
-            <Link href="/faq">
+            <LocaleLink href="/faq">
               {t('expats.cta.button')}
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            </LocaleLink>
           </Button>
         </div>
       </section>

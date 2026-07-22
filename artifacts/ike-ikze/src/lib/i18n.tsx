@@ -1,4 +1,5 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useEffect, ReactNode, ComponentProps } from 'react';
+import { useLocation, Link } from 'wouter';
 
 export type Language = 'en' | 'ru' | 'ua';
 
@@ -12,23 +13,55 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 const STORAGE_KEY = 'ike-ikze-language';
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(() => {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    return (stored as Language) || 'en';
-  });
+/** Derive language from URL path prefix. */
+function getLangFromPath(path: string): Language {
+  if (path === '/ru' || path.startsWith('/ru/')) return 'ru';
+  if (path === '/ua' || path.startsWith('/ua/')) return 'ua';
+  return 'en';
+}
 
+/** Strip the language prefix to get the canonical page path. */
+function getBasePath(path: string): string {
+  if (path === '/ru' || path === '/ua') return '/';
+  if (path.startsWith('/ru/') || path.startsWith('/ua/')) return path.slice(3);
+  return path;
+}
+
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [location, navigate] = useLocation();
+
+  const language = getLangFromPath(location);
+
+  // On mount: if the URL is English but localStorage has ru/ua, redirect.
+  useEffect(() => {
+    if (language === 'en') {
+      const stored = localStorage.getItem(STORAGE_KEY) as Language | null;
+      if (stored && stored !== 'en') {
+        const base = getBasePath(location);
+        navigate(`/${stored}${base === '/' ? '' : base}`, { replace: true });
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Keep localStorage and <html lang> in sync with URL-derived language.
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, language);
+    // BCP 47: internal code 'ua' → ISO 639-1 'uk' for Ukrainian
+    document.documentElement.lang = language === 'ua' ? 'uk' : language;
   }, [language]);
 
   const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
+    const base = getBasePath(location);
+    if (lang === 'en') {
+      navigate(base);
+    } else {
+      navigate(`/${lang}${base === '/' ? '' : base}`);
+    }
   };
 
   const t = (key: string): string => {
-    const translation = translations[language]?.[key];
-    return translation || key;
+    return translations[language]?.[key] || key;
   };
 
   return (
@@ -44,6 +77,32 @@ export function useLanguage() {
     throw new Error('useLanguage must be used within LanguageProvider');
   }
   return context;
+}
+
+/**
+ * Returns a function that prefixes an English page path with the active
+ * language segment (e.g. "/ike" → "/ru/ike" when language is "ru").
+ * English (default) paths are returned unchanged.
+ */
+export function useLocalePath() {
+  const { language } = useLanguage();
+  return (path: string): string => {
+    if (language === 'en') return path;
+    return path === '/' ? `/${language}` : `/${language}${path}`;
+  };
+}
+
+/**
+ * Drop-in replacement for wouter's <Link> that automatically prefixes the
+ * href with the active language segment so internal links stay within the
+ * correct locale URL tree.
+ */
+export function LocaleLink({
+  href,
+  ...props
+}: ComponentProps<typeof Link>) {
+  const localePath = useLocalePath();
+  return <Link href={localePath(href as string)} {...props} />;
 }
 
 interface Translations {
