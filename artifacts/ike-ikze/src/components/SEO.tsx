@@ -42,7 +42,7 @@ export function SEO({ title, description, path, image }: SEOProps) {
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="IKE &amp; IKZE Poland Guide" />
+      <meta property="og:site_name" content="IKE &amp; IKZE Guide in 2026 Poland" />
       <meta property="og:locale" content={ogLocale} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
@@ -58,11 +58,11 @@ export function SEO({ title, description, path, image }: SEOProps) {
       <link rel="canonical" href={canonicalUrl} />
 
       {/* hreflang alternates — tell search engines about all language versions */}
-      <link rel="alternate" hreflang="en" href={enUrl} />
-      <link rel="alternate" hreflang="ru" href={ruUrl} />
-      <link rel="alternate" hreflang="uk" href={uaUrl} />
+      <link rel="alternate" hrefLang="en" href={enUrl} />
+      <link rel="alternate" hrefLang="ru" href={ruUrl} />
+      <link rel="alternate" hrefLang="uk" href={uaUrl} />
       {/* x-default points to the English (default) version */}
-      <link rel="alternate" hreflang="x-default" href={enUrl} />
+      <link rel="alternate" hrefLang="x-default" href={enUrl} />
     </Helmet>
   );
 }

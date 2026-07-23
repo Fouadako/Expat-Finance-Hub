@@ -99,10 +99,12 @@ export function useLocalePath() {
  */
 export function LocaleLink({
   href,
+  to,
   ...props
 }: ComponentProps<typeof Link>) {
   const localePath = useLocalePath();
-  return <Link href={localePath(href as string)} {...props} />;
+  const dest = localePath((href ?? to) as string);
+  return <Link href={dest} {...props} />;
 }
 
 interface Translations {

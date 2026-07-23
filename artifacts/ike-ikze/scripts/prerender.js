@@ -38,7 +38,7 @@ const routes = [
     ogLocale: 'en_US',
     title: 'IKE & IKZE Poland 2026: Complete Guide for Expats',
     description:
-      'Everything expats need to know about IKE and IKZE retirement accounts in Poland: contribution limits, tax benefits, and how to open as a foreign resident.',
+      'IKE & IKZE Guide - Everything you need to know to build your Wealth',
   },
   {
     routePath: '/ike',
@@ -431,7 +431,7 @@ function buildMetaBlock(route) {
     <meta property="og:description" content="${safeDesc}" />
     <meta property="og:url" content="${escAttr(canonicalUrl)}" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="IKE &amp; IKZE Poland Guide" />
+    <meta property="og:site_name" content="IKE &amp; IKZE Guide in 2026 Poland" />
     <meta property="og:locale" content="${ogLocale}" />
     <meta property="og:image" content="${escAttr(ogImage)}" />
     <meta property="og:image:width" content="1200" />

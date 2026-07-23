@@ -1,6 +1,6 @@
 kind = "web"
 previewPath = "/"
-title = "IKE & IKZE Guide"
+title = "IKE & IKZE Guide in 2026 Poland"
 version = "1.0.0"
 id = "artifacts/ike-ikze"
 router = "path"
