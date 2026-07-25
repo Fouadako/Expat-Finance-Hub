@@ -18,6 +18,32 @@ build = [ "pnpm", "--filter", "@workspace/ike-ikze", "run", "build" ]
 serve = "static"
 publicDir = "artifacts/ike-ikze/dist/public"
 
+# Pass static files through directly — must come BEFORE the SPA catch-all
+[[services.production.rewrites]]
+from = "/sitemap.xml"
+to = "/sitemap.xml"
+
+[[services.production.rewrites]]
+from = "/robots.txt"
+to = "/robots.txt"
+
+[[services.production.rewrites]]
+from = "/llms.txt"
+to = "/llms.txt"
+
+[[services.production.rewrites]]
+from = "/social-preview.png"
+to = "/social-preview.png"
+
+[[services.production.rewrites]]
+from = "/social-preview.svg"
+to = "/social-preview.svg"
+
+[[services.production.rewrites]]
+from = "/favicon.svg"
+to = "/favicon.svg"
+
+# SPA fallback — all other paths serve the app shell
 [[services.production.rewrites]]
 from = "/*"
 to = "/index.html"
