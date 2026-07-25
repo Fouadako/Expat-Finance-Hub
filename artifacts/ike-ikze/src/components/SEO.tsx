@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '@/lib/i18n';
+import { SITE_URL } from '@/lib/site-config';
 
 interface SEOProps {
   title: string;
@@ -11,7 +12,7 @@ interface SEOProps {
 }
 
 export function SEO({ title, description, path, image }: SEOProps) {
-  const siteUrl = import.meta.env.VITE_SITE_URL ?? 'https://ike-ikze-poland.com';
+  const siteUrl = import.meta.env.VITE_SITE_URL ?? SITE_URL;
   const { language } = useLanguage();
 
   // BCP 47 code for the current language (ua → uk per ISO 639-1)
@@ -28,8 +29,8 @@ export function SEO({ title, description, path, image }: SEOProps) {
   // OG locale derived from language
   const ogLocale = language === 'en' ? 'en_US' : language === 'ru' ? 'ru_RU' : 'uk_UA';
 
-  // Social preview image — per-route override or site-wide default
-  const ogImage = image ?? `${siteUrl}/social-preview.svg`;
+  // Social preview image — PNG required (FB/LinkedIn/WhatsApp don't render SVG)
+  const ogImage = image ?? `${siteUrl}/social-preview.png`;
 
   return (
     <Helmet>

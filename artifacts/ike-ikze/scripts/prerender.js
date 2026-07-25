@@ -21,7 +21,8 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = join(__dirname, '../dist/public');
-const SITE_URL = 'https://ike-ikze-poland.com';
+// Single source of truth — must match src/lib/site-config.ts
+const SITE_URL = 'https://expatfinance.pl';
 
 // ---------------------------------------------------------------------------
 // Route metadata: every route × every language
@@ -415,7 +416,8 @@ function buildMetaBlock(route) {
       ? uaUrl
       : enUrl;
 
-  const ogImage = `${SITE_URL}/social-preview.svg`;
+  // PNG required — Facebook, LinkedIn, WhatsApp and Telegram don't render SVG
+  const ogImage = `${SITE_URL}/social-preview.png`;
   const safeTitle = escAttr(title);
   const safeDesc = escAttr(description);
 

@@ -2,10 +2,10 @@
 > Complete guide to IKE and IKZE individual retirement accounts in Poland for expats and foreign residents.
 
 ## Pages
-- [Home](https://ike-ikze-poland.com/): Overview of IKE and IKZE accounts
-- [IKE Account Guide](https://ike-ikze-poland.com/ike): Full details on IKE — limits, tax benefits, eligibility
-- [IKZE Account Guide](https://ike-ikze-poland.com/ikze): Full details on IKZE — limits, tax deduction, 10% withdrawal tax
-- [IKE vs IKZE Comparison](https://ike-ikze-poland.com/compare): Side-by-side comparison
-- [Savings Calculator](https://ike-ikze-poland.com/calculator): Interactive retirement savings projections
-- [Guide for Expats](https://ike-ikze-poland.com/expats): PESEL requirements, English-language providers, what happens if you leave Poland
-- [FAQ](https://ike-ikze-poland.com/faq): 12 common questions answered
+- [Home](https://expatfinance.pl/): Overview of IKE and IKZE accounts
+- [IKE Account Guide](https://expatfinance.pl/ike): Full details on IKE — limits, tax benefits, eligibility
+- [IKZE Account Guide](https://expatfinance.pl/ikze): Full details on IKZE — limits, tax deduction, 10% withdrawal tax
+- [IKE vs IKZE Comparison](https://expatfinance.pl/compare): Side-by-side comparison
+- [Savings Calculator](https://expatfinance.pl/calculator): Interactive retirement savings projections
+- [Guide for Expats](https://expatfinance.pl/expats): PESEL requirements, English-language providers, what happens if you leave Poland
+- [FAQ](https://expatfinance.pl/faq): 12 common questions answered
