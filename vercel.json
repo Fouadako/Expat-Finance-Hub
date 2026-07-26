@@ -7,8 +7,27 @@
       "includeFiles": "artifacts/api-server/guides/**"
     }
   },
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/index" },
-    { "source": "/(.*)",     "destination": "/index.html" }
+  "routes": [
+    {
+      "src": "/sitemap.xml",
+      "headers": {
+        "Content-Type": "application/xml; charset=utf-8",
+        "Cache-Control": "public, max-age=43200, s-maxage=86400"
+      },
+      "dest": "/sitemap.xml"
+    },
+    {
+      "src": "/robots.txt",
+      "headers": { "Content-Type": "text/plain; charset=utf-8" },
+      "dest": "/robots.txt"
+    },
+    {
+      "src": "/llms.txt",
+      "headers": { "Content-Type": "text/plain; charset=utf-8" },
+      "dest": "/llms.txt"
+    },
+    { "src": "/api/(.*)", "dest": "/api/index" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
