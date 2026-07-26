@@ -95,17 +95,11 @@ export function AboutMe() {
           {/* Right column: prose */}
           <div className="lg:col-span-3 flex flex-col gap-6">
             <motion.div variants={itemVariants}>
-              <p
-                className="text-xs font-semibold uppercase text-accent mb-3"
-                style={{ letterSpacing: '0.1em' }}
-              >
-                {t('about.eyebrow')}
-              </p>
               <h2
                 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-2"
                 style={{ letterSpacing: '-0.02em' }}
               >
-                {t('about.heading')}
+                {t('about.subheading')}
               </h2>
             </motion.div>
 
