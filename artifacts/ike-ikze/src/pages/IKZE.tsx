@@ -3,6 +3,7 @@ import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Shield, CheckCircle, XCircle, ArrowRight, AlertTriangle } from 'lucide-react';
+import { Disclaimer } from '@/components/Disclaimer';
 import { motion } from 'framer-motion';
 import { BookingCTA } from '@/components/BookingCTA';
 
@@ -258,6 +259,12 @@ export default function IKZE() {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      <section className="py-8 sm:py-10">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Disclaimer variant="long" />
         </div>
       </section>
 

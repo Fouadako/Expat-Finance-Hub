@@ -124,6 +124,7 @@ export const translations: Translations = {
     'nav.expats': 'For Expats',
     'nav.faq': 'FAQ',
     'nav.booking': 'Book a consultation',
+    'nav.about': 'About',
     
     // Booking CTA
     'cta.heading': 'Want to understand how these mechanics apply in practice?',
@@ -232,7 +233,7 @@ export const translations: Translations = {
     'ike.eligible.citizens': 'Polish citizens',
     'ike.eligible.residents': 'Foreign residents with valid residence permits',
     'ike.eligible.workers': 'Employed, self-employed, or unemployed',
-    'ike.eligible.p2': 'Minimum age: 16. Those aged 16–17 (minors) may only contribute in years when they earn employment income (umowa o pracę). From age 18, there are no additional restrictions.',
+    'ike.eligible.p2': 'Minimum age: 16. Those aged 16–17 (minors) may only contribute in years when they earn employment income. From age 18, there are no additional restrictions.',
     
     'ike.how.title': 'How to Open IKE',
     'ike.how.step1': 'Choose your provider',
@@ -300,7 +301,7 @@ export const translations: Translations = {
     
     'ikze.eligible.title': 'Who Can Open IKZE?',
     'ikze.eligible.p1': 'Any individual with a PESEL number who pays PIT tax in Poland:',
-    'ikze.eligible.employed': 'Employees (umowa o pracę)',
+    'ikze.eligible.employed': 'Employees (employment contract)',
     'ikze.eligible.selfemployed': 'Self-employed (działalność gospodarcza / JDG)',
     'ikze.eligible.contract': 'Contract workers (umowa zlecenie)',
     'ikze.eligible.p2': 'Foreign residents with valid residence permits are eligible.',
@@ -336,10 +337,10 @@ export const translations: Translations = {
     'ikze.cons.tax': 'Withdrawal is taxed',
     'ikze.cons.tax.desc': 'Unlike IKE, you pay 10% tax when withdrawing at age 65',
     'ikze.cons.penalty': 'Early withdrawal penalties',
-    'ikze.cons.penalty.desc': 'No partial withdrawal — only full liquidation (zwrot) is possible, unlike IKE. The entire amount is added to taxable income at progressive PIT scale rates.',
+    'ikze.cons.penalty.desc': 'No partial withdrawal — only full liquidation is possible, unlike IKE. The entire amount is added to taxable income at progressive PIT scale rates.',
     
-    'ikze.ryczalt.title': 'Important: If You Are on Ryczałt Tax',
-    'ikze.ryczalt.desc': 'If you pay ryczałt (lump-sum tax on revenue — common among IT freelancers at 8.5% or 12%), the IKZE deduction reduces your revenue at your lump-sum rate, not your marginal income tax rate. The benefit is smaller than for skala or liniowy taxpayers. For ryczałt taxpayers, IKE is often worth considering first. This is a significant nuance the research shows is almost absent from English-language content.',
+    'ikze.ryczalt.title': 'Important: If You Are on Lump-Sum Tax',
+    'ikze.ryczalt.desc': 'If you pay lump-sum tax on revenue (common among IT freelancers at 8.5% or 12%), the IKZE deduction reduces your revenue at your lump-sum rate, not your marginal income tax rate. The benefit is smaller than for progressive-scale or flat-tax payers. For lump-sum tax payers, IKE is often worth considering first. This is a significant nuance the research shows is almost absent from English-language content.',
     
     'ikze.cta.title': 'Compare with IKE',
     'ikze.cta.desc': 'See how IKZE differs from IKE to make the best choice for your situation.',
@@ -401,7 +402,7 @@ export const translations: Translations = {
     
     'compare.choose.ikze': 'Choose IKZE if...',
     'compare.choose.ikze.immediate': 'You want immediate tax savings this year',
-    'compare.choose.ikze.bracket': 'You are in a higher tax bracket (32%) or on liniowy (19%)',
+    'compare.choose.ikze.bracket': 'You are in a higher tax bracket (32%) or on flat tax (19%)',
     'compare.choose.ikze.selfemployed': 'You are self-employed and want to reduce taxable income',
     
     'compare.choose.both': 'Choose both if...',
@@ -429,10 +430,10 @@ export const translations: Translations = {
     'calc.return': 'Expected annual return',
     'calc.years': 'Years until retirement',
     'calc.bracket': 'Your tax bracket',
-    'calc.bracket.12': '12% (skala, up to 120k PLN)',
-    'calc.bracket.32': '32% (skala, above 120k PLN)',
-    'calc.bracket.19lin': '19% flat (liniowy)',
-    'calc.bracket.ryczalt': 'Ryczałt (reduced IKZE benefit)',
+    'calc.bracket.12': '12% (progressive scale, up to 120k PLN)',
+    'calc.bracket.32': '32% (progressive scale, above 120k PLN)',
+    'calc.bracket.19lin': '19% flat tax',
+    'calc.bracket.ryczalt': 'Lump-sum tax (reduced IKZE benefit)',
     
     'calc.results.title': 'Projected Results',
     'calc.results.balance': 'Final balance',
@@ -494,7 +495,7 @@ export const translations: Translations = {
     'expats.leave.ike': 'IKE if you leave: You can keep the account. No new contributions are allowed once you are no longer a Polish tax resident. If you withdraw early (before age 60), the standard 19% Belka capital gains tax applies to profits only — your principal is untouched. An early IKE withdrawal simply makes it equivalent to a regular brokerage account. No worse than if you had never used it.',
     'expats.leave.ikze': 'IKZE if you leave: Early full liquidation adds the entire amount (contributions + gains) to your taxable income in that year at the progressive tax scale rate. The tax deductions you already received in prior years remain yours. Partial withdrawal is not permitted — it must be a full liquidation. This is the key risk difference between IKE and IKZE.',
     'expats.leave.currency': 'Currency risk: Both accounts are PLN-denominated. If you plan to retire outside Poland, consider how exchange rate movements between PLN and your target currency may affect your real purchasing power.',
-    'expats.leave.disclaimer': 'Cross-border tax treaty implications between Poland and your new country of residence are complex and depend on your specific situation. Consult a licensed tax advisor (doradca podatkowy) for personalized cross-border guidance.',
+    'expats.leave.disclaimer': 'Cross-border tax treaty implications between Poland and your new country of residence are complex and depend on your specific situation. Consult a licensed tax advisor for personalized cross-border guidance.',
     'expats.leave.uscitizen': 'US citizens face additional complexity due to PFIC tax rules on EU-domiciled ETFs. Consult a specialized cross-border tax advisor.',
     
     'expats.leave.p1': 'You can keep your IKE/IKZE accounts even after leaving Poland. The accounts remain yours, and you can still withdraw funds according to the standard rules (after qualifying age).',
@@ -529,7 +530,7 @@ export const translations: Translations = {
     'faq.hero.desc': 'Common questions about retirement accounts in Poland',
     
     'faq.q1': 'Can foreigners open IKE and IKZE accounts?',
-    'faq.a1': 'Yes! Any individual aged 16 or older with a PESEL number can open IKE and IKZE accounts, including foreign residents with valid residence permits. Polish citizenship is not required. Those aged 16–17 may only contribute to IKE in years when they earn employment income (umowa o pracę).',
+    'faq.a1': 'Yes! Any individual aged 16 or older with a PESEL number can open IKE and IKZE accounts, including foreign residents with valid residence permits. Polish citizenship is not required. Those aged 16–17 may only contribute to IKE in years when they earn employment income.',
     
     'faq.q2': 'Can I have both IKE and IKZE?',
     'faq.a2': 'Yes. You can open and contribute to both IKE and IKZE accounts simultaneously. Many people do this to maximize both immediate tax deductions (IKZE) and long-term tax-free growth (IKE).',
@@ -541,7 +542,7 @@ export const translations: Translations = {
     'faq.a4': 'Both accounts are inheritable, but with different tax treatment. For IKE: beneficiaries receive funds completely tax-free — exempt from both Belka and inheritance/gift tax — and can withdraw or transfer to their own IKE or PPE. For IKZE: beneficiaries pay a flat 10% tax on withdrawal. IKZE funds can be transferred to the beneficiary\'s own IKZE (with 10% tax on eventual withdrawal), but cannot be moved to IKE or PPE.',
     
     'faq.q5': 'Can I withdraw money before the qualifying age?',
-    'faq.a5': 'Yes. For IKE: early withdrawal is always possible. Full early withdrawal triggers 19% Belka tax on gains only — your contributed principal is never touched. Since 2009, partial withdrawal of your own contributions is also allowed. Important: once you make the first full IKE withdrawal or receive the first installment, you cannot open a new IKE. For IKZE: no partial withdrawal is allowed — only full liquidation (zwrot). The entire amount (contributions + gains) is added to your taxable income at progressive PIT scale rates.',
+    'faq.a5': 'Yes. For IKE: early withdrawal is always possible. Full early withdrawal triggers 19% Belka tax on gains only — your contributed principal is never touched. Since 2009, partial withdrawal of your own contributions is also allowed. Important: once you make the first full IKE withdrawal or receive the first installment, you cannot open a new IKE. For IKZE: no partial withdrawal is allowed — only full liquidation. The entire amount (contributions + gains) is added to your taxable income at progressive PIT scale rates.',
     
     'faq.q6': 'Do popular brokers like Interactive Brokers, DEGIRO, or Revolut offer IKE/IKZE?',
     'faq.a6': 'No. IKE and IKZE are Polish-specific tax wrappers and are only available through Polish-licensed financial institutions. IBKR, DEGIRO, Revolut, Trading 212, and eToro do not offer these accounts. Polish brokers such as XTB, DM BOŚ, and mBank eMakler are among those that do.',
@@ -549,8 +550,8 @@ export const translations: Translations = {
     'faq.q7': 'What happens if I accidentally open two IKE accounts?',
     'faq.a7': 'Holding two IKE accounts simultaneously triggers a 75% punitive flat-rate tax on income from all your IKE accounts under Article 30(1)(7a) of the Polish PIT Act — the highest flat rate in the Polish tax system. If you open a new IKE, ensure you close your previous one first.',
     
-    'faq.q8': 'I am on ryczałt tax. Does IKZE still make sense?',
-    'faq.a8': 'On ryczałt, your IKZE contributions reduce your revenue at your lump-sum tax rate (e.g. 12% or 8.5% for IT), not at a marginal income tax rate. The benefit is real but smaller than for skala or liniowy taxpayers. For ryczałt users, IKE — which requires no specific tax form to benefit from — may be worth exploring first. This depends on your individual situation; consider discussing it with a tax professional.',
+    'faq.q8': 'I am on lump-sum tax. Does IKZE still make sense?',
+    'faq.a8': 'On lump-sum tax, your IKZE contributions reduce your revenue at your lump-sum tax rate (e.g. 12% or 8.5% for IT), not at a marginal income tax rate. The benefit is real but smaller than for progressive-scale or flat-tax payers. For lump-sum tax users, IKE — which requires no specific tax form to benefit from — may be worth exploring first. This depends on your individual situation; consider discussing it with a tax professional.',
     
     'faq.q9': 'How do I claim the IKZE tax deduction?',
     'faq.a9': 'Report your IKZE contributions in your annual Polish tax return (PIT-37 for employees, PIT-36 for self-employed). The contribution amount reduces your taxable income, lowering your tax bill. Your provider will give you a statement of contributions.',
@@ -571,8 +572,8 @@ export const translations: Translations = {
     
     // Footer
     'footer.disclaimer.title': 'Legal Disclaimer',
-    'footer.disclaimer.text': 'Disclaimer: This content is strictly for educational purposes. I am not a licensed financial advisor or tax advisor (doradca podatkowy). I do not provide personalized investment recommendations or cross-border tax advice. Always verify information with a licensed professional.',
-    'disclaimer.text': 'Disclaimer: This content and my consultations are strictly for educational purposes. I am not a licensed financial advisor or tax advisor (doradca podatkowy). I do not provide personalized investment recommendations or cross-border tax advice.',
+    'footer.disclaimer.text': 'Disclaimer: This content is strictly for educational purposes. I am not a licensed financial advisor or tax advisor. I do not provide personalized investment recommendations or cross-border tax advice. Always verify information with a licensed professional.',
+    'disclaimer.text': 'Disclaimer: This content and my consultations are strictly for educational purposes. I am not a licensed financial advisor or tax advisor. I do not provide personalized investment recommendations or cross-border tax advice.',
 
     // Book page — "What to expect" bullets
     'book.expect.title': 'What to expect',
@@ -585,6 +586,31 @@ export const translations: Translations = {
     'common.readmore': 'Read more',
     'common.getstarted': 'Get started',
     'common.learnmore': 'Learn more',
+
+    // About page
+    'about.eyebrow': 'WHO WROTE THIS',
+    'about.heading': 'I learned this the expensive way',
+    'about.body.0': 'I moved to Poland, spent a decade working in finance, and still found out about IKZE one year ago.',
+    'about.body.1': 'The lesson arrived the year my income crossed 120,000 zł. My next tax settlement showed exactly how much of that raise never reached me. For a while I filed it under the cost of earning more. Then I asked a better question: what do people who understand this system know that I don\'t?',
+    'about.body.2': 'IKZE lowers your taxable base. IKE shelters your gains from the 19% Belka tax. Neither rule is hidden. Both are written in Polish, buried in ministry announcements and fund brochures — effectively unavailable if you can\'t read them.',
+    'about.body.3': 'My work has been financial reporting, month-end close and variance analysis at Accenture, the ICRC and Lumen Technologies. Reconciling other people\'s numbers for ten years teaches you one habit: check the arithmetic yourself.',
+    'about.body.4': 'So I decided to post on LinkedIn about my journey and noticed a gap, which I chose to fill for expats living in Poland by creating this website — in English, Russian and Ukrainian, with calculators that run your figures instead of an example someone made up.',
+    'about.body.5': 'I\'m not selling advice. I\'m showing you the mechanics, so you can weigh them for yourself.',
+    'about.imageAlt': 'Fuad Mammadov, author of Expatfinance.pl',
+    'about.credentials.name': 'Fuad Mammadov',
+    'about.credentials.role': 'Senior Financial Analyst, Warsaw',
+    'about.credentials.line0': '10+ years in Finance',
+    'about.credentials.line1': 'Accenture · ICRC · Lumen Technologies',
+    'about.credentials.line2': 'BSc Economics, Vistula University, Warsaw',
+    'about.credentials.line3': 'Financial Modelling & Valuation Analysis (CFI)',
+    'about.credentials.line4': 'English · Russian · Azerbaijani · Polish (B1)',
+    'about.credentials.statusFlag': 'Not a licensed investment or tax advisor. Educational content only.',
+    'about.pageTitle': 'About Me — Expatfinance.pl',
+    'about.metaDescription': 'Why an expat finance professional in Warsaw built a free English, Russian and Ukrainian guide to Poland\'s IKE and IKZE retirement accounts.',
+
+    // Disclaimer
+    'disclaimer.long': 'Educational content only. Expatfinance.pl is an independent educational resource. I am not a licensed financial advisor, investment advisor, or tax advisor, and nothing on this site is personalised investment, tax, or legal advice. Figures reflect the 2026 limits published by the Polish Ministry of Finance; your own outcome depends on your tax residency, contract type, applicable double taxation treaties, and personal circumstances. Investments held inside IKE or IKZE carry risk, including loss of capital — only the PIT deduction mechanism itself is defined by statute. Verify any decision with a licensed tax advisor or legal advisor before acting.',
+    'disclaimer.short': 'Educational content only — not personalised investment, tax, or legal advice. Verify your situation with a licensed advisor.',
   },
   
   ru: {
@@ -597,6 +623,7 @@ export const translations: Translations = {
     'nav.expats': 'Для иностранцев',
     'nav.faq': 'Вопросы',
     'nav.booking': 'Записаться на консультацию',
+    'nav.about': 'Об авторе',
 
     // Booking CTA
     'cta.heading': 'Хотите понять, как эта механика работает на практике?',
@@ -705,7 +732,7 @@ export const translations: Translations = {
     'ike.eligible.citizens': 'Граждане Польши',
     'ike.eligible.residents': 'Иностранные резиденты с действующим видом на жительство',
     'ike.eligible.workers': 'Наемные работники, самозанятые или безработные',
-    'ike.eligible.p2': 'Минимальный возраст: 16 лет. Лица 16–17 лет (несовершеннолетние) могут вносить взносы только в те годы, когда они получают доход по трудовому договору (umowa o pracę). С 18 лет ограничений нет.',
+    'ike.eligible.p2': 'Минимальный возраст: 16 лет. Лица 16–17 лет (несовершеннолетние) могут вносить взносы только в те годы, когда они получают доход по трудовому договору. С 18 лет ограничений нет.',
     
     'ike.how.title': 'Как открыть IKE',
     'ike.how.step1': 'Выберите провайдера',
@@ -773,7 +800,7 @@ export const translations: Translations = {
 
     'ikze.eligible.title': 'Кто может открыть IKZE?',
     'ikze.eligible.p1': 'Любое лицо с номером PESEL, уплачивающее PIT в Польше:',
-    'ikze.eligible.employed': 'Наемные работники (umowa o pracę)',
+    'ikze.eligible.employed': 'Наёмные работники (трудовой договор)',
     'ikze.eligible.selfemployed': 'Самозанятые (działalność gospodarcza / JDG)',
     'ikze.eligible.contract': 'Работники по контракту (umowa zlecenie)',
     'ikze.eligible.p2': 'Иностранные резиденты с действующим видом на жительство имеют право.',
@@ -809,14 +836,14 @@ export const translations: Translations = {
     'ikze.cons.tax': 'Вывод облагается налогом',
     'ikze.cons.tax.desc': 'В отличие от IKE, при выводе в 65 лет вы платите 10% налог',
     'ikze.cons.penalty': 'Штрафы за досрочный вывод',
-    'ikze.cons.penalty.desc': 'Частичный вывод невозможен — только полная ликвидация (zwrot), в отличие от IKE. Вся сумма добавляется к налогооблагаемому доходу по прогрессивной шкале PIT.',
+    'ikze.cons.penalty.desc': 'Частичный вывод невозможен — только полная ликвидация, в отличие от IKE. Вся сумма добавляется к налогооблагаемому доходу по прогрессивной шкале PIT.',
 
     'ikze.cta.title': 'Сравните с IKE',
     'ikze.cta.desc': 'Посмотрите, чем IKZE отличается от IKE, чтобы сделать лучший выбор для вашей ситуации.',
     'ikze.cta.button': 'Сравнить счета',
 
-    'ikze.ryczalt.title': 'Важно: Если вы на налоге рычалт',
-    'ikze.ryczalt.desc': 'Если вы платите рычалт (паушальный налог на выручку — распространен среди IT-фрилансеров на 8,5% или 12%), вычет IKZE уменьшает вашу выручку по вашей паушальной ставке, а не по предельной ставке подоходного налога. Выгода меньше, чем для налогоплательщиков скала или линёвы. Для плательщиков рычалт часто стоит рассмотреть IKE в первую очередь. Это значимый нюанс, который, как показывают исследования, почти отсутствует в англоязычном контенте.',
+    'ikze.ryczalt.title': 'Важно: Если вы на паушальном налоге',
+    'ikze.ryczalt.desc': 'Если вы платите паушальный налог на выручку (распространён среди IT-фрилансеров на 8,5% или 12%), вычет IKZE уменьшает вашу выручку по вашей паушальной ставке, а не по предельной ставке подоходного налога. Выгода меньше, чем для плательщиков прогрессивной шкалы или единого налога. Для плательщиков паушального налога часто стоит рассмотреть IKE в первую очередь. Это значимый нюанс, который, как показывают исследования, почти отсутствует в англоязычном контенте.',
     
     'compare.meta.title': 'IKE vs IKZE: Полное сравнение Польша 2026',
     'compare.meta.description': 'Сравнение IKE и IKZE по лимитам взносов, налоговым льготам, правилам вывода и выбору счета для вашей ситуации.',
@@ -859,7 +886,7 @@ export const translations: Translations = {
     'compare.choose.ike.horizon': 'У вас долгосрочный горизонт и вы ожидаете значительного роста',
     'compare.choose.ikze': 'Выберите IKZE, если...',
     'compare.choose.ikze.immediate': 'Вы хотите немедленно сэкономить на налогах в этом году',
-    'compare.choose.ikze.bracket': 'Вы в высокой налоговой ставке (32%) или на линёвом (19%)',
+    'compare.choose.ikze.bracket': 'Вы в высокой налоговой ставке (32%) или на едином налоге (19%)',
     'compare.choose.ikze.selfemployed': 'Вы самозанятый и хотите снизить налогооблагаемый доход',
     'compare.choose.both': 'Выберите оба, если...',
     'compare.choose.both.max': 'Вы можете пополнять оба счета по максимуму',
@@ -884,10 +911,10 @@ export const translations: Translations = {
     'calc.return': 'Ожидаемая годовая доходность',
     'calc.years': 'Лет до пенсии',
     'calc.bracket': 'Ваша налоговая ставка',
-    'calc.bracket.12': '12% (шкала, до 120k PLN)',
-    'calc.bracket.32': '32% (шкала, свыше 120k PLN)',
-    'calc.bracket.19lin': '19% плоский (liniowy)',
-    'calc.bracket.ryczalt': 'Рычалт (уменьшенная льгота IKZE)',
+    'calc.bracket.12': '12% (прогрессивная шкала, до 120 000 PLN)',
+    'calc.bracket.32': '32% (прогрессивная шкала, свыше 120 000 PLN)',
+    'calc.bracket.19lin': '19% единый налог',
+    'calc.bracket.ryczalt': 'Паушальный налог (сниженная льгота IKZE)',
 
     'calc.results.title': 'Прогнозируемые результаты',
     'calc.results.balance': 'Итоговый баланс',
@@ -963,7 +990,7 @@ export const translations: Translations = {
     'expats.leave.ike': 'IKE при отъезде: Вы можете сохранить счет. Новые взносы не допускаются после того, как вы перестали быть налоговым резидентом Польши. При досрочном выводе (до 60 лет) применяется стандартный 19% налог Белки на прирост капитала только на прибыль — ваш основной капитал не затрагивается. Досрочный вывод с IKE просто делает его эквивалентным обычному брокерскому счету. Не хуже, чем если бы вы никогда его не использовали.',
     'expats.leave.ikze': 'IKZE при отъезде: Досрочная полная ликвидация добавляет всю сумму (взносы + прибыль) к вашему налогооблагаемому доходу в этом году по прогрессивной шкале налогообложения. Налоговые вычеты, которые вы уже получили в предыдущие годы, остаются вашими. Частичный вывод не разрешен — это должна быть полная ликвидация. Это ключевое различие в рисках между IKE и IKZE.',
     'expats.leave.currency': 'Валютный риск: Оба счета номинированы в злотых. Если вы планируете выйти на пенсию за пределами Польши, учитывайте, как колебания обменного курса между злотым и вашей целевой валютой могут повлиять на вашу реальную покупательную способность.',
-    'expats.leave.disclaimer': 'Последствия трансграничного налогового соглашения между Польшей и вашей новой страной проживания сложны и зависят от вашей конкретной ситуации. Проконсультируйтесь с лицензированным налоговым консультантом (doradca podatkowy) для персональных трансграничных рекомендаций.',
+    'expats.leave.disclaimer': 'Последствия трансграничного налогового соглашения между Польшей и вашей новой страной проживания сложны и зависят от вашей конкретной ситуации. Проконсультируйтесь с лицензированным налоговым консультантом для персональных трансграничных рекомендаций.',
     'expats.leave.uscitizen': 'Граждане США сталкиваются с дополнительной сложностью из-за правил налогообложения PFIC на ETF, зарегистрированные в ЕС. Проконсультируйтесь со специализированным трансграничным налоговым консультантом.',
     
     'faq.meta.title': 'Вопросы и ответы по IKE и IKZE Польша 2026: Частые вопросы',
@@ -972,7 +999,7 @@ export const translations: Translations = {
     'faq.hero.subtitle': 'IKE и IKZE',
     'faq.hero.desc': 'Распространенные вопросы о пенсионных счетах в Польше',
     'faq.q1': 'Могут ли иностранцы открыть счета IKE и IKZE?',
-    'faq.a1': 'Да! Любое лицо от 16 лет с номером PESEL может открыть счета IKE и IKZE, включая иностранных резидентов с действующим видом на жительство. Польское гражданство не требуется. Лица 16–17 лет могут вносить взносы в IKE только в годы получения дохода по трудовому договору (umowa o pracę).',
+    'faq.a1': 'Да! Любое лицо от 16 лет с номером PESEL может открыть счета IKE и IKZE, включая иностранных резидентов с действующим видом на жительство. Польское гражданство не требуется. Лица 16–17 лет могут вносить взносы в IKE только в годы получения дохода по трудовому договору.',
     'faq.q2': 'Можно ли иметь одновременно IKE и IKZE?',
     'faq.a2': 'Да. Вы можете открывать и пополнять оба счета — IKE и IKZE — одновременно. Многие делают это, чтобы получить и немедленный налоговый вычет (IKZE), и долгосрочный безналоговый рост (IKE).',
     'faq.q3': 'Что происходит со счетом при отъезде из Польши?',
@@ -980,7 +1007,7 @@ export const translations: Translations = {
     'faq.q4': 'Что происходит с деньгами в случае смерти?',
     'faq.a4': 'Оба счета наследуемы, но с разным налогообложением. Для IKE: бенефициары получают средства полностью без налогов — освобождены как от налога Белки, так и от налога на наследство и дарение — и могут вывести или перевести на собственный IKE или PPE. Для IKZE: бенефициары платят фиксированный налог 10% при выводе. Средства IKZE можно перевести на IKZE бенефициара (с 10% налогом при последующем выводе), но не на IKE или PPE.',
     'faq.q5': 'Можно ли вывести деньги до достижения пенсионного возраста?',
-    'faq.a5': 'Да. Для IKE: досрочный вывод всегда возможен. Полный досрочный вывод активирует 19% налог Белки только на прибыль — основной капитал не затрагивается никогда. С 2009 года разрешён частичный вывод собственных взносов. Важно: после первого полного вывода IKE или первой рассрочки открыть новый IKE невозможно. Для IKZE: частичный вывод невозможен — только полная ликвидация (zwrot). Вся сумма (взносы + доход) добавляется к налогооблагаемому доходу по прогрессивной шкале PIT.',
+    'faq.a5': 'Да. Для IKE: досрочный вывод всегда возможен. Полный досрочный вывод активирует 19% налог Белки только на прибыль — основной капитал не затрагивается никогда. С 2009 года разрешён частичный вывод собственных взносов. Важно: после первого полного вывода IKE или первой рассрочки открыть новый IKE невозможно. Для IKZE: частичный вывод невозможен — только полная ликвидация. Вся сумма (взносы + доход) добавляется к налогооблагаемому доходу по прогрессивной шкале PIT.',
     'faq.q9': 'Как получить налоговый вычет IKZE?',
     'faq.a9': 'Укажите взносы в IKZE в ежегодной польской налоговой декларации (PIT-37 для наемных, PIT-36 для самозанятых). Сумма взносов уменьшает налогооблагаемый доход, снижая налоговый счет. Провайдер выдаст вам справку о взносах.',
     'faq.q10': 'Можно ли перевести IKE или IKZE к другому провайдеру?',
@@ -998,15 +1025,15 @@ export const translations: Translations = {
     'faq.q7': 'Что произойдет, если я случайно открою два счета IKE?',
     'faq.a7': 'Одновременное владение двумя счетами IKE активирует карательный налог 75% фиксированной ставки на доход со всех ваших счетов IKE согласно статье 30(1)(7a) польского закона о PIT — самая высокая фиксированная ставка в польской налоговой системе. Если вы открываете новый IKE, убедитесь, что сначала закрыли предыдущий.',
     
-    'faq.q8': 'Я на налоге рычалт. Имеет ли смысл IKZE?',
-    'faq.a8': 'При рычалт ваши взносы в IKZE уменьшают вашу выручку по вашей паушальной налоговой ставке (например, 12% или 8,5% для IT), а не по предельной ставке подоходного налога. Выгода реальна, но меньше, чем для налогоплательщиков скала или линёвы. Для пользователей рычалт может быть целесообразно сначала изучить IKE, который не требует специальной налоговой формы для получения льгот. Это зависит от вашей индивидуальной ситуации; рассмотрите возможность обсуждения с налоговым специалистом.',
+    'faq.q8': 'Я на паушальном налоге. Имеет ли смысл IKZE?',
+    'faq.a8': 'При паушальном налоге ваши взносы в IKZE уменьшают вашу выручку по вашей паушальной налоговой ставке (например, 12% или 8,5% для IT), а не по предельной ставке подоходного налога. Выгода реальна, но меньше, чем для плательщиков прогрессивной шкалы или единого налога. Для плательщиков паушального налога может быть целесообразно сначала изучить IKE, который не требует специальной налоговой формы для получения льгот. Это зависит от вашей индивидуальной ситуации; рассмотрите возможность обсуждения с налоговым специалистом.',
     
     'faq.q12': 'Увеличиваются ли лимиты взносов каждый год?',
     'faq.a12': 'Да. Лимиты IKE и IKZE основаны на средней месячной зарплате в Польше, которая обычно растет ежегодно. Лимиты 2026 года составляют 28 260 зл (IKE) и 11 304 зл (IKZE для наемных работников) или 16 956 зл (IKZE для самозанятых/JDG).',
     
     'footer.disclaimer.title': 'Правовая оговорка',
-    'footer.disclaimer.text': 'Оговорка: Этот контент носит исключительно образовательный характер. Я не являюсь лицензированным финансовым консультантом или налоговым консультантом (doradca podatkowy). Я не предоставляю персональных инвестиционных рекомендаций или советов по трансграничному налогообложению. Всегда проверяйте информацию у лицензированного специалиста.',
-    'disclaimer.text': 'Оговорка: Этот контент и мои консультации носят исключительно образовательный характер. Я не являюсь лицензированным финансовым консультантом или налоговым консультантом (doradca podatkowy). Я не предоставляю персональных инвестиционных рекомендаций или советов по трансграничному налогообложению.',
+    'footer.disclaimer.text': 'Оговорка: Этот контент носит исключительно образовательный характер. Я не являюсь лицензированным финансовым консультантом или налоговым консультантом. Я не предоставляю персональных инвестиционных рекомендаций или советов по трансграничному налогообложению. Всегда проверяйте информацию у лицензированного специалиста.',
+    'disclaimer.text': 'Оговорка: Этот контент и мои консультации носят исключительно образовательный характер. Я не являюсь лицензированным финансовым консультантом или налоговым консультантом. Я не предоставляю персональных инвестиционных рекомендаций или советов по трансграничному налогообложению.',
 
     // Book page — "What to expect" bullets
     'book.expect.title': 'Что вас ждёт',
@@ -1018,6 +1045,31 @@ export const translations: Translations = {
     'common.readmore': 'Читать дальше',
     'common.getstarted': 'Начать',
     'common.learnmore': 'Узнать больше',
+
+    // About page
+    'about.eyebrow': 'КТО ЭТО НАПИСАЛ',
+    'about.heading': 'Я узнал это дорогой ценой',
+    'about.body.0': 'Я переехал в Польшу, десять лет проработал в финансах — и узнал об IKZE только год назад.',
+    'about.body.1': 'Переломный момент наступил в год, когда мой доход превысил 120 000 зл. Следующий налоговый расчёт показал, сколько из этой прибавки до меня так и не дошло. Некоторое время я списывал это на цену успеха. Потом задал себе лучший вопрос: что знают те, кто разбирается в этой системе?',
+    'about.body.2': 'IKZE уменьшает налогооблагаемую базу. IKE защищает инвестиционный доход от 19% налога Белки. Ни одно из этих правил не является тайной. Оба изложены по-польски — в объявлениях министерств и брошюрах фондов — и фактически недоступны тем, кто не читает по-польски.',
+    'about.body.3': 'Я занимался финансовой отчётностью, закрытием периодов и анализом отклонений в Accenture, ICRC и Lumen Technologies. Десять лет работы с чужими цифрами вырабатывают одну привычку: проверять математику самостоятельно.',
+    'about.body.4': 'Я начал писать в LinkedIn о своём опыте и заметил пробел, который решил заполнить для иностранцев, живущих в Польше, создав этот сайт — на английском, русском и украинском, с калькуляторами на основе ваших реальных данных, а не придуманных кем-то примеров.',
+    'about.body.5': 'Я не продаю советы. Я показываю механику — чтобы вы могли оценить её самостоятельно.',
+    'about.imageAlt': 'Фуад Мамедов, автор Expatfinance.pl',
+    'about.credentials.name': 'Fuad Mammadov',
+    'about.credentials.role': 'Старший финансовый аналитик, Варшава',
+    'about.credentials.line0': '10+ лет в финансах',
+    'about.credentials.line1': 'Accenture · ICRC · Lumen Technologies',
+    'about.credentials.line2': 'Бакалавр экономики, Университет Вистула, Варшава',
+    'about.credentials.line3': 'Financial Modelling & Valuation Analysis (CFI)',
+    'about.credentials.line4': 'Английский · Русский · Азербайджанский · Польский (B1)',
+    'about.credentials.statusFlag': 'Не является лицензированным инвестиционным или налоговым консультантом. Только образовательный контент.',
+    'about.pageTitle': 'Об авторе — Expatfinance.pl',
+    'about.metaDescription': 'Как финансовый аналитик-экспат в Варшаве создал бесплатный гид по польским пенсионным счетам IKE и IKZE на английском, русском и украинском языках.',
+
+    // Disclaimer
+    'disclaimer.long': 'Только в образовательных целях. Expatfinance.pl — независимый образовательный ресурс. Я не являюсь лицензированным финансовым консультантом, инвестиционным консультантом или налоговым консультантом, и ничто на этом сайте не является персонализированной инвестиционной, налоговой или юридической консультацией. Цифры отражают лимиты 2026 года, опубликованные Министерством финансов Польши; ваш результат зависит от вашего налогового резидентства, типа контракта, применимых соглашений об избежании двойного налогообложения и личных обстоятельств. Инвестиции в рамках IKE или IKZE несут риск, включая потерю капитала — только механизм вычета PIT сам по себе закреплён законодательно. Проверьте любое решение с лицензированным налоговым или юридическим консультантом перед принятием мер.',
+    'disclaimer.short': 'Только в образовательных целях — не является персонализированной инвестиционной, налоговой или юридической консультацией. Проверьте вашу ситуацию с лицензированным консультантом.',
   },
   
   ua: {
@@ -1030,6 +1082,7 @@ export const translations: Translations = {
     'nav.expats': 'Для іноземців',
     'nav.faq': 'Питання',
     'nav.booking': 'Записатися на консультацію',
+    'nav.about': 'Про автора',
 
     // Booking CTA
     'cta.heading': 'Хочете зрозуміти, як ця механіка працює на практиці?',
@@ -1138,7 +1191,7 @@ export const translations: Translations = {
     'ike.eligible.citizens': 'Громадяни Польщі',
     'ike.eligible.residents': 'Іноземні резиденти з дійсним дозволом на проживання',
     'ike.eligible.workers': 'Наймані працівники, самозайняті або безробітні',
-    'ike.eligible.p2': 'Мінімальний вік: 16 років. Особи 16–17 років (неповнолітні) можуть робити внески лише в ті роки, коли вони отримують дохід за трудовим договором (umowa o pracę). З 18 років обмежень немає.',
+    'ike.eligible.p2': 'Мінімальний вік: 16 років. Особи 16–17 років (неповнолітні) можуть робити внески лише в ті роки, коли вони отримують дохід за трудовим договором. З 18 років обмежень немає.',
 
     'ike.how.title': 'Як відкрити IKE',
     'ike.how.step1': 'Оберіть провайдера',
@@ -1206,7 +1259,7 @@ export const translations: Translations = {
 
     'ikze.eligible.title': 'Хто може відкрити IKZE?',
     'ikze.eligible.p1': 'Будь-яка особа з номером PESEL, що сплачує PIT в Польщі:',
-    'ikze.eligible.employed': 'Наймані працівники (umowa o pracę)',
+    'ikze.eligible.employed': 'Наймані працівники (трудовий договір)',
     'ikze.eligible.selfemployed': 'Самозайняті (działalność gospodarcza / JDG)',
     'ikze.eligible.contract': 'Контрактні працівники (umowa zlecenie)',
     'ikze.eligible.p2': 'Іноземні резиденти з дійсним дозволом на проживання мають право.',
@@ -1242,14 +1295,14 @@ export const translations: Translations = {
     'ikze.cons.tax': 'Виведення оподатковується',
     'ikze.cons.tax.desc': 'На відміну від IKE, при виведенні в 65 років ви платите 10% податок',
     'ikze.cons.penalty': 'Штрафи за дострокове виведення',
-    'ikze.cons.penalty.desc': 'Часткове виведення неможливе — тільки повна ліквідація (zwrot), на відміну від IKE. Вся сума додається до оподатковуваного доходу за прогресивною шкалою PIT.',
+    'ikze.cons.penalty.desc': 'Часткове виведення неможливе — тільки повна ліквідація, на відміну від IKE. Вся сума додається до оподатковуваного доходу за прогресивною шкалою PIT.',
 
     'ikze.cta.title': 'Порівняйте з IKE',
     'ikze.cta.desc': 'Подивіться, чим IKZE відрізняється від IKE, щоб зробити найкращий вибір для вашої ситуації.',
     'ikze.cta.button': 'Порівняти рахунки',
 
-    'ikze.ryczalt.title': 'Важливо: Якщо ви на податку ричалт',
-    'ikze.ryczalt.desc': 'Якщо ви сплачуєте ричалт (паушальний податок на виручку — поширений серед IT-фрилансерів на 8,5% або 12%), відрахування IKZE зменшує вашу виручку за вашою паушальною ставкою, а не за граничною ставкою прибуткового податку. Вигода менша, ніж для платників податку скала або лінійни. Для платників ричалт часто варто розглянути IKE насамперед. Це значимий нюанс, який, як показують дослідження, майже відсутній в англомовному контенті.',
+    'ikze.ryczalt.title': 'Важливо: Якщо ви на паушальному податку',
+    'ikze.ryczalt.desc': 'Якщо ви сплачуєте паушальний податок на виручку (поширений серед IT-фрилансерів на 8,5% або 12%), відрахування IKZE зменшує вашу виручку за вашою паушальною ставкою, а не за граничною ставкою прибуткового податку. Вигода менша, ніж для платників прогресивної шкали або фіксованого податку. Для платників паушального податку часто варто розглянути IKE насамперед. Це значимий нюанс, який, як показують дослідження, майже відсутній в англомовному контенті.',
     
     'compare.meta.title': 'IKE vs IKZE: Повне порівняння Польща 2026',
     'compare.meta.description': 'Порівняння IKE і IKZE за лімітами внесків, податковими пільгами, правилами виведення та вибором рахунку для вашої ситуації.',
@@ -1292,7 +1345,7 @@ export const translations: Translations = {
     'compare.choose.ike.horizon': 'У вас довгостроковий горизонт і ви очікуєте значного зростання',
     'compare.choose.ikze': 'Оберіть IKZE, якщо...',
     'compare.choose.ikze.immediate': 'Ви хочете негайно заощадити на податках цього року',
-    'compare.choose.ikze.bracket': 'Ви у вищій податковій ставці (32%) або на лінійному (19%)',
+    'compare.choose.ikze.bracket': 'Ви у вищій податковій ставці (32%) або на фіксованому податку (19%)',
     'compare.choose.ikze.selfemployed': 'Ви самозайнятий і хочете знизити оподатковуваний дохід',
     'compare.choose.both': 'Оберіть обидва, якщо...',
     'compare.choose.both.max': 'Ви можете поповнювати обидва рахунки по максимуму',
@@ -1317,10 +1370,10 @@ export const translations: Translations = {
     'calc.return': 'Очікувана річна дохідність',
     'calc.years': 'Років до пенсії',
     'calc.bracket': 'Ваша податкова ставка',
-    'calc.bracket.12': '12% (шкала, до 120k PLN)',
-    'calc.bracket.32': '32% (шкала, понад 120k PLN)',
-    'calc.bracket.19lin': '19% фіксований (liniowy)',
-    'calc.bracket.ryczalt': 'Ричалт (зменшена пільга IKZE)',
+    'calc.bracket.12': '12% (прогресивна шкала, до 120 000 PLN)',
+    'calc.bracket.32': '32% (прогресивна шкала, понад 120 000 PLN)',
+    'calc.bracket.19lin': '19% фіксований податок',
+    'calc.bracket.ryczalt': 'Паушальний податок (знижена пільга IKZE)',
 
     'calc.results.title': 'Прогнозовані результати',
     'calc.results.balance': 'Підсумковий баланс',
@@ -1396,7 +1449,7 @@ export const translations: Translations = {
     'expats.leave.ike': 'IKE при від\'їзді: Ви можете зберегти рахунок. Нові внески не дозволяються після того, як ви перестали бути податковим резидентом Польщі. При достроковому виведенні (до 60 років) застосовується стандартний 19% податок Белки на приріст капіталу тільки на прибуток — ваш основний капітал не зачіпається. Дострокове виведення з IKE просто робить його еквівалентним звичайному брокерському рахунку. Не гірше, ніж якби ви ніколи його не використовували.',
     'expats.leave.ikze': 'IKZE при від\'їзді: Дострокова повна ліквідація додає всю суму (внески + прибуток) до вашого оподатковуваного доходу в цьому році за прогресивною шкалою оподаткування. Податкові знижки, які ви вже отримали в попередні роки, залишаються вашими. Часткове виведення не дозволено — це має бути повна ліквідація. Це ключова різниця в ризиках між IKE і IKZE.',
     'expats.leave.currency': 'Валютний ризик: Обидва рахунки номіновані в злотих. Якщо ви плануєте вийти на пенсію за межами Польщі, враховуйте, як коливання обмінного курсу між злотим і вашою цільовою валютою можуть вплинути на вашу реальну купівельну спроможність.',
-    'expats.leave.disclaimer': 'Наслідки транскордонної податкової угоди між Польщею та вашою новою країною проживання складні та залежать від вашої конкретної ситуації. Проконсультуйтеся з ліцензованим податковим консультантом (doradca podatkowy) для персональних транскордонних рекомендацій.',
+    'expats.leave.disclaimer': 'Наслідки транскордонної податкової угоди між Польщею та вашою новою країною проживання складні та залежать від вашої конкретної ситуації. Проконсультуйтеся з ліцензованим податковим консультантом для персональних транскордонних рекомендацій.',
     'expats.leave.uscitizen': 'Громадяни США стикаються з додатковою складністю через правила оподаткування PFIC на ETF, зареєстровані в ЄС. Проконсультуйтеся зі спеціалізованим транскордонним податковим консультантом.',
     
     'faq.meta.title': 'Питання та відповіді з IKE і IKZE Польща 2026: Поширені запитання',
@@ -1405,7 +1458,7 @@ export const translations: Translations = {
     'faq.hero.subtitle': 'IKE і IKZE',
     'faq.hero.desc': 'Поширені запитання про пенсійні рахунки в Польщі',
     'faq.q1': 'Чи можуть іноземці відкрити рахунки IKE і IKZE?',
-    'faq.a1': 'Так! Будь-яка особа від 16 років з номером PESEL може відкрити рахунки IKE і IKZE, включаючи іноземних резидентів з дійсним дозволом на проживання. Польське громадянство не потрібне. Особи 16–17 років можуть робити внески в IKE лише в роки отримання доходу за трудовим договором (umowa o pracę).',
+    'faq.a1': 'Так! Будь-яка особа від 16 років з номером PESEL може відкрити рахунки IKE і IKZE, включаючи іноземних резидентів з дійсним дозволом на проживання. Польське громадянство не потрібне. Особи 16–17 років можуть робити внески в IKE лише в роки отримання доходу за трудовим договором.',
     'faq.q2': 'Чи можна мати одночасно IKE і IKZE?',
     'faq.a2': 'Так. Ви можете відкривати і поповнювати обидва рахунки — IKE і IKZE — одночасно. Багато хто робить це, щоб отримати і негайне податкове вирахування (IKZE), і довгострокове безподаткове зростання (IKE).',
     'faq.q3': 'Що відбувається з рахунком при від\'їзді з Польщі?',
@@ -1413,7 +1466,7 @@ export const translations: Translations = {
     'faq.q4': 'Що відбувається з грошима у разі смерті?',
     'faq.a4': 'Обидва рахунки успадковуються, але з різним оподаткуванням. Для IKE: бенефіціари отримують кошти повністю без податків — звільнені як від податку Белки, так і від податку на спадщину та дарування — і можуть вивести або перевести на власний IKE чи PPE. Для IKZE: бенефіціари сплачують фіксований 10% податок при виведенні. Кошти IKZE можна перевести на IKZE бенефіціара (з 10% податком при наступному виведенні), але не на IKE або PPE.',
     'faq.q5': 'Чи можна вивести кошти до досягнення пенсійного віку?',
-    'faq.a5': 'Так. Для IKE: дострокове виведення завжди можливе. Повне дострокове виведення активує 19% податок Белки тільки на прибуток — основний капітал ніколи не зачіпається. З 2009 року також дозволено часткове виведення власних внесків. Важливо: після першого повного виведення IKE або першого платежу при розстрочці відкрити новий IKE неможливо. Для IKZE: часткове виведення неможливе — тільки повна ліквідація (zwrot). Вся сума (внески + дохід) додається до оподатковуваного доходу за прогресивною шкалою PIT.',
+    'faq.a5': 'Так. Для IKE: дострокове виведення завжди можливе. Повне дострокове виведення активує 19% податок Белки тільки на прибуток — основний капітал ніколи не зачіпається. З 2009 року також дозволено часткове виведення власних внесків. Важливо: після першого повного виведення IKE або першого платежу при розстрочці відкрити новий IKE неможливо. Для IKZE: часткове виведення неможливе — тільки повна ліквідація. Вся сума (внески + дохід) додається до оподатковуваного доходу за прогресивною шкалою PIT.',
     'faq.q9': 'Як отримати податкове вирахування IKZE?',
     'faq.a9': 'Зазначте внески в IKZE у щорічній польській податковій декларації (PIT-37 для найманих, PIT-36 для самозайнятих). Сума внесків зменшує оподатковуваний дохід, знижуючи ваш податковий рахунок. Провайдер надасть вам довідку про внески.',
     'faq.q10': 'Чи можна перевести IKE або IKZE до іншого провайдера?',
@@ -1431,15 +1484,15 @@ export const translations: Translations = {
     'faq.q7': 'Що станеться, якщо я випадково відкрию два рахунки IKE?',
     'faq.a7': 'Одночасне володіння двома рахунками IKE активує каральний податок 75% фіксованої ставки на дохід з усіх ваших рахунків IKE згідно зі статтею 30(1)(7a) польського закону про PIT — найвища фіксована ставка в польській податковій системі. Якщо ви відкриваєте новий IKE, переконайтеся, що спочатку закрили попередній.',
     
-    'faq.q8': 'Я на податку ричалт. Чи має сенс IKZE?',
-    'faq.a8': 'При ричалт ваші внески в IKZE зменшують вашу виручку за вашою паушальною податковою ставкою (наприклад, 12% або 8,5% для IT), а не за граничною ставкою прибуткового податку. Вигода реальна, але менша, ніж для платників податку скала або лінійни. Для користувачів ричалт може бути доцільно спочатку вивчити IKE, який не вимагає спеціальної податкової форми для отримання пільг. Це залежить від вашої індивідуальної ситуації; розгляньте можливість обговорення з податковим фахівцем.',
+    'faq.q8': 'Я на паушальному податку. Чи має сенс IKZE?',
+    'faq.a8': 'При паушальному податку ваші внески в IKZE зменшують вашу виручку за вашою паушальною податковою ставкою (наприклад, 12% або 8,5% для IT), а не за граничною ставкою прибуткового податку. Вигода реальна, але менша, ніж для платників прогресивної шкали або фіксованого податку. Для платників паушального податку може бути доцільно спочатку вивчити IKE, який не вимагає спеціальної податкової форми для отримання пільг. Це залежить від вашої індивідуальної ситуації; розгляньте можливість обговорення з податковим фахівцем.',
     
     'faq.q12': 'Чи збільшуються ліміти внесків щороку?',
     'faq.a12': 'Так. Ліміти IKE і IKZE базуються на середній місячній зарплаті в Польщі, яка зазвичай зростає щорічно. Ліміти 2026 року становлять 28 260 зл (IKE) і 11 304 зл (IKZE для найм працівників) або 16 956 зл (IKZE для самозайнятих/JDG).',
     
     'footer.disclaimer.title': 'Правова застереження',
-    'footer.disclaimer.text': 'Застереження: Цей контент має виключно освітній характер. Я не є ліцензованим фінансовим консультантом або податковим консультантом (doradca podatkowy). Я не надаю персональних інвестиційних рекомендацій або порад щодо транскордонного оподаткування. Завжди перевіряйте інформацію у ліцензованого фахівця.',
-    'disclaimer.text': 'Застереження: Цей контент і мої консультації мають виключно освітній характер. Я не є ліцензованим фінансовим консультантом або податковим консультантом (doradca podatkowy). Я не надаю персональних інвестиційних рекомендацій або порад щодо транскордонного оподаткування.',
+    'footer.disclaimer.text': 'Застереження: Цей контент має виключно освітній характер. Я не є ліцензованим фінансовим консультантом або податковим консультантом. Я не надаю персональних інвестиційних рекомендацій або порад щодо транскордонного оподаткування. Завжди перевіряйте інформацію у ліцензованого фахівця.',
+    'disclaimer.text': 'Застереження: Цей контент і мої консультації мають виключно освітній характер. Я не є ліцензованим фінансовим консультантом або податковим консультантом. Я не надаю персональних інвестиційних рекомендацій або порад щодо транскордонного оподаткування.',
 
     // Book page — "What to expect" bullets
     'book.expect.title': 'Що на вас чекає',
@@ -1451,5 +1504,30 @@ export const translations: Translations = {
     'common.readmore': 'Читати далі',
     'common.getstarted': 'Почати',
     'common.learnmore': 'Дізнатися більше',
+
+    // About page
+    'about.eyebrow': 'ХТО ЦЕ НАПИСАВ',
+    'about.heading': 'Я дізнався це дорогою ціною',
+    'about.body.0': 'Я переїхав до Польщі, десять років пропрацював у фінансах — і дізнався про IKZE лише рік тому.',
+    'about.body.1': 'Переломний момент настав у рік, коли мій дохід перевищив 120 000 зл. Наступний податковий розрахунок показав, скільки з цієї надбавки до мене так і не дійшло. Певний час я відносив це до ціни успіху. Потім поставив собі краще запитання: що знають ті, хто розбирається в цій системі?',
+    'about.body.2': 'IKZE зменшує оподатковувану базу. IKE захищає інвестиційний дохід від 19% податку Белки. Жодне з цих правил не є таємницею. Обидва викладені польською мовою — в оголошеннях міністерств і брошурах фондів — і фактично недоступні тим, хто не читає по-польськи.',
+    'about.body.3': 'Я займався фінансовою звітністю, закриттям періодів та аналізом відхилень в Accenture, ICRC та Lumen Technologies. Десять років роботи з чужими цифрами виробляють одну звичку: перевіряти математику самостійно.',
+    'about.body.4': 'Я почав писати в LinkedIn про свій досвід і помітив прогалину, яку вирішив заповнити для іноземців, що живуть у Польщі, створивши цей сайт — англійською, російською та українською мовами, з калькуляторами на основі ваших реальних даних, а не вигаданих кимось прикладів.',
+    'about.body.5': 'Я не продаю поради. Я показую механіку — щоб ви могли оцінити її самостійно.',
+    'about.imageAlt': 'Фуад Мамедов, автор Expatfinance.pl',
+    'about.credentials.name': 'Fuad Mammadov',
+    'about.credentials.role': 'Старший фінансовий аналітик, Варшава',
+    'about.credentials.line0': '10+ років у фінансах',
+    'about.credentials.line1': 'Accenture · ICRC · Lumen Technologies',
+    'about.credentials.line2': 'Бакалавр економіки, Університет Вістула, Варшава',
+    'about.credentials.line3': 'Financial Modelling & Valuation Analysis (CFI)',
+    'about.credentials.line4': 'Англійська · Російська · Азербайджанська · Польська (B1)',
+    'about.credentials.statusFlag': 'Не є ліцензованим інвестиційним або податковим консультантом. Лише освітній контент.',
+    'about.pageTitle': 'Про автора — Expatfinance.pl',
+    'about.metaDescription': 'Як фінансовий аналітик-експат у Варшаві створив безкоштовний гід польськими пенсійними рахунками IKE і IKZE англійською, російською та українською мовами.',
+
+    // Disclaimer
+    'disclaimer.long': 'Лише в освітніх цілях. Expatfinance.pl — незалежний освітній ресурс. Я не є ліцензованим фінансовим консультантом, інвестиційним консультантом або податковим консультантом, і ніщо на цьому сайті не є персоналізованою інвестиційною, податковою або юридичною консультацією. Цифри відображають ліміти 2026 року, опубліковані Міністерством фінансів Польщі; ваш результат залежить від вашого податкового резидентства, типу контракту, застосовних угод про уникнення подвійного оподаткування та особистих обставин. Інвестиції в рамках IKE або IKZE несуть ризик, включаючи втрату капіталу — лише механізм вирахування PIT сам по собі закріплений законодавчо. Перевірте будь-яке рішення з ліцензованим податковим або юридичним консультантом перед прийняттям заходів.',
+    'disclaimer.short': 'Лише в освітніх цілях — не є персоналізованою інвестиційною, податковою або юридичною консультацією. Перевірте вашу ситуацію з ліцензованим консультантом.',
   },
 };

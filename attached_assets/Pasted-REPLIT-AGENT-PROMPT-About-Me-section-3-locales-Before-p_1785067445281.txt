@@ -1,0 +1,145 @@
+REPLIT AGENT PROMPT — "About Me" section, 3 locales
+Before pasting: upload the portrait file to the Repl. Everything else the agent needs is inside this prompt.
+
+
+TASK
+Add an "About Me" section to expatfinance.pl in all three locales (EN / RU / UA), then verify every component of the site still works.
+
+
+RULE ZERO — INHERIT, DON'T INVENT
+Before writing any code, read the existing codebase and extract:
+
+design tokens (CSS variables / Tailwind config: colors, spacing scale, border radii, shadow tiers)
+font families and the weights actually in use
+the existing section wrapper component, its max-width and vertical rhythm
+the heading scale and the eyebrow/label style
+the i18n setup and locale file format
+the routing and locale-path convention
+
+The new section must be indistinguishable in construction from the sections already on the site. Do not add a new color, a new font, a new border-radius value, or a new shadow tier. Do not install a new dependency. If you need a primitive that doesn't exist, reuse the closest one that does.
+
+Explicitly banned here: circle-cropped avatar, grayscale-to-color hover, purple/pink gradients, a floating blurred blob behind the portrait, tilted or "polaroid" framing, animated counters, testimonial carousels, any element that moves without a functional reason.
+
+
+1. IMAGE
+Portrait file → public/images/fuad-mammadov.png
+Generate .webp variants at 800×800 and 400×400. Serve via <picture> or the framework's image component with loading="lazy", decoding="async", and explicit width/height so CLS stays at 0.
+It's a square studio portrait, black turtleneck, near-white background. Frame it in the same card treatment already used elsewhere on the site — same radius, same border, same shadow tier. Let it sit plainly. No hover effect on the portrait.
+
+
+2. I18N — ADD AN about NAMESPACE
+Add to each of the three locale files. Paste the strings exactly as written below. Do not machine-translate, do not shorten, do not "improve" the prose. Keep IKZE, IKE, PIT, doradca podatkowy, radca prawny, Accenture, ICRC, Lumen Technologies untranslated in all three locales.
+2.1 English (en.about)
+eyebrow: "WHO WROTE THIS"
+
+heading: "I learned this the expensive way"
+
+body: [
+
+  "I moved to Poland, spent a decade working in finance, and still found out about IKZE one year ago.",
+
+  "The lesson arrived the year my income crossed 120,000 zł. My next tax settlement showed exactly how much of that raise never reached me. For a while I filed it under the cost of earning more. Then I asked a better question: what do people who understand this system know that I don't?",
+
+  "IKZE lowers your taxable base. IKE shelters your gains from the 19% Belka tax. Neither rule is hidden. Both are written in Polish, buried in ministry announcements and fund brochures — effectively unavailable if you can't read them.",
+
+  "My work has been financial reporting, month-end close and variance analysis at Accenture, the ICRC and Lumen Technologies. Reconciling other people's numbers for ten years teaches you one habit: check the arithmetic yourself.",
+
+  "So I decide to post on LinkedIn about my journey and noticed a gap, which I chose to fill for expats living in Poland by created the website as well — in English, Russian and Ukrainian, with calculators that run your figures instead of an example someone made up.",
+
+  "I'm not selling advice. I'm showing you the mechanics, so you can weigh them for yourself."
+
+]
+
+imageAlt: "Fuad Mammadov, author of Expatfinance.pl"
+
+credentials: {
+
+  name: "Fuad Mammadov",
+
+  role: "Senior Financial Analyst, Warsaw",
+
+  lines: [
+
+    "10+ years in Finance ",
+
+    "Accenture · ICRC · Lumen Technologies",
+
+    "BSc Economics, Vistula University, Warsaw",
+
+    Financial Modelling & Valuation Analysis (CFI)",
+
+    "English · Russian · Azerbaijani · Polish (B1)"
+
+  ],
+
+  statusFlag: "Not a licensed investment or tax advisor. Educational content only."
+
+}
+
+navLabel: "About"
+
+pageTitle: "About Me — Expatfinance.pl"
+
+metaDescription: "Why an expat finance professional in Warsaw built a free English, Russian and Ukrainian guide to Poland's IKE and IKZE retirement accounts."
+
+
+
+3. DISCLAIMERS — ADD A disclaimer NAMESPACE
+Two variants per locale. Add these keys alongside the about namespace.
+English
+long: "Educational content only. Expatfinance.pl is an independent educational resource. I am not a licensed financial advisor, investment advisor, or tax advisor, and nothing on this site is personalised investment, tax, or legal advice. Figures reflect the 2026 limits published by the Polish Ministry of Finance; your own outcome depends on your tax residency, contract type, applicable double taxation treaties, and personal circumstances. Investments held inside IKE or IKZE carry risk, including loss of capital — only the PIT deduction mechanism itself is defined by statute. Verify any decision with a licensed doradca podatkowy or radca prawny before acting."
+
+short: "Educational content only — not personalised investment, tax, or legal advice. Verify your situation with a licensed advisor."
+Where each variant renders
+Build one <Disclaimer variant="long" | "short" /> component that reads from i18n.
+long → the About page, every calculator page (directly beneath the result output), and the end of every guide article.
+short → the global footer, on every page, in every locale.
+Audit the codebase: if disclaimer text is hardcoded anywhere today, replace it with this component so there is a single source of truth.
+
+
+4. COMPONENT — AboutMe
+Layout: two columns on desktop — portrait + credentials card (~1fr) and prose (~1.6fr). Stacked on mobile, portrait first. Reuse the site's existing grid and breakpoints.
+
+Order inside the section: eyebrow → H2 → prose paragraphs → credentials card → long disclaimer callout.
+
+Credentials card: use the site's existing info-callout styling. The statusFlag line must be present and legible — visually quieter than the rest, but never hidden. It is a compliance requirement, not decoration.
+
+Typography: H2 letter-spacing -0.02em; eyebrow uppercase, small, letter-spacing 0.1em; body 0.01em. Use the site's existing font families only.
+
+Motion: exactly one staggered fade-and-rise as the section scrolls into view, ~60ms between children, gated behind prefers-reduced-motion. Nothing else animates.
+
+
+5. PLACEMENT & ROUTING
+Render the section on the homepage, below the tools/calculator block and above the footer.
+Create a standalone page at /about, /ru/about, /ua/about (match the site's existing locale-path convention), reusing the same component.
+Add all three to sitemap.xml.
+Add reciprocal hreflang alternates between the three, plus x-default.
+Add the per-locale <title> and meta description from section 2.
+Add the nav label to the main navigation in all three locales.
+
+
+6. STRUCTURED DATA (E-E-A-T)
+Inject Person JSON-LD on the About page: name, jobTitle, worksFor, alumniOf (Vistula University), knowsLanguage, image, url, and sameAs — leave the LinkedIn URL as a clearly marked TODO constant for me to fill in.
+
+Reference that Person as author and publisher on every article and calculator page.
+
+Do not add Review or AggregateRating markup anywhere on the site.
+
+
+7. FULL-SITE VERIFICATION
+Run every check below and report pass/fail with the specific fix applied for any failure. Do not mark the task complete with anything unresolved.
+
+Build command passes — zero errors, zero new warnings.
+Every route resolves in all three locales: home, about, each guide, each calculator. Zero 404s.
+The language switcher preserves the current route — switching locale on /about lands on /ru/about, not the homepage. Test from every page type.
+Both calculators still produce correct output. Verify with the 2026 figures: JDG IKZE limit 16,956 zł at the 32% rate → 5,426 zł; UoP IKZE limit 11,304 zł at 32% → 3,617 zł; IKE limit 28,260 zł. If any is wrong, the bug pre-dates this task — fix it and tell me what it was.
+Every internal link, nav item, footer link and CTA resolves. Zero console errors and zero hydration warnings on any page in any locale.
+Responsive at 375px, 768px, 1280px, 1920px — no overflow, no clipped text, no layout shift when the portrait loads.
+Accessibility: full keyboard tab order through the new section, visible focus rings, portrait has locale-correct alt text, heading hierarchy unbroken (one H1 per page, About section uses H2).
+Lighthouse on /about and the homepage: LCP < 2.5s, CLS < 0.1, INP < 200ms, Accessibility ≥ 95.
+Confirm the disclaimer renders on every calculator page, every guide page, and in the footer of all three locales.
+
+
+8. COPY IS LOCKED
+The prose in section 2 and the disclaimers in section 3 were written against Polish financial-education compliance boundaries (KNF / doradztwo podatkowe). Do not rewrite, paraphrase, soften, or "punch up" any of it. In particular, never change the closing line to language that implies managing, optimising, protecting, or structuring a reader's money or taxes. If a string doesn't fit the layout, change the layout.
+

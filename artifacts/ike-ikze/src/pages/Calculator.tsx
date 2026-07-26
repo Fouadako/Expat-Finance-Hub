@@ -6,7 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Calculator as CalcIcon, TrendingUp, Shield, AlertCircle } from 'lucide-react';
+import { Calculator as CalcIcon, TrendingUp, Shield } from 'lucide-react';
+import { Disclaimer } from '@/components/Disclaimer';
 import { motion } from 'framer-motion';
 import { BookingCTA } from '@/components/BookingCTA';
 
@@ -365,21 +366,10 @@ export default function Calculator() {
               <BookingCTA location="calculator" />
 
               {/* Disclaimer */}
-              <Card className="bg-amber-50/50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800">
-                <CardContent className="p-6">
-                  <div className="flex gap-3">
-                    <AlertCircle className="h-5 w-5 text-amber-600 dark:text-amber-500 shrink-0 mt-0.5" />
-                    <div>
-                      <p className="text-sm text-muted-foreground mb-3">
-                        {t('calc.note')}
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        Disclaimer: This content is strictly for educational purposes. I am not a licensed financial advisor or tax advisor (doradca podatkowy). Always verify information with a licensed professional.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="space-y-3">
+                <p className="text-sm text-muted-foreground">{t('calc.note')}</p>
+                <Disclaimer variant="long" />
+              </div>
             </div>
           </div>
         </div>

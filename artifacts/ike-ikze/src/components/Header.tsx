@@ -14,6 +14,7 @@ export function Header() {
     { name: t('nav.calculator'), href: '/calculator' },
     { name: t('nav.expats'), href: '/expats' },
     { name: t('nav.faq'), href: '/faq' },
+    { name: t('nav.about'), href: '/about' },
   ];
 
   const languages: { code: Language; label: string; flag: string }[] = [

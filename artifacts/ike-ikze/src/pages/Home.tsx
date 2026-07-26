@@ -3,6 +3,7 @@ import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, TrendingUp, Shield, Users, Banknote, Globe, CheckCircle, Calendar, ExternalLink, AlertCircle } from 'lucide-react';
+import { AboutMe } from '@/components/AboutMe';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -268,44 +269,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About / Why work with me */}
-      <section className="py-16 sm:py-20">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-8 text-center">
-              {t('home.about.title') !== 'home.about.title' ? t('home.about.title') : 'Why work with me?'}
-            </h2>
-            
-            <Card className="border-l-4 border-l-amber-500 shadow-sm border-y-border border-r-border">
-              <CardContent className="p-8 sm:p-10 space-y-6">
-                <p className="text-lg font-medium text-foreground leading-relaxed">
-                  {t('home.about.educator') !== 'home.about.educator' ? t('home.about.educator') : "I'm a financial educator who helps English and Russian-speaking foreigners understand how Poland's retirement accounts actually work."}
-                </p>
-                
-                <ul className="space-y-4 text-muted-foreground">
-                  <li className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2.5 shrink-0" />
-                    <span>{t('home.about.bullet1')}</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2.5 shrink-0" />
-                    <span>{t('home.about.bullet2')}</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2.5 shrink-0" />
-                    <span>{t('home.about.bullet3')}</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
+      <AboutMe />
 
       {/* Booking Section */}
       <section className="py-16 sm:py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 text-white relative overflow-hidden">

@@ -226,6 +226,38 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/faq"/>
   </url>
 
+  <!-- About -->
+  <url>
+    <loc>https://expatfinance.pl/about</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://expatfinance.pl/about"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://expatfinance.pl/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://expatfinance.pl/ua/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/about"/>
+  </url>
+  <url>
+    <loc>https://expatfinance.pl/ru/about</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://expatfinance.pl/about"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://expatfinance.pl/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://expatfinance.pl/ua/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/about"/>
+  </url>
+  <url>
+    <loc>https://expatfinance.pl/ua/about</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://expatfinance.pl/about"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://expatfinance.pl/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://expatfinance.pl/ua/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://expatfinance.pl/about"/>
+  </url>
+
   <!-- Book -->
   <url>
     <loc>https://expatfinance.pl/book</loc>

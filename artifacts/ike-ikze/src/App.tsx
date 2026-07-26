@@ -13,6 +13,7 @@ import Calculator from '@/pages/Calculator';
 import Expats from '@/pages/Expats';
 import FAQ from '@/pages/FAQ';
 import Book from '@/pages/Book';
+import About from '@/pages/About';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const pages = [
   { path: '/expats', component: Expats },
   { path: '/faq', component: FAQ },
   { path: '/book', component: Book },
+  { path: '/about', component: About },
 ] as const;
 
 function Router() {

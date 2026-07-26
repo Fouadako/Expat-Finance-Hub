@@ -1,6 +1,7 @@
 import { useLanguage, LocaleLink } from '@/lib/i18n';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Disclaimer } from '@/components/Disclaimer';
 import { useState } from 'react';
 
 export function Footer() {
@@ -20,6 +21,7 @@ export function Footer() {
       { name: t('nav.calculator'), href: '/calculator' },
       { name: t('nav.expats'), href: '/expats' },
       { name: t('nav.faq'), href: '/faq' },
+      { name: t('nav.about'), href: '/about' },
     ],
     sessions: [
       { name: t('nav.booking'), href: '/book' },
@@ -157,10 +159,8 @@ export function Footer() {
 
         {/* Legal Disclaimer */}
         <div className="pt-8 border-t border-border">
-          <div className="bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 rounded-lg p-6 mb-6">
-            <p className="text-xs text-muted-foreground leading-relaxed font-medium">
-              {t('disclaimer.text')}
-            </p>
+          <div className="mb-6">
+            <Disclaimer variant="short" />
           </div>
           <p className="text-xs text-muted-foreground text-center">
             © 2026 IKE & IKZE Poland Guide. Information provided for educational purposes only.

@@ -174,9 +174,36 @@ const routes = [
     lang: 'ru',
     bcp47: 'ru',
     ogLocale: 'ru_RU',
-    title: 'Book a Consultation — IKE & IKZE Educational Sessions',
+    title: 'Записаться на консультацию — Образовательные сессии IKE & IKZE',
     description:
-      'Book a 60-minute educational session to walk through IKE and IKZE mechanics in Poland — contribution limits, withdrawal rules, tax treatment, and account types.',
+      'Запишитесь на 60-минутную образовательную сессию: механика IKE и IKZE в Польше — лимиты взносов, правила вывода, налогообложение и типы счетов.',
+  },
+  {
+    routePath: '/about',
+    lang: 'en',
+    bcp47: 'en',
+    ogLocale: 'en_US',
+    title: 'About Me — Expatfinance.pl',
+    description:
+      'Why an expat finance professional in Warsaw built a free English, Russian and Ukrainian guide to Poland\'s IKE and IKZE retirement accounts.',
+  },
+  {
+    routePath: '/ru/about',
+    lang: 'ru',
+    bcp47: 'ru',
+    ogLocale: 'ru_RU',
+    title: 'Об авторе — Expatfinance.pl',
+    description:
+      'Как финансовый аналитик-экспат в Варшаве создал бесплатный гид по польским пенсионным счетам IKE и IKZE на английском, русском и украинском языках.',
+  },
+  {
+    routePath: '/ua/about',
+    lang: 'ua',
+    bcp47: 'uk',
+    ogLocale: 'uk_UA',
+    title: 'Про автора — Expatfinance.pl',
+    description:
+      'Як фінансовий аналітик-експат у Варшаві створив безкоштовний гід польськими пенсійними рахунками IKE і IKZE англійською, російською та українською мовами.',
   },
 
   // ── Ukrainian ─────────────────────────────────────────────────────────────
@@ -248,9 +275,9 @@ const routes = [
     lang: 'ua',
     bcp47: 'uk',
     ogLocale: 'uk_UA',
-    title: 'Book a Consultation — IKE & IKZE Educational Sessions',
+    title: 'Записатися на консультацію — Освітні сесії IKE & IKZE',
     description:
-      'Book a 60-minute educational session to walk through IKE and IKZE mechanics in Poland — contribution limits, withdrawal rules, tax treatment, and account types.',
+      'Запишіться на 60-хвилинну освітню сесію: механіка IKE і IKZE в Польщі — ліміти внесків, правила виведення, оподаткування та типи рахунків.',
   },
 ];
 
