@@ -7,7 +7,6 @@ const bodyKeys = [
   'about.body.0',
   'about.body.1',
   'about.body.2',
-  'about.body.3',
   'about.body.4',
   'about.body.5',
 ];
@@ -96,11 +95,14 @@ export function AboutMe() {
           <div className="lg:col-span-3 flex flex-col gap-6">
             <motion.div variants={itemVariants}>
               <h2
-                className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-2"
+                className="font-display text-3xl sm:text-4xl font-bold text-accent mb-4"
                 style={{ letterSpacing: '-0.02em' }}
               >
                 {t('about.subheading')}
               </h2>
+              <p className="text-base font-semibold text-foreground leading-relaxed">
+                {t('about.mission')}
+              </p>
             </motion.div>
 
             <div className="space-y-4">

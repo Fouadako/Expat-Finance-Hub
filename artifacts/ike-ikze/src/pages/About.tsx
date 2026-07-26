@@ -50,12 +50,6 @@ export default function About() {
       {/* Hero */}
       <section className="bg-gradient-to-b from-accent/5 to-background py-16 sm:py-20 border-b border-border">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <p
-            className="text-xs font-semibold uppercase text-accent mb-4"
-            style={{ letterSpacing: '0.1em' }}
-          >
-            {t('about.eyebrow')}
-          </p>
           <h1
             className="font-display text-4xl sm:text-5xl font-bold text-foreground"
             style={{ letterSpacing: '-0.02em' }}

@@ -606,6 +606,7 @@ export const translations: Translations = {
     'about.credentials.line4': 'English · Russian · Azerbaijani · Polish (B1)',
     'about.credentials.statusFlag': 'Not a licensed investment or tax advisor. Educational content only.',
     'about.subheading': 'IKE & IKZE in Poland — A Free Guide for English-Speaking Expats',
+    'about.mission': 'My mission is to teach expat professionals in Poland how to manage their personal finances in a way that builds lasting wealth.',
     'about.pageTitle': 'About Me — Expatfinance.pl',
     'about.metaDescription': 'Why an expat finance professional in Warsaw built a free English, Russian and Ukrainian guide to Poland\'s IKE and IKZE retirement accounts.',
 
@@ -1066,6 +1067,7 @@ export const translations: Translations = {
     'about.credentials.line4': 'Английский · Русский · Азербайджанский · Польский (B1)',
     'about.credentials.statusFlag': 'Не является лицензированным инвестиционным или налоговым консультантом. Только образовательный контент.',
     'about.subheading': 'IKE & IKZE в Польше — бесплатный гид для русскоязычных иностранцев',
+    'about.mission': 'Моя миссия — научить иностранных специалистов в Польше управлять личными финансами так, чтобы создавать долгосрочное благосостояние.',
     'about.pageTitle': 'Об авторе — Expatfinance.pl',
     'about.metaDescription': 'Как финансовый аналитик-экспат в Варшаве создал бесплатный гид по польским пенсионным счетам IKE и IKZE на английском, русском и украинском языках.',
 
@@ -1526,6 +1528,7 @@ export const translations: Translations = {
     'about.credentials.line4': 'Англійська · Російська · Азербайджанська · Польська (B1)',
     'about.credentials.statusFlag': 'Не є ліцензованим інвестиційним або податковим консультантом. Лише освітній контент.',
     'about.subheading': 'IKE & IKZE у Польщі — безкоштовний гід для україномовних іноземців',
+    'about.mission': 'Моя місія — навчити іноземних фахівців у Польщі управляти особистими фінансами так, щоб будувати довгострокове багатство.',
     'about.pageTitle': 'Про автора — Expatfinance.pl',
     'about.metaDescription': 'Як фінансовий аналітик-експат у Варшаві створив безкоштовний гід польськими пенсійними рахунками IKE і IKZE англійською, російською та українською мовами.',
 
