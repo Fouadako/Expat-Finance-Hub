@@ -1,4 +1,5 @@
 import { useLanguage } from '@/lib/i18n';
+import { Breadcrumb } from '@/components/Breadcrumb';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -25,6 +26,10 @@ export default function Book() {
         description="Book a session to walk through the exact mechanics of IKE and IKZE in Poland."
         path="/book"
       />
+      <Breadcrumb items={[
+        { label: t('nav.home'), href: '/' },
+        { label: t('nav.booking') },
+      ]} />
 
       <section className="bg-gradient-to-b from-primary/5 to-background py-16 sm:py-24 border-b border-border">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">

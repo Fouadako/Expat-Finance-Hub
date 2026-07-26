@@ -1,6 +1,7 @@
 import { useLanguage } from '@/lib/i18n';
 import { SEO } from '@/components/SEO';
 import { AboutMe } from '@/components/AboutMe';
+import { Breadcrumb } from '@/components/Breadcrumb';
 import { BookingCTA } from '@/components/BookingCTA';
 import { SITE_URL } from '@/lib/site-config';
 
@@ -46,6 +47,10 @@ export default function About() {
       <script type="application/ld+json">
         {JSON.stringify(personSchema)}
       </script>
+      <Breadcrumb items={[
+        { label: t('nav.home'), href: '/' },
+        { label: t('nav.about') },
+      ]} />
 
       {/* Hero */}
       <section className="bg-gradient-to-b from-accent/5 to-background py-16 sm:py-20 border-b border-border">

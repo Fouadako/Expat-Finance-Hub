@@ -4,11 +4,13 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { GitCompare, TrendingUp, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 import { Disclaimer } from '@/components/Disclaimer';
+import { Breadcrumb } from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
 import { BookingCTA } from '@/components/BookingCTA';
 
 export default function Compare() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const IL = 'text-accent font-medium underline underline-offset-2 hover:no-underline';
 
   const comparisonData = [
     { feature: t('compare.annual'), ike: t('compare.annual.ike'), ikze: t('compare.annual.ikze') },
@@ -28,6 +30,10 @@ export default function Compare() {
         description={t('compare.meta.description')}
         path="/compare"
       />
+      <Breadcrumb items={[
+        { label: t('nav.home'), href: '/' },
+        { label: t('nav.compare') },
+      ]} />
 
       {/* Hero */}
       <section className="bg-gradient-to-b from-muted to-background py-16 sm:py-20 border-b border-border">
@@ -48,6 +54,11 @@ export default function Compare() {
             </p>
             <p className="text-lg text-muted-foreground">
               {t('compare.hero.desc')}
+            </p>
+            <p className="text-sm text-muted-foreground mt-3">
+              {language === 'en' && <>For a deeper look first, read how the <LocaleLink href="/ike" className={IL}>IKE account</LocaleLink> and the <LocaleLink href="/ikze" className={IL}>IKZE account</LocaleLink> each work in detail.</>}
+              {language === 'ru' && <>Для более детального изучения — прочитайте, как работает <LocaleLink href="/ike" className={IL}>счёт IKE</LocaleLink> и <LocaleLink href="/ikze" className={IL}>счёт IKZE</LocaleLink>.</>}
+              {language === 'ua' && <>Для детальнішого вивчення — прочитайте, як працює <LocaleLink href="/ike" className={IL}>рахунок IKE</LocaleLink> та <LocaleLink href="/ikze" className={IL}>рахунок IKZE</LocaleLink>.</>}
             </p>
           </motion.div>
         </div>
@@ -135,6 +146,11 @@ export default function Compare() {
               <p className="text-muted-foreground">
                 {t('compare.both.strategy')}
               </p>
+              <p className="text-sm text-muted-foreground mt-3">
+                {language === 'en' && <>The <LocaleLink href="/calculator" className={IL}>IKE & IKZE retirement calculator</LocaleLink> lets you model both accounts simultaneously to see the combined impact on your retirement pot.</>}
+                {language === 'ru' && <><LocaleLink href="/calculator" className={IL}>Калькулятор IKE & IKZE</LocaleLink> позволяет смоделировать оба счёта одновременно, чтобы увидеть совокупный эффект для вашего пенсионного капитала.</>}
+                {language === 'ua' && <><LocaleLink href="/calculator" className={IL}>Калькулятор IKE & IKZE</LocaleLink> дозволяє змоделювати обидва рахунки одночасно, щоб побачити сукупний ефект для вашого пенсійного капіталу.</>}
+              </p>
             </CardContent>
           </Card>
         </div>
@@ -220,6 +236,11 @@ export default function Compare() {
               </CardContent>
             </Card>
           </div>
+          <p className="text-muted-foreground text-sm mt-8 text-center">
+            {language === 'en' && <>Common decision-making questions — including which account fits which tax situation — are answered in the <LocaleLink href="/faq" className={IL}>IKE & IKZE FAQ</LocaleLink>. Foreign residents can also check the <LocaleLink href="/expats" className={IL}>expat eligibility guide</LocaleLink>.</>}
+            {language === 'ru' && <>Ответы на самые распространённые вопросы — в том числе, какой счёт подходит для какой налоговой ситуации — в <LocaleLink href="/faq" className={IL}>разделе вопросов и ответов</LocaleLink>. Иностранные резиденты также могут ознакомиться с <LocaleLink href="/expats" className={IL}>гидом по требованиям для иностранцев</LocaleLink>.</>}
+            {language === 'ua' && <>Відповіді на найпоширеніші питання — зокрема, який рахунок підходить для якої податкової ситуації — у <LocaleLink href="/faq" className={IL}>розділі запитань і відповідей</LocaleLink>. Іноземні резиденти також можуть переглянути <LocaleLink href="/expats" className={IL}>гід з вимог для іноземців</LocaleLink>.</>}
+          </p>
         </div>
       </section>
 

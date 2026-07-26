@@ -4,11 +4,13 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Shield, CheckCircle, XCircle, ArrowRight, AlertTriangle } from 'lucide-react';
 import { Disclaimer } from '@/components/Disclaimer';
+import { Breadcrumb } from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
 import { BookingCTA } from '@/components/BookingCTA';
 
 export default function IKZE() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const IL = 'text-accent font-medium underline underline-offset-2 hover:no-underline';
 
   return (
     <>
@@ -17,6 +19,10 @@ export default function IKZE() {
         description={t('ikze.meta.description')}
         path="/ikze"
       />
+      <Breadcrumb items={[
+        { label: t('nav.home'), href: '/' },
+        { label: t('nav.ikze') },
+      ]} />
 
       {/* Hero */}
       <section className="bg-gradient-to-b from-accent/5 to-background py-16 sm:py-20 border-b border-border">
@@ -62,6 +68,11 @@ export default function IKZE() {
             <p className="text-muted-foreground leading-relaxed">
               {t('ikze.what.p2')}
             </p>
+            <p className="text-muted-foreground leading-relaxed mt-3 text-sm">
+              {language === 'en' && <>Unlike the <LocaleLink href="/ike" className={IL}>IKE account</LocaleLink>, which shelters investment gains from tax at withdrawal, IKZE's advantage lands immediately — in the tax year you contribute.</>}
+              {language === 'ru' && <>В отличие от <LocaleLink href="/ike" className={IL}>счёта IKE</LocaleLink>, который защищает инвестиционный доход от налога при выплате, преимущество IKZE реализуется сразу — в том налоговом году, когда вы вносите средства.</>}
+              {language === 'ua' && <>На відміну від <LocaleLink href="/ike" className={IL}>рахунку IKE</LocaleLink>, який захищає інвестиційний дохід від податку при виплаті, перевага IKZE реалізується одразу — в тому податковому році, коли ви вносите кошти.</>}
+            </p>
           </article>
 
           {/* Contribution Limits */}
@@ -89,6 +100,12 @@ export default function IKZE() {
               </div>
             </CardContent>
           </Card>
+
+          <p className="text-muted-foreground leading-relaxed text-sm">
+            {language === 'en' && <>The <LocaleLink href="/calculator" className={IL}>IKE & IKZE tax calculator</LocaleLink> lets you model how the deduction changes your net tax position across different contribution amounts and tax brackets.</>}
+            {language === 'ru' && <><LocaleLink href="/calculator" className={IL}>Калькулятор IKE & IKZE</LocaleLink> позволяет смоделировать, как вычет меняет вашу налоговую нагрузку при разных суммах взносов и ставках налога.</>}
+            {language === 'ua' && <><LocaleLink href="/calculator" className={IL}>Калькулятор IKE & IKZE</LocaleLink> дозволяє змоделювати, як відрахування змінює вашу податкову позицію при різних сумах внесків і ставках податку.</>}
+          </p>
 
           {/* Tax Benefits */}
           <div className="my-12">
@@ -212,6 +229,12 @@ export default function IKZE() {
               </CardContent>
             </Card>
           </div>
+
+          <p className="text-muted-foreground leading-relaxed text-sm">
+            {language === 'en' && <>For a direct feature-by-feature breakdown — limits, tax treatment, and early-exit rules for both accounts — see the <LocaleLink href="/compare" className={IL}>IKE vs. IKZE comparison page</LocaleLink>.</>}
+            {language === 'ru' && <>Для прямого сравнения обоих счетов по каждому параметру — лимитам, налогообложению и условиям досрочного выхода — смотрите <LocaleLink href="/compare" className={IL}>страницу сравнения IKE vs. IKZE</LocaleLink>.</>}
+            {language === 'ua' && <>Для прямого порівняння обох рахунків за кожним параметром — лімітами, оподаткуванням і умовами дострокового виходу — дивіться <LocaleLink href="/compare" className={IL}>сторінку порівняння IKE vs. IKZE</LocaleLink>.</>}
+          </p>
 
           {/* Pros and Cons */}
           <div className="my-12 grid md:grid-cols-2 gap-8">

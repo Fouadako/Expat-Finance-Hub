@@ -4,11 +4,13 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { TrendingUp, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 import { Disclaimer } from '@/components/Disclaimer';
+import { Breadcrumb } from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
 import { BookingCTA } from '@/components/BookingCTA';
 
 export default function IKE() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const IL = 'text-accent font-medium underline underline-offset-2 hover:no-underline';
 
   return (
     <>
@@ -17,6 +19,10 @@ export default function IKE() {
         description={t('ike.meta.description')}
         path="/ike"
       />
+      <Breadcrumb items={[
+        { label: t('nav.home'), href: '/' },
+        { label: t('nav.ike') },
+      ]} />
 
       {/* Hero */}
       <section className="bg-gradient-to-b from-primary/5 to-background py-16 sm:py-20 border-b border-border">
@@ -61,6 +67,11 @@ export default function IKE() {
             </p>
             <p className="text-muted-foreground leading-relaxed">
               {t('ike.what.p2')}
+            </p>
+            <p className="text-muted-foreground leading-relaxed mt-3 text-sm">
+              {language === 'en' && <>To see how IKE's Belka exemption stacks up against IKZE's upfront deduction, visit the <LocaleLink href="/compare" className={IL}>IKE vs. IKZE side-by-side comparison</LocaleLink>.</>}
+              {language === 'ru' && <>Чтобы сравнить освобождение IKE от налога Белки с авансовым вычетом IKZE, смотрите <LocaleLink href="/compare" className={IL}>полное сравнение IKE и IKZE</LocaleLink>.</>}
+              {language === 'ua' && <>Щоб порівняти звільнення IKE від податку Белки з авансовим відрахуванням IKZE, дивіться <LocaleLink href="/compare" className={IL}>повне порівняння IKE та IKZE</LocaleLink>.</>}
             </p>
           </article>
 
@@ -167,6 +178,12 @@ export default function IKE() {
             </div>
           </div>
 
+          <p className="text-muted-foreground leading-relaxed text-sm">
+            {language === 'en' && <>Use the <LocaleLink href="/calculator" className={IL}>IKE & IKZE retirement calculator</LocaleLink> to model how compound growth and the Belka exemption add up across your specific time horizon.</>}
+            {language === 'ru' && <>Воспользуйтесь <LocaleLink href="/calculator" className={IL}>калькулятором IKE & IKZE</LocaleLink>, чтобы смоделировать, как сложные проценты и освобождение от налога Белки складываются на вашем горизонте планирования.</>}
+            {language === 'ua' && <>Скористайтеся <LocaleLink href="/calculator" className={IL}>калькулятором IKE & IKZE</LocaleLink>, щоб змоделювати, як складні відсотки та звільнення від податку Белки складаються на вашому горизонті планування.</>}
+          </p>
+
           {/* Investment Options */}
           <div className="my-12">
             <h2 className="font-display text-3xl font-bold text-foreground mb-6">
@@ -238,6 +255,11 @@ export default function IKE() {
               </CardContent>
             </Card>
           </div>
+          <p className="text-muted-foreground leading-relaxed mt-6 text-sm">
+            {language === 'en' && <>If reducing this year's taxable income matters more than tax-free withdrawals later, the <LocaleLink href="/ikze" className={IL}>IKZE account</LocaleLink> deducts your contribution directly from your taxable income in the same year you make it.</>}
+            {language === 'ru' && <>Если уменьшение налогооблагаемого дохода в текущем году важнее, чем безналоговые выплаты позже, <LocaleLink href="/ikze" className={IL}>счёт IKZE</LocaleLink> вычитает взнос из дохода в том же году.</>}
+            {language === 'ua' && <>Якщо зменшення оподатковуваного доходу в поточному році важливіше за безподаткові виплати пізніше, <LocaleLink href="/ikze" className={IL}>рахунок IKZE</LocaleLink> вираховує внесок із доходу в тому ж році.</>}
+          </p>
         </div>
       </section>
 

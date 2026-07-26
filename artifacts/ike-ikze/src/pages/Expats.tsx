@@ -4,10 +4,12 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Globe, CheckCircle, FileText, Building2, Info, ArrowRight, AlertTriangle, DollarSign, TrendingUp, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Breadcrumb } from '@/components/Breadcrumb';
 import { BookingCTA } from '@/components/BookingCTA';
 
 export default function Expats() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const IL = 'text-accent font-medium underline underline-offset-2 hover:no-underline';
 
   return (
     <>
@@ -16,6 +18,10 @@ export default function Expats() {
         description={t('expats.meta.description')}
         path="/expats"
       />
+      <Breadcrumb items={[
+        { label: t('nav.home'), href: '/' },
+        { label: t('nav.expats') },
+      ]} />
 
       {/* Hero */}
       <section className="bg-gradient-to-b from-primary/5 to-background py-16 sm:py-20 border-b border-border">
@@ -53,6 +59,11 @@ export default function Expats() {
               <CardContent className="p-8">
                 <p className="text-lg text-foreground mb-6">
                   {t('expats.eligible.p1')}
+                </p>
+                <p className="text-sm text-muted-foreground mb-6">
+                  {language === 'en' && <>Both accounts — the <LocaleLink href="/ike" className={IL}>IKE</LocaleLink> and the <LocaleLink href="/ikze" className={IL}>IKZE</LocaleLink> — are available to qualifying foreign residents, with full mechanics covered in the dedicated guides.</>}
+                  {language === 'ru' && <>Оба счёта — <LocaleLink href="/ike" className={IL}>IKE</LocaleLink> и <LocaleLink href="/ikze" className={IL}>IKZE</LocaleLink> — доступны иностранным резидентам, соответствующим требованиям; подробная механика каждого описана в отдельных руководствах.</>}
+                  {language === 'ua' && <>Обидва рахунки — <LocaleLink href="/ike" className={IL}>IKE</LocaleLink> та <LocaleLink href="/ikze" className={IL}>IKZE</LocaleLink> — доступні іноземним резидентам, що відповідають вимогам; докладна механіка кожного описана в окремих посібниках.</>}
                 </p>
                 <div className="bg-muted rounded-lg p-6">
                   <p className="font-semibold text-foreground mb-3">{t('expats.eligible.req')}</p>
@@ -224,6 +235,12 @@ export default function Expats() {
             </div>
           </div>
 
+          <p className="text-muted-foreground leading-relaxed text-sm mb-16">
+            {language === 'en' && <>For a structured breakdown of how IKE and IKZE differ on every dimension — contribution limits, tax treatment, and early-exit conditions — see the <LocaleLink href="/compare" className={IL}>IKE vs. IKZE comparison</LocaleLink>.</>}
+            {language === 'ru' && <>Для структурированного сравнения всех отличий IKE и IKZE — лимитов, налогообложения и условий досрочного выхода — смотрите <LocaleLink href="/compare" className={IL}>сравнение IKE vs. IKZE</LocaleLink>.</>}
+            {language === 'ua' && <>Для структурованого порівняння всіх відмінностей IKE та IKZE — лімітів, оподаткування та умов дострокового виходу — дивіться <LocaleLink href="/compare" className={IL}>порівняння IKE vs. IKZE</LocaleLink>.</>}
+          </p>
+
           {/* Tax Considerations */}
           <div className="mb-16">
             <h2 className="font-display text-3xl font-bold text-foreground mb-6">
@@ -281,6 +298,11 @@ export default function Expats() {
               ))}
             </div>
           </div>
+          <p className="text-muted-foreground leading-relaxed text-sm">
+            {language === 'en' && <>To see how your numbers might look over a Polish career, use the <LocaleLink href="/calculator" className={IL}>IKE & IKZE retirement calculator</LocaleLink>.</>}
+            {language === 'ru' && <>Чтобы увидеть, как могут выглядеть ваши цифры за годы работы в Польше, воспользуйтесь <LocaleLink href="/calculator" className={IL}>калькулятором IKE & IKZE</LocaleLink>.</>}
+            {language === 'ua' && <>Щоб побачити, як можуть виглядати ваші цифри за роки роботи в Польщі, скористайтеся <LocaleLink href="/calculator" className={IL}>калькулятором IKE & IKZE</LocaleLink>.</>}
+          </p>
         </div>
       </section>
 

@@ -8,11 +8,13 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Calculator as CalcIcon, TrendingUp, Shield } from 'lucide-react';
 import { Disclaimer } from '@/components/Disclaimer';
+import { Breadcrumb } from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
 import { BookingCTA } from '@/components/BookingCTA';
 
 export default function Calculator() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const IL = 'text-accent font-medium underline underline-offset-2 hover:no-underline';
 
   const [contractType, setContractType] = useState<'uop' | 'jdg'>('uop');
   const [monthly, setMonthly] = useState(1000);
@@ -68,6 +70,10 @@ export default function Calculator() {
         description={t('calc.meta.description')}
         path="/calculator"
       />
+      <Breadcrumb items={[
+        { label: t('nav.home'), href: '/' },
+        { label: t('nav.calculator') },
+      ]} />
 
       {/* Hero */}
       <section className="bg-gradient-to-b from-accent/5 to-background py-16 sm:py-20 border-b border-border">
@@ -103,6 +109,11 @@ export default function Calculator() {
               <span className="text-xs font-medium text-accent">{t('calc.limits.badge')}</span>
             </div>
           </div>
+          <p className="text-muted-foreground text-sm mb-8">
+            {language === 'en' && <>Not sure how IKE and IKZE differ before running numbers? The <LocaleLink href="/compare" className={IL}>IKE vs. IKZE comparison table</LocaleLink> explains the mechanics behind each result.</>}
+            {language === 'ru' && <>Не уверены, чем IKE и IKZE отличаются перед расчётами? <LocaleLink href="/compare" className={IL}>Таблица сравнения IKE vs. IKZE</LocaleLink> объясняет механику, лежащую в основе каждого результата.</>}
+            {language === 'ua' && <>Не впевнені, чим IKE та IKZE відрізняються перед розрахунками? <LocaleLink href="/compare" className={IL}>Таблиця порівняння IKE vs. IKZE</LocaleLink> пояснює механіку, що стоїть за кожним результатом.</>}
+          </p>
           <div className="grid lg:grid-cols-5 gap-8">
             {/* Inputs */}
             <div className="lg:col-span-2">
@@ -362,6 +373,12 @@ export default function Calculator() {
                   </CardContent>
                 </Card>
               </motion.div>
+
+              <p className="text-sm text-muted-foreground">
+                {language === 'en' && <>To understand what drives these results, read how the <LocaleLink href="/ike" className={IL}>IKE Belka exemption</LocaleLink> and the <LocaleLink href="/ikze" className={IL}>IKZE deduction</LocaleLink> each work.</>}
+                {language === 'ru' && <>Чтобы понять, что стоит за этими результатами, прочитайте, как работают <LocaleLink href="/ike" className={IL}>освобождение IKE от налога Белки</LocaleLink> и <LocaleLink href="/ikze" className={IL}>вычет IKZE</LocaleLink>.</>}
+                {language === 'ua' && <>Щоб зрозуміти, що стоїть за цими результатами, прочитайте, як працюють <LocaleLink href="/ike" className={IL}>звільнення IKE від податку Белки</LocaleLink> та <LocaleLink href="/ikze" className={IL}>відрахування IKZE</LocaleLink>.</>}
+              </p>
 
               <BookingCTA location="calculator" />
 

@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 
 export default function Home() {
   const { t, language } = useLanguage();
+  const IL = 'text-accent font-medium underline underline-offset-2 hover:no-underline';
 
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -68,6 +69,11 @@ export default function Home() {
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {t('home.what.desc')}
+            </p>
+            <p className="text-sm text-muted-foreground max-w-2xl mx-auto mt-3">
+              {language === 'en' && <>Compare them side-by-side on the <LocaleLink href="/compare" className={IL}>IKE vs. IKZE comparison page</LocaleLink>, or model your own figures with the <LocaleLink href="/calculator" className={IL}>retirement calculator</LocaleLink>.</>}
+              {language === 'ru' && <>Сравните их на <LocaleLink href="/compare" className={IL}>странице сравнения IKE и IKZE</LocaleLink> или смоделируйте свои цифры в <LocaleLink href="/calculator" className={IL}>калькуляторе пенсионных накоплений</LocaleLink>.</>}
+              {language === 'ua' && <>Порівняйте їх на <LocaleLink href="/compare" className={IL}>сторінці порівняння IKE та IKZE</LocaleLink> або змоделюйте свої цифри в <LocaleLink href="/calculator" className={IL}>калькуляторі пенсійних накопичень</LocaleLink>.</>}
             </p>
           </div>
 
@@ -177,6 +183,11 @@ export default function Home() {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {t('home.who.desc')}
             </p>
+            <p className="text-sm text-muted-foreground max-w-2xl mx-auto mt-3">
+              {language === 'en' && <>Foreign residents can find detailed eligibility requirements and the opening process step-by-step in the <LocaleLink href="/expats" className={IL}>expat guide</LocaleLink>.</>}
+              {language === 'ru' && <>Подробные требования для иностранных резидентов и пошаговый процесс открытия счёта описаны в <LocaleLink href="/expats" className={IL}>гиде для иностранцев</LocaleLink>.</>}
+              {language === 'ua' && <>Докладні вимоги для іноземних резидентів та покроковий процес відкриття рахунку описані в <LocaleLink href="/expats" className={IL}>гіді для іноземців</LocaleLink>.</>}
+            </p>
           </div>
 
           <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -266,6 +277,11 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+          <p className="text-sm text-muted-foreground max-w-2xl mx-auto mt-8 text-center">
+            {language === 'en' && <>Have a specific question about eligibility, limits, or what happens if you leave Poland? Browse the <LocaleLink href="/faq" className={IL}>IKE & IKZE FAQ</LocaleLink>.</>}
+            {language === 'ru' && <>Есть конкретный вопрос о праве на открытие, лимитах или о том, что происходит при отъезде? Загляните в <LocaleLink href="/faq" className={IL}>раздел вопросов и ответов IKE & IKZE</LocaleLink>.</>}
+            {language === 'ua' && <>Є конкретне запитання про право на відкриття, ліміти або що відбувається при виїзді? Перегляньте <LocaleLink href="/faq" className={IL}>розділ запитань і відповідей IKE & IKZE</LocaleLink>.</>}
+          </p>
         </div>
       </section>
 

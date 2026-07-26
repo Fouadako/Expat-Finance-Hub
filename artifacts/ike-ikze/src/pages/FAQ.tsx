@@ -5,21 +5,39 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { HelpCircle, ArrowRight } from 'lucide-react';
 import { Disclaimer } from '@/components/Disclaimer';
+import { Breadcrumb } from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
 import { BookingCTA } from '@/components/BookingCTA';
 
 export default function FAQ() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const IL = 'text-accent font-medium underline underline-offset-2 hover:no-underline';
 
   const faqs = [
-    { q: t('faq.q1'), a: t('faq.a1') },
-    { q: t('faq.q2'), a: t('faq.a2') },
+    { q: t('faq.q1'), a: <>{t('faq.a1')}{' '}
+      {language === 'en' && <>The <LocaleLink href="/expats" className={IL}>dedicated expat guide</LocaleLink> covers required documents and the full opening process.</>}
+      {language === 'ru' && <><LocaleLink href="/expats" className={IL}>Специальный гид для иностранцев</LocaleLink> охватывает необходимые документы и полный процесс открытия счёта.</>}
+      {language === 'ua' && <><LocaleLink href="/expats" className={IL}>Спеціальний гід для іноземців</LocaleLink> охоплює необхідні документи та повний процес відкриття рахунку.</>}
+    </> },
+    { q: t('faq.q2'), a: <>{t('faq.a2')}{' '}
+      {language === 'en' && <>See the <LocaleLink href="/compare" className={IL}>full IKE vs. IKZE comparison</LocaleLink> for a structured breakdown of how the two accounts complement each other.</>}
+      {language === 'ru' && <>Смотрите <LocaleLink href="/compare" className={IL}>полное сравнение IKE и IKZE</LocaleLink> для структурированного обзора того, как оба счёта дополняют друг друга.</>}
+      {language === 'ua' && <>Дивіться <LocaleLink href="/compare" className={IL}>повне порівняння IKE та IKZE</LocaleLink> для структурованого огляду того, як обидва рахунки доповнюють один одного.</>}
+    </> },
     { q: t('faq.q3'), a: t('faq.a3') },
     { q: t('faq.q4'), a: t('faq.a4') },
-    { q: t('faq.q5'), a: t('faq.a5') },
+    { q: t('faq.q5'), a: <>{t('faq.a5')}{' '}
+      {language === 'en' && <>Full withdrawal rules for each account are covered in the <LocaleLink href="/ike" className={IL}>IKE guide</LocaleLink> and the <LocaleLink href="/ikze" className={IL}>IKZE guide</LocaleLink>.</>}
+      {language === 'ru' && <>Полные правила вывода для каждого счёта рассмотрены в <LocaleLink href="/ike" className={IL}>руководстве по IKE</LocaleLink> и <LocaleLink href="/ikze" className={IL}>руководстве по IKZE</LocaleLink>.</>}
+      {language === 'ua' && <>Повні правила виведення для кожного рахунку розглянуто в <LocaleLink href="/ike" className={IL}>посібнику по IKE</LocaleLink> та <LocaleLink href="/ikze" className={IL}>посібнику по IKZE</LocaleLink>.</>}
+    </> },
     { q: t('faq.q6'), a: t('faq.a6') },
     { q: t('faq.q7'), a: t('faq.a7') },
-    { q: t('faq.q8'), a: t('faq.a8') },
+    { q: t('faq.q8'), a: <>{t('faq.a8')}{' '}
+      {language === 'en' && <>Use the <LocaleLink href="/calculator" className={IL}>tax benefit calculator</LocaleLink> to model the numerical difference between IKE and IKZE for lump-sum taxpayers.</>}
+      {language === 'ru' && <>Воспользуйтесь <LocaleLink href="/calculator" className={IL}>калькулятором налоговых льгот</LocaleLink>, чтобы смоделировать разницу между IKE и IKZE для плательщиков паушального налога.</>}
+      {language === 'ua' && <>Скористайтеся <LocaleLink href="/calculator" className={IL}>калькулятором податкових пільг</LocaleLink>, щоб змоделювати різницю між IKE та IKZE для платників паушального податку.</>}
+    </> },
     { q: t('faq.q9'), a: t('faq.a9') },
     { q: t('faq.q10'), a: t('faq.a10') },
     { q: t('faq.q11'), a: t('faq.a11') },
@@ -33,6 +51,10 @@ export default function FAQ() {
         description={t('faq.meta.description')}
         path="/faq"
       />
+      <Breadcrumb items={[
+        { label: t('nav.home'), href: '/' },
+        { label: t('nav.faq') },
+      ]} />
 
       {/* Hero */}
       <section className="bg-gradient-to-b from-muted to-background py-16 sm:py-20 border-b border-border">
