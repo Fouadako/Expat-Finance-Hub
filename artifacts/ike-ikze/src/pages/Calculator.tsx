@@ -39,12 +39,12 @@ export default function Calculator() {
   const ikzeLimit = contractType === 'jdg' ? 16956 : 11304;
   const ikzeAnnualContribution = Math.min(monthly * 12, ikzeLimit);
   const ikzeMonthlyEffective = ikzeAnnualContribution / 12;
-  const ikzeUpfrontSavings = ikzeAnnualContribution * (taxBracket / 100) * years; // Tax deduction benefit
+  // Annual PIT refund: what the taxpayer gets back in the NEXT year's tax settlement
+  const ikzeAnnualRefund = ikzeAnnualContribution * (taxBracket / 100);
   const ikzeFV = calculateFV(ikzeMonthlyEffective, annualReturn, years);
   const ikzeReturns = ikzeFV - (ikzeMonthlyEffective * 12 * years);
   const ikzeTax = ikzeFV * 0.10; // 10% flat tax on withdrawal
   const ikzeAfterTax = ikzeFV - ikzeTax;
-  const ikzeTotalBenefit = ikzeAfterTax + ikzeUpfrontSavings;
 
   // Regular brokerage: No deduction, 19% tax on gains
   const regularFV = calculateFV(monthly, annualReturn, years);
@@ -99,7 +99,7 @@ export default function Calculator() {
           <div className="flex justify-center mb-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20">
               <div className="w-2 h-2 rounded-full bg-accent" />
-              <span className="text-xs font-medium text-accent">2026 limits: IKE PLN 28,260 | IKZE PLN 11,304 (UoP) / 16,956 (JDG)</span>
+              <span className="text-xs font-medium text-accent">{t('calc.limits.badge')}</span>
             </div>
           </div>
           <div className="grid lg:grid-cols-5 gap-8">
@@ -283,9 +283,9 @@ export default function Calculator() {
                     {monthly * 12 > ikzeLimit && (
                       <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-3 mb-4">
                         <p className="text-xs text-amber-700 dark:text-amber-400">
-                          {contractType === 'jdg' 
-                            ? 'Monthly contribution capped at PLN 1,413 (annual limit PLN 16,956 for JDG/B2B)' 
-                            : 'Monthly contribution capped at PLN 942 (annual limit PLN 11,304 for employees)'}
+                          {contractType === 'jdg'
+                            ? t('calc.ikze.cap.jdg')
+                            : t('calc.ikze.cap.uop')}
                         </p>
                       </div>
                     )}
@@ -309,16 +309,16 @@ export default function Calculator() {
                         </p>
                       </div>
                       <div>
-                        <p className="text-sm text-muted-foreground mb-1">Tax deduction benefit</p>
+                        <p className="text-sm text-muted-foreground mb-1">{t('calc.ikze.annualrefund')}</p>
                         <p className="font-mono text-lg text-accent">
-                          {formatPLN(ikzeUpfrontSavings)}
+                          {formatPLN(ikzeAnnualRefund)}<span className="text-sm font-normal ml-1">{t('calc.ikze.peryear')}</span>
                         </p>
                       </div>
                     </div>
                     <div className="pt-4 border-t border-border">
-                      <p className="text-sm text-muted-foreground mb-1">{t('calc.results.aftertax')} + deductions</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('calc.results.aftertax')}</p>
                       <p className="font-mono text-3xl font-bold text-accent">
-                        {formatPLN(ikzeTotalBenefit)}
+                        {formatPLN(ikzeAfterTax)}
                       </p>
                     </div>
                   </CardContent>
@@ -346,7 +346,7 @@ export default function Calculator() {
                         </p>
                       </div>
                       <div>
-                        <p className="text-sm text-muted-foreground mb-1">19% Belka tax</p>
+                        <p className="text-sm text-muted-foreground mb-1">{t('calc.results.belka')}</p>
                         <p className="font-mono text-lg text-destructive">
                           -{formatPLN(regularTax)}
                         </p>
